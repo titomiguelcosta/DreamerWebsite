@@ -1,8 +1,12 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-    <div id="contacts" class="main yui3-g">
+    <div id="contacts" class="main">
         <h1>Contact</h1>
-        {{ form(form) }}
+        <form action="#" method="post">
+            {{ form_widget(form) }}
+
+            <input type="submit" name="submit" />
+        </form>
     </div>
 {% endblock %}
