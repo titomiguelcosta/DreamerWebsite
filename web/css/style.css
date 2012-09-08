@@ -11,7 +11,7 @@ header {
     margin: 0 0 15px;
 }
 header #name {
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
 }
 header a:link, header a:visited {
@@ -52,53 +52,91 @@ footer #credits {
 /** HOME **/
 #home .content {
     height: 187px;
-    color: #eee;
     font-size: 30px;
-    line-height: 300px;
     text-align: right;
     padding: 0 20px;
-}
-#home .content {
     margin: 0 15px 15px 0; /* gutters */
+    position: relative;
+    border: 5px solid transparent;
 }
 #home a:link, #home a:visited {
     color: #eee;
     text-decoration: none;
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
 }
 #home a:hover, #home a:active {
     color: #fff;
+}
+#home .content:hover {
+    color: #fff;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px #888;
+    box-shadow: 0 0 5px #888;
+}
+#home .content.first:hover, #home .content.ninth:hover {
+    border: 5px solid #BD6C54;
+}
+#home .content.second:hover, #home .content.eighth:hover {
+    border: 5px solid #E59167;
+}
+#home .content.third:hover, #home .content.seventh:hover {
+    border: 5px solid #F5CA7F;
+}
+#home .content.fourth:hover, #home .content.sixth:hover {
+    border: 5px solid #DEAC68;
+}
+#home .content.fifth:hover {
+    border: 5px solid #BD6C54;
+}
+#home .content p {
+    font-size: 16px;
+    text-align: left;
+    padding: 15px 0;
 }
 .main {
     background-color: #c6c6c6;
     min-height: 230px;
     margin-bottom: 10px;
+    padding: 15px;
+    border: 5px solid #C0C0C0;
 }
 .first {
     background-color: #874A43;
+    color: #874A43;
 }
 .second {
     background-color: #BD6C54;
+    color: #BD6C54;
 }
 .third {
     background-color: #DEAC68;
+    color: #DEAC68;
 }
 .fourth {
     background-color: #F5CA7F;
+    color: #F5CA7F;
 }
 .fifth {
     background-color: #E59167;
+    color: #E59167;
 }
 .sixth {
     background-color: #F5CA7F;
+    color: #F5CA7F;
 }
 .seventh {
     background-color: #DEAC68;
+    color: #DEAC68;
 }
 .eighth {
     background-color: #BD6C54;
+    color: #BD6C54;
 }
 .ninth {
     background-color: #874A43;
+    color: #874A43;
 }
 /** Line */
 #line .square {

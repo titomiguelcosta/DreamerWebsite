@@ -1,5 +1,5 @@
 {
-    "hash": "f20eccb85756b3fca30422c5fe4fc26b",
+    "hash": "ebf83f1456122169db75a3104c1afcb2",
     "packages": [
         {
             "package": "pimple/pimple",
@@ -24,6 +24,10 @@
             "version": "dev-master",
             "source-reference": "73b18ef69f74d878465dba0836ad96affc6c820c",
             "commit-date": "1346766167"
+        },
+        {
+            "package": "symfony/config",
+            "version": "v2.1.0"
         },
         {
             "package": "symfony/css-selector",
