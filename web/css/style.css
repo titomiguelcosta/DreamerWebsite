@@ -58,7 +58,8 @@ footer #credits {
     padding: 0 20px;
     margin: 0 15px 15px 0; /* gutters */
     position: relative;
-    border: 5px solid transparent;
+/*    border: 5px solid transparent;*/
+    background-image: none;
 }
 #home a:link, #home a:visited {
     color: #eee;
@@ -77,8 +78,11 @@ footer #credits {
     -moz-box-shadow: 0 0 5px #888;
     -webkit-box-shadow: 0 0 5px #888;
     box-shadow: 0 0 5px #888;
+    background-image: url('../images/caixa_bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
 }
-#home .content.first:hover, #home .content.ninth:hover {
+/*#home .content.first:hover, #home .content.ninth:hover {
     border: 5px solid #BD6C54;
 }
 #home .content.second:hover, #home .content.eighth:hover {
@@ -93,6 +97,7 @@ footer #credits {
 #home .content.fifth:hover {
     border: 5px solid #BD6C54;
 }
+*/
 #home .content p {
     font-size: 16px;
     text-align: left;
