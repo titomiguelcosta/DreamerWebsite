@@ -3,10 +3,33 @@
 {% block body %}
     <div id="contacts" class="main">
         <h1>Contact</h1>
-        <form action="{{ path('contact') }}" method="post">
-            {{ form_widget(form) }}
+        <form action="{{ path('contact') }}" method="post" class="form-horizontal">
+            <div class="control-group">
+                {{ form_errors(form.name) }}
+                {{ form_label(form.name, null, { 'label': 'Your name', 'label_attr': {'class': 'control-label'} }) }}
+                <div class="controls">
+                    {{ form_widget(form.name) }}
+                </div>
+            </div>
 
-            <input type="submit" name="submit" value="Submit" />
+            <div class="control-group">
+                {{ form_errors(form.email) }}
+                {{ form_label(form.email, null, { 'label': 'Your e-mail', 'label_attr': {'class': 'control-label'} }) }}
+                <div class="controls">
+                    {{ form_widget(form.email) }}
+                </div>
+            </div>
+
+            <div class="control-group">
+                {{ form_errors(form.message) }}
+                {{ form_label(form.message, null, { 'label': 'Your message', 'label_attr': {'class': 'control-label'} }) }}
+                <div class="controls">
+                    {{ form_widget(form.message) }}
+                </div>
+            </div>
+
+            {{ form_rest(form) }}
+            <input type="submit" name="submit" value="Submit" class="btn" />
         </form>
     </div>
 {% endblock %}

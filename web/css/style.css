@@ -8,11 +8,12 @@ html, body {
     width: 100%;
 }
 header {
-    margin: 0 0 15px;
+    margin: 0 0 15px 15px;
 }
 header #name {
     font-size: 28px;
     font-weight: bold;
+    margin: 0 0 12px 0;
 }
 header a:link, header a:visited {
     color: #1391CC;
@@ -39,7 +40,7 @@ footer {
     text-align: right;
 }
 footer #credits {
-    margin-right: 20px !important;
+    margin-right: 35px !important;
 }
 .center {
     margin:auto;

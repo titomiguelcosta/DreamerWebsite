@@ -2,27 +2,30 @@
 
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * homepage
+ */
 $app->get('/', function () use ($app)
         {
             return $app['twig']->render('home.twig', array(
                     ));
         })->bind('homepage');
 
+/**
+ * contacts
+ */
 $app->match('/contacts', function (Request $request) use ($app)
         {
             $submit = false;
             $data = array(
-                'name' => 'Your name',
-                'email' => 'Your email',
+                'name' => '',
+                'email' => '',
             );
 
             $form = $app['form.factory']->createBuilder('form', $data)
                     ->add('name', 'text')
                     ->add('email', 'text')
-                    ->add('gender', 'choice', array(
-                        'choices' => array(1 => 'male', 2 => 'female'),
-                        'expanded' => true,
-                    ))
+                    ->add('message', 'textarea')
                     ->getForm();
 
             if ('POST' == $request->getMethod())

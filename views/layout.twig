@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>{% block title %}Tito Miguel Costa{% endblock %}</title>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
         <script src="/js/main.js" type="text/javascript"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.6.0/build/cssreset/cssreset-min.css&3.6.0/build/cssgrids/cssgrids-min.css&3.6.0/build/cssfonts/cssfonts-min.css" />
         <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.min.css" />
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
     </head>
     <body>
@@ -34,7 +37,7 @@
 
         {% block footer %}
         <div id="footer">
-            <footer class="center"><div id="credits">página desenvolvida com o Silex</div></footer>
+            <footer class="center"><div id="credits">&copy; Tito Miguel Costa</div></footer>
         </div>
         {% endblock %}
     </body>
