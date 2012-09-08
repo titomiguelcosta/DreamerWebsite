@@ -1,5 +1,5 @@
 {
-    "hash": "ebf83f1456122169db75a3104c1afcb2",
+    "hash": "0fc1dfaffa8711d3b7fb87f787472838",
     "packages": [
         {
             "package": "pimple/pimple",
@@ -24,6 +24,10 @@
             "version": "dev-master",
             "source-reference": "73b18ef69f74d878465dba0836ad96affc6c820c",
             "commit-date": "1346766167"
+        },
+        {
+            "package": "swiftmailer/swiftmailer",
+            "version": "v4.1.8"
         },
         {
             "package": "symfony/config",

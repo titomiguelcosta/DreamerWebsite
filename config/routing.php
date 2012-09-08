@@ -16,6 +16,7 @@ $app->get('/', function () use ($app)
  */
 $app->match('/contacts', function (Request $request) use ($app)
         {
+
             $submit = false;
             $data = array(
                 'name' => '',
@@ -34,6 +35,8 @@ $app->match('/contacts', function (Request $request) use ($app)
 
                 if ($form->isValid())
                 {
+                    $app->register(new Silex\Provider\SwiftmailerServiceProvider());
+                    
                     $data = $form->getData();
                     $submit = true;
 

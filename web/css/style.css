@@ -66,6 +66,8 @@ footer #credits {
     position: absolute;
     bottom: 16px;
     right: 20px;
+    line-height: 30px;
+    height: 30px;
 }
 #home a:hover, #home a:active {
     color: #fff;
