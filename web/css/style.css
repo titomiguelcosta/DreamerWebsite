@@ -1,7 +1,5 @@
 html, body {
-    background-color: #c6c6c6;
     font-family: 'Enriqueta', sans-serif;
-    color: #666;
 }
 #banner {
     height: 15px;
@@ -16,7 +14,6 @@ header #name {
     margin: 0 0 12px 0;
 }
 header a:link, header a:visited {
-    color: #1391CC;
     text-decoration: none;
 }
 header a:hover, header a:active {
@@ -24,12 +21,8 @@ header a:hover, header a:active {
 }
 header #slogan {
     font-size: 16px;
-    color: #777;
     margin-top: 5px;
     font-weight: normal;
-}
-header .tags {
-    /*color: #276A91;*/
 }
 #footer {
     width: 100%;
@@ -58,7 +51,7 @@ footer #credits {
     padding: 0 20px;
     margin: 0 15px 15px 0; /* gutters */
     position: relative;
-/*    border: 5px solid transparent;*/
+    /*    border: 5px solid transparent;*/
     background-image: none;
 }
 #home a:link, #home a:visited {
@@ -74,77 +67,19 @@ footer #credits {
     color: #fff;
 }
 #home .content:hover {
-    color: #fff;
-    -moz-box-shadow: 0 0 5px #888;
-    -webkit-box-shadow: 0 0 5px #888;
-    box-shadow: 0 0 5px #888;
     background-image: url('../images/caixa_bg.png');
     background-repeat: no-repeat;
     background-position: top center;
 }
-/*#home .content.first:hover, #home .content.ninth:hover {
-    border: 5px solid #BD6C54;
-}
-#home .content.second:hover, #home .content.eighth:hover {
-    border: 5px solid #E59167;
-}
-#home .content.third:hover, #home .content.seventh:hover {
-    border: 5px solid #F5CA7F;
-}
-#home .content.fourth:hover, #home .content.sixth:hover {
-    border: 5px solid #DEAC68;
-}
-#home .content.fifth:hover {
-    border: 5px solid #BD6C54;
-}
-*/
 #home .content p {
     font-size: 16px;
     text-align: left;
     padding: 15px 0;
 }
 .main {
-    background-color: #c6c6c6;
     min-height: 230px;
     margin-bottom: 10px;
     padding: 15px;
-    border: 5px solid #C0C0C0;
-}
-.first {
-    background-color: #874A43;
-    color: #874A43;
-}
-.second {
-    background-color: #BD6C54;
-    color: #BD6C54;
-}
-.third {
-    background-color: #DEAC68;
-    color: #DEAC68;
-}
-.fourth {
-    background-color: #F5CA7F;
-    color: #F5CA7F;
-}
-.fifth {
-    background-color: #E59167;
-    color: #E59167;
-}
-.sixth {
-    background-color: #F5CA7F;
-    color: #F5CA7F;
-}
-.seventh {
-    background-color: #DEAC68;
-    color: #DEAC68;
-}
-.eighth {
-    background-color: #BD6C54;
-    color: #BD6C54;
-}
-.ninth {
-    background-color: #874A43;
-    color: #874A43;
 }
 /** Line */
 #line .square {

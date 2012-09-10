@@ -1,0 +1,56 @@
+html, body {
+    background-color: #c6c6c6;
+    color: #666;
+}
+header a:link, header a:visited {
+    color: #1391CC;
+}
+header #slogan {
+    color: #777;
+}
+#home .content:hover {
+    color: #fff;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px #888;
+    box-shadow: 0 0 5px #888;
+}
+.main {
+    background-color: #c6c6c6;
+    border: 5px solid #C0C0C0;
+}
+/*#home .content.first:hover, #home .content.ninth:hover {
+    border: 5px solid #BD6C54;
+}
+#home .content.second:hover, #home .content.eighth:hover {
+    border: 5px solid #E59167;
+}
+#home .content.third:hover, #home .content.seventh:hover {
+    border: 5px solid #F5CA7F;
+}
+#home .content.fourth:hover, #home .content.sixth:hover {
+    border: 5px solid #DEAC68;
+}
+#home .content.fifth:hover {
+    border: 5px solid #BD6C54;
+}
+*/
+.first, .ninth {
+    background-color: #874A43;
+    color: #874A43;
+}
+.second, .eight {
+    background-color: #BD6C54;
+    color: #BD6C54;
+}
+.third, .seventh {
+    background-color: #DEAC68;
+    color: #DEAC68;
+}
+.fourth, .sixth {
+    background-color: #F5CA7F;
+    color: #F5CA7F;
+}
+.fifth {
+    background-color: #E59167;
+    color: #E59167;
+}
