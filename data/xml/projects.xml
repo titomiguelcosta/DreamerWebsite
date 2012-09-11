@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<projects>
+    <project slug="university-of-azores">
+        <name>University of Azores</name>
+        <presentation>Development of a content management system.</presentation>
+        <description>
+            <![CDATA[
+            <p>I love this site.</p><p>And a few more</p>
+            ]]>
+        </description>
+        <url>http://www.uac.pt/</url>
+        <keywords></keywords>
+        <image></image>
+        <date></date>
+        <status>In progress</status>
+    </project>
+    <project slug="casas-acorianas">
+        <name>Casas Açorianas</name>
+        <presentation>Maintainance of the portal Casas Açorianas</presentation>
+        <description>
+            <![CDATA[
+            <p>Have nothing to say about it.</p>
+            <p>Not at all.</p>
+            ]]>
+        </description>
+        <url>http://www.uac.pt/</url>
+        <keywords></keywords>
+        <image></image>
+        <date></date>
+        <status>In progress</status>
+    </project>
+</projects>

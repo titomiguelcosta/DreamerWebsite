@@ -81,3 +81,11 @@ footer #credits {
 #line .square {
     height: 5px;
 }
+h1 {
+    margin-top: 0;
+    font-size: 24px;
+}
+h2 {
+    font-size: 18px;
+    margin-bottom: 0;
+}

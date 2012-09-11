@@ -12,5 +12,10 @@
         "symfony/translation": "2.1.*",
         "symfony/locale": "2.1.*",
         "swiftmailer/swiftmailer": ">=4.1.2,<4.2-dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "TitoMiguelCosta": "lib"
+        }
     }
 }

@@ -1,2 +1,2 @@
 <?php
-    define('PROJECT_ROOT', realpath(__DIR__.'/../'));
+    define('PROJECT_ROOT', realpath(__DIR__.'/..'));

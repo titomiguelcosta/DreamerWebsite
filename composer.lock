@@ -1,5 +1,5 @@
 {
-    "hash": "0fc1dfaffa8711d3b7fb87f787472838",
+    "hash": "60a054634357ba69d3b36a97e1265660",
     "packages": [
         {
             "package": "pimple/pimple",
@@ -10,8 +10,8 @@
         {
             "package": "pimple/pimple",
             "version": "dev-master",
-            "source-reference": "db836b8cfadc0f39dacafa2bf311a1ab603600bb",
-            "commit-date": "1343051648"
+            "source-reference": "b9f27b8dc18c08f00627dec02359b46a24791dc3",
+            "commit-date": "1347278988"
         },
         {
             "package": "silex/silex",
@@ -22,8 +22,8 @@
         {
             "package": "silex/silex",
             "version": "dev-master",
-            "source-reference": "73b18ef69f74d878465dba0836ad96affc6c820c",
-            "commit-date": "1346766167"
+            "source-reference": "a9e34f08ab00c4cc6c97e7ae8fdf7d0fc367e5f5",
+            "commit-date": "1347298149"
         },
         {
             "package": "swiftmailer/swiftmailer",
@@ -31,57 +31,81 @@
         },
         {
             "package": "symfony/config",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.0-RC2",
+            "commit-date": "1345643321"
         },
         {
             "package": "symfony/css-selector",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.0-RC2",
+            "commit-date": "1345643321"
         },
         {
             "package": "symfony/dom-crawler",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.1",
+            "commit-date": "1347274422"
         },
         {
             "package": "symfony/event-dispatcher",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.1",
+            "commit-date": "1347274422"
         },
         {
             "package": "symfony/form",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.1",
+            "commit-date": "1347274422"
         },
         {
             "package": "symfony/http-foundation",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.1",
+            "commit-date": "1346761482"
         },
         {
             "package": "symfony/http-kernel",
             "version": "2.1.x-dev",
-            "source-reference": "ec5cdb100c20537e9d806facd4d121c985658e8b",
-            "commit-date": "1346926323"
+            "source-reference": "584499e64026f41c4be938ed35d8f0a9a9eebd38",
+            "commit-date": "1347354770"
         },
         {
             "package": "symfony/locale",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.0-RC2",
+            "commit-date": "1345643321"
         },
         {
             "package": "symfony/options-resolver",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.0-RC2",
+            "commit-date": "1345643321"
         },
         {
             "package": "symfony/routing",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.1",
+            "commit-date": "1347274422"
         },
         {
             "package": "symfony/translation",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.1",
+            "commit-date": "1347274422"
         },
         {
             "package": "symfony/twig-bridge",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.1",
+            "commit-date": "1347274422"
         },
         {
             "package": "symfony/validator",
-            "version": "v2.1.0"
+            "version": "2.1.x-dev",
+            "source-reference": "v2.1.1",
+            "commit-date": "1347274422"
         },
         {
             "package": "twig/twig",

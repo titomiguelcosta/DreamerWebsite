@@ -1,6 +1,7 @@
 <?php
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * homepage
@@ -11,6 +12,38 @@ $app->get('/', function () use ($app)
                     ));
         })->bind('homepage');
 
+/**
+ * profile
+ */
+$app->get('/profile', function () use ($app)
+        {
+            return $app['twig']->render('profile.twig', array(
+                    ));
+        })->bind('profile');
+
+/** Projects * */
+$app->get('/projects', function () use ($app)
+        {
+            $crawler = new Crawler();
+            $crawler->addXmlContent(file_get_contents(PROJECT_ROOT.'/data/xml/projects.xml'));
+            $projects = $crawler->filterXPath('//project');
+
+            return $app['twig']->render('projects.twig', array(
+                'projects' => $projects
+                    ));
+        })->bind('projects');
+
+/** Project * */
+$app->get('/project/{slug}', function ($slug) use ($app)
+        {
+            $crawler = new Crawler();
+            $crawler->addXmlContent(file_get_contents(PROJECT_ROOT.'/data/xml/projects.xml'));
+
+            return $app['twig']->render('project.twig', array(
+                'project' => $crawler->filterXPath('//project[@slug="'.$slug.'"]')->children(),
+                'projects' => $crawler->filterXPath('//project[not(@slug="'.$slug.'")]')
+                    ));
+        })->bind('project');
 /**
  * contacts
  */
@@ -35,12 +68,8 @@ $app->match('/contacts', function (Request $request) use ($app)
                 {
                     $data = $form->getData();
                     $app->register(new Silex\Provider\SwiftmailerServiceProvider());
-                    $message = \Swift_Message::newInstance()
-                        ->setSubject('Tito Miguel Costa @ Contact')
-                        ->setFrom(array($data['email']))
-                        ->setTo(array('contact@titomiguelcosta.com'))
-                        ->setBody($app['twig']->render('email/contact.twig', array('data' => $data)));
 
+                    $app['mailer']->send(new TitoMiguelCosta\Email\Contact($app, $data));
                     $app['session']->setFlash('name', $data['name']);
 
                     return $app->redirect('/contacts');

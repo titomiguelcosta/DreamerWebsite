@@ -3,7 +3,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 require_once __DIR__.'/../config/settings.php';
 
 $app = new Silex\Application();
-$app['debug'] = false;
+$app['debug'] = true;
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../views',
@@ -19,7 +19,8 @@ $app->register(new Silex\Provider\ValidatorServiceProvider(), array(
 $app->register(new Silex\Provider\TranslationServiceProvider(), array(
     'locale_fallback' => 'en',
 ));
-$app->register(new Silex\Provider\SessionServiceProvider());
+$app->register(new Silex\Provider\SessionServiceProvider(array(
+)));
 
 require_once __DIR__.'/../config/routing.php';
 

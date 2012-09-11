@@ -57,8 +57,9 @@ header #slogan {
 }
 h1 {
     color: #4A3259;
-    margin-top: 0;
-    font-size: 24px;
+}
+h2 {
+    color: #8C6181;
 }
 /*.fourth, .sixth {
     background-color: #D9B19A;
