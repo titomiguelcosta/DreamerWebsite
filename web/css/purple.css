@@ -3,10 +3,13 @@ html, body {
     color: #666;
 }
 header a:link, header a:visited {
-    color: #1391CC;
+    color: #8C6181;
+}
+header a:hover, header a:active {
+    color: #4A3259;
 }
 header #slogan {
-    color: #777;
+    color: #888;
 }
 #home .content:hover {
     color: #fff;
@@ -14,9 +17,15 @@ header #slogan {
     -webkit-box-shadow: 0 0 5px #888;
     box-shadow: 0 0 5px #888;
 }
+#home a:link, #home a:visited {
+    color: #e3e3e3;
+}
+#home a:hover, #home a:active {
+    color: #fff;
+}
 .main {
     background-color: #c6c6c6;
-    border: 5px solid #C0C0C0;
+    border: 7px solid #C0C0C0;
 }
 /*#home .content.first:hover, #home .content.ninth:hover {
     border: 5px solid #BD6C54;
@@ -34,7 +43,7 @@ header #slogan {
     border: 5px solid #BD6C54;
 }
 */
-.first, .ninth, fifth {
+.first, .ninth {
     background-color: #4A3259;
     color: #4A3259;
 }
@@ -45,6 +54,11 @@ header #slogan {
 .third, .seventh, .fifth {
     background-color: #BF8A8A;
     color: #BF8A8A;
+}
+h1 {
+    color: #4A3259;
+    margin-top: 0;
+    font-size: 24px;
 }
 /*.fourth, .sixth {
     background-color: #D9B19A;

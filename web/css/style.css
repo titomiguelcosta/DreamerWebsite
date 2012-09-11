@@ -49,22 +49,18 @@ footer #credits {
     font-size: 30px;
     text-align: right;
     padding: 0 20px;
-    margin: 0 15px 15px 0; /* gutters */
+    margin: 0 7px 7px 0; /* gutters */
     position: relative;
     /*    border: 5px solid transparent;*/
     background-image: none;
 }
 #home a:link, #home a:visited {
-    color: #eee;
     text-decoration: none;
     position: absolute;
     bottom: 16px;
     right: 20px;
     line-height: 30px;
     height: 30px;
-}
-#home a:hover, #home a:active {
-    color: #fff;
 }
 #home .content:hover {
     background-image: url('../images/caixa_bg.png');
@@ -79,7 +75,7 @@ footer #credits {
 .main {
     min-height: 230px;
     margin-bottom: 10px;
-    padding: 15px;
+    padding: 10px 15px 15px;
 }
 /** Line */
 #line .square {
