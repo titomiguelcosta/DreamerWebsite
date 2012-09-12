@@ -8,6 +8,9 @@ html, body {
 header {
     margin: 0 0 15px 15px;
 }
+header img {
+    margin: 0 8px 0 0;
+}
 header #name {
     font-size: 28px;
     font-weight: bold;

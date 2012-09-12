@@ -20,6 +20,10 @@ $app->get('/profile', function () use ($app)
             return $app['twig']->render('profile.twig', array(
                     ));
         })->bind('profile');
+/**
+ * links
+ */
+$app->get('/links', 'TitoMiguelCosta\Controller::links')->bind('links');
 
 /** Projects * */
 $app->get('/projects', function () use ($app)
