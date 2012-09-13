@@ -10,11 +10,12 @@ class Contact extends \Swift_Message
     public function __construct($app, $data)
     {
         $this->message = $app['twig']->render('email/contact.twig', array('data' => $data));
+
+        parent::__construct('Tito Miguel Costa @ Contact', $this->message, 'text/html', 'utf-8');
+
         $this
-            ->setSubject('Tito Miguel Costa @ Contact')
             ->setFrom(array($data['email']))
-            ->setTo(array('contact@titomiguelcosta.com'))
-            ->setBody($this->message);
+            ->setTo(array('contact@titomiguelcosta.com'));
     }
 
     public function generateId()

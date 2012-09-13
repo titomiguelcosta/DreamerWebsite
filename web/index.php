@@ -21,6 +21,12 @@ $app->register(new Silex\Provider\TranslationServiceProvider(), array(
 ));
 $app->register(new Silex\Provider\SessionServiceProvider(array(
 )));
+$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+    'db.options' => array(
+        'driver'   => 'pdo_sqlite',
+        'path'     => __DIR__.'/../data/sql/db.sqlite',
+    ),
+));
 
 require_once __DIR__.'/../config/routing.php';
 

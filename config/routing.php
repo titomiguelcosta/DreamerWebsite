@@ -73,6 +73,8 @@ $app->match('/contacts', function (Request $request) use ($app)
                     $data = $form->getData();
                     $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 
+                    $app['db']->insert('contact', array_merge($data, array('created_at' => time())));
+
                     $app['mailer']->send(new TitoMiguelCosta\Email\Contact($app, $data));
                     $app['session']->setFlash('name', $data['name']);
 
@@ -80,8 +82,7 @@ $app->match('/contacts', function (Request $request) use ($app)
                 }
             }
             return $app['twig']->render('contact.twig', array(
-                        'form' => $form->createView(),
-                        'name' => $name
+                        'form' => $form->createView()
                     ));
         })->bind('contact');
 /**

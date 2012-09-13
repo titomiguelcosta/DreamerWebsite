@@ -1,6 +1,16 @@
 {
-    "hash": "60a054634357ba69d3b36a97e1265660",
+    "hash": "7431ca40f6d8ca6ed3dd4b4fe991d72a",
     "packages": [
+        {
+            "package": "doctrine/common",
+            "version": "2.2.3"
+        },
+        {
+            "package": "doctrine/dbal",
+            "version": "2.2.x-dev",
+            "source-reference": "da4b7b4d965db0c1c1d23333e87ee5ae8994e249",
+            "commit-date": "1344978731"
+        },
         {
             "package": "pimple/pimple",
             "version": "dev-master",
@@ -116,8 +126,8 @@
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "68b8c4619c5bbe82bd345fe56070dec8c356610a",
-            "commit-date": "1347025342"
+            "source-reference": "956a66e6da304ead2aa2632acc01118b360d19d3",
+            "commit-date": "1347542132"
         }
     ],
     "packages-dev": null,
