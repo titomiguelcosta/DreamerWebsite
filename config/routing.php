@@ -71,7 +71,6 @@ $app->match('/contacts', function (Request $request) use ($app)
                 if ($form->isValid())
                 {
                     $data = $form->getData();
-                    $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 
                     $app['db']->insert('contact', array_merge($data, array('created_at' => time())));
 

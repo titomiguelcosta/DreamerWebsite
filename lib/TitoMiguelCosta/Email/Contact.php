@@ -14,8 +14,8 @@ class Contact extends \Swift_Message
         parent::__construct('Tito Miguel Costa @ Contact', $this->message, 'text/html', 'utf-8');
 
         $this
-            ->setFrom(array($data['email']))
-            ->setTo(array('contact@titomiguelcosta.com'));
+            ->setFrom($data['email'])
+            ->setTo('contact@titomiguelcosta.com', 'Tito Miguel Costa');
     }
 
     public function generateId()

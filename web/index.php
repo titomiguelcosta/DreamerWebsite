@@ -27,6 +27,16 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'path'     => __DIR__.'/../data/sql/db.sqlite',
     ),
 ));
+$app->register(new Silex\Provider\SwiftmailerServiceProvider(array(
+    'switfmailer.options' => array(
+        'host' => 'smtp.gmail.com',
+        'port' => 465,
+        'username' => 'titomiguelcosta@gmail.com',
+        'password' => 'mvjwmvbdavxquyiw',
+        'encryption' => 'ssl',
+        'auth_mode' => null
+    )
+)));
 
 require_once __DIR__.'/../config/routing.php';
 
