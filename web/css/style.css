@@ -105,17 +105,20 @@ h2 {
     font-size: 13px;
     display: inline-block;
     padding: 8px 8px 8px 9px;
-    color: #ddd;
+    color: #666;
 }
 #menu li {
-    background-color: #aaa;
+    background-color: #c0c0c0;
 }
 #menu li.active a:link, #menu li.active a:visited {
-    color: #eee !important;
-}
-#menu a:hover, #menu a:active {
     color: #fff !important;
 }
+#menu a:hover, #menu a:active {
+    color: #eee !important;
+}
 dl dt a {
-    font-size: 16px;
+    font-size: 15px;
+}
+a:hover, a:active {
+    text-decoration: none;
 }
