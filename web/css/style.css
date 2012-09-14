@@ -98,13 +98,13 @@ h2 {
 }
 #menu li {
     float: right;
-    padding: 8px 5px;
-    margin: 7px 0 0;
+    padding: 8px 8px 8px 9px;
+    margin: 5px 0 0;
 }
 #menu a:link, #menu a:visited {
     text-transform: none;
     color: #ddd;
-    font-size: 14px;
+    font-size: 13px;
 }
 #menu a:hover, #menu a:active {
     color: #fff;
