@@ -106,6 +106,12 @@ h2 {
     color: #ddd;
     font-size: 13px;
 }
+#menu li.active {
+    background-color: #aaa;
+}
+#menu li.active a:link, #menu li.active a:visited {
+    color: #eee;
+}
 #menu a:hover, #menu a:active {
     color: #fff;
 }

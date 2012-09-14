@@ -57,15 +57,15 @@
                     {% block menu %}
                         <div id="menu" class="yui3-u-3-5">
                             <ul class="inline">
-                                <li class="ninth"><a href="{{ path('contact') }}">Contact</a></li>
-                                <li class="eighth"><a href="{{ path('work') }}">Work</a></li>
-                                <li class="seventh"><a href="{{ path('homepage') }}">Social</a></li>
-                                <li class="sixth"><a href="{{ path('links') }}">Links</a></li>
-                                <li class="fifth"><a href="{{ path('homepage') }}">Blog</a></li>
-                                <li class="fourth"><a href="{{ path('homepage') }}">Studies</a></li>
-                                <li class="third"><a href="{{ path('homepage') }}">Programming</a></li>
-                                <li class="second"><a href="{{ path('projects') }}">Projects</a></li>
-                                <li class="first"><a href="{{ path('profile') }}">Profile</a></li>
+                                <li class="ninth{% if path('contact') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('contact') }}">Contact</a></li>
+                                <li class="eighth{% if path('work') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('work') }}">Work</a></li>
+                                <li class="seventh{% if path('homepage') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('homepage') }}">Social</a></li>
+                                <li class="sixth{% if path('links') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('links') }}">Links</a></li>
+                                <li class="fifth{% if path('homepage') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('homepage') }}">Blog</a></li>
+                                <li class="fourth{% if path('homepage') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('homepage') }}">Studies</a></li>
+                                <li class="third{% if path('homepage') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('homepage') }}">Programming</a></li>
+                                <li class="second{% if path('projects') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('projects') }}">Projects</a></li>
+                                <li class="first{% if path('profile') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('profile') }}">Profile</a></li>
                             </ul>
                         </div>
                     {% endblock %}
