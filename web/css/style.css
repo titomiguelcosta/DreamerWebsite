@@ -98,22 +98,23 @@ h2 {
 }
 #menu li {
     float: right;
-    padding: 8px 8px 8px 9px;
     margin: 5px 0 0;
 }
 #menu a:link, #menu a:visited {
     text-transform: none;
-    color: #ddd;
     font-size: 13px;
+    display: inline-block;
+    padding: 8px 8px 8px 9px;
+    color: #ddd;
 }
-#menu li.active {
+#menu li {
     background-color: #aaa;
 }
 #menu li.active a:link, #menu li.active a:visited {
-    color: #eee;
+    color: #eee !important;
 }
 #menu a:hover, #menu a:active {
-    color: #fff;
+    color: #fff !important;
 }
 dl dt a {
     font-size: 16px;

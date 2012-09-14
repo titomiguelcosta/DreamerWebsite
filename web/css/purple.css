@@ -43,15 +43,15 @@ header #slogan {
     border: 5px solid #BD6C54;
 }
 */
-.first, .ninth {
+.first, .ninth, #menu li.first a:hover, #menu li.first a:active, #menu li.first.active a:link, #menu li.first.active a:visited {
     background-color: #4A3259;
     color: #4A3259;
 }
-.second, .eighth, .fourth, .sixth {
+.second, .eighth, .fourth, .sixth, #menu li.second a:hover, #menu li.second a:active, #menu li.second.active a:link, #menu li.second.active a:visited {
     background-color: #8C6181;
     color: #8C6181;
 }
-.third, .seventh, .fifth {
+.third, .seventh, .fifth, #menu li.third a:hover, #menu li.third a:active, #menu li.third.active a:link, #menu li.third.active a:visited {
     background-color: #BF8A8A;
     color: #BF8A8A;
 }
