@@ -48,10 +48,28 @@
 
         <div id="wrapper">
             <div id="contents" class="center">
-                <header>
-                    <a href="{{ path('homepage') }}"><img src="/images/logo-purple.png" align="left" alt="Tito Miguel Costa" width="70" height="56" /></a>
-                    <div id="name"><a href="{{ path('homepage') }}"><span class="tags">&lt;</span>titomiguelcosta <span class="tags">/&gt;</span></a></div>
-                    <div id="slogan">refactoring ideas</div>
+                <header class="yui3-g">
+                    <div class="yui3-u-2-5">
+                        <a href="{{ path('homepage') }}"><img src="/images/logo-purple.png" align="left" alt="Tito Miguel Costa" width="70" height="56" /></a>
+                        <div id="name"><a href="{{ path('homepage') }}"><span class="tags">&lt;</span>titomiguelcosta <span class="tags">/&gt;</span></a></div>
+                        <div id="slogan">refactoring ideas</div>
+                    </div>
+                    {% block menu %}
+                        <div id="menu" class="yui3-u-3-5">
+                            <ul class="inline">
+                                <li class="ninth"><a href="{{ path('contact') }}">Contact</a></li>
+                                <li class="eighth"><a href="{{ path('work') }}">Work</a></li>
+                                <li class="seventh"><a href="{{ path('homepage') }}">Social</a></li>
+                                <li class="sixth"><a href="{{ path('links') }}">Links</a></li>
+                                <li class="fifth"><a href="{{ path('homepage') }}">Blog</a></li>
+                                <li class="fourth"><a href="{{ path('homepage') }}">Studies</a></li>
+                                <li class="third"><a href="{{ path('homepage') }}">Programming</a></li>
+                                <li class="second"><a href="{{ path('projects') }}">Projects</a></li>
+                                <li class="first"><a href="{{ path('profile') }}">Profile</a></li>
+                            </ul>
+                        </div>
+                    {% endblock %}
+
                 </header>
                 {% block body %}{% endblock %}
             </div>
