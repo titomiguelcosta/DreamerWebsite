@@ -1,5 +1,4 @@
 nbproject
-vendor
 data/cache/*
 data/sql/db.sqlite
 *~
