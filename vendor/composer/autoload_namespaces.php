@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig_' => $vendorDir . '/twig/twig/lib/',
-    'TitoMiguelCosta' => $baseDir . '/lib',
+    'TitoMiguelCosta' => $baseDir . '/src',
     'Symfony\\Component\\Validator' => $vendorDir . '/symfony/validator/',
     'Symfony\\Component\\Translation' => $vendorDir . '/symfony/translation/',
     'Symfony\\Component\\Routing' => $vendorDir . '/symfony/routing/',

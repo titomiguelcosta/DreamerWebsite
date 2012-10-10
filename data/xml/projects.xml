@@ -10,7 +10,7 @@
             ]]>
         </description>
         <url>http://www.uac.pt/</url>
-        <keywords></keywords>
+        <keywords>frontend and backend development, maintainance, migration, services integration, linux server administration</keywords>
         <image></image>
         <date></date>
         <status>In progress</status>
@@ -24,10 +24,85 @@
             <p>Not at all.</p>
             ]]>
         </description>
-        <url>http://www.uac.pt/</url>
-        <keywords></keywords>
+        <url>http://www.casasacorianas.com/</url>
+        <keywords>maintainance and linux server administration</keywords>
         <image></image>
         <date></date>
         <status>In progress</status>
+    </project>
+    <project slug="new-studio-arquitectos">
+        <name>New Studio Arquitectos</name>
+        <presentation>Programatic development of the frontend and </presentation>
+        <description>
+            <![CDATA[
+            <p>Have nothing to say about it.</p>
+            <p>Not at all.</p>
+            ]]>
+        </description>
+        <url>http://www.newstudio.pt/</url>
+        <keywords>frontend and backend development</keywords>
+        <image></image>
+        <date></date>
+        <status>Complete</status>
+    </project>
+    <project slug="moinho-da-bibi">
+        <name>Moinho da Bibi</name>
+        <presentation>Programatic development of the frontend and administration area.</presentation>
+        <description>
+            <![CDATA[
+            <p>Have nothing to say about it.</p>
+            <p>Not at all.</p>
+            ]]>
+        </description>
+        <url>http://www.moinhodabibi.net/</url>
+        <keywords>frontend and backend development, migration</keywords>
+        <image></image>
+        <date></date>
+        <status>Complete</status>
+    </project>
+    <project slug="baratix">
+        <name>Baratix</name>
+        <presentation>Programatic development of the frontend and administration area.</presentation>
+        <description>
+            <![CDATA[
+            <p>Have nothing to say about it.</p>
+            <p>Not at all.</p>
+            ]]>
+        </description>
+        <url>http://www.baratix.com.br/</url>
+        <keywords>frontend and backend development, services integration</keywords>
+        <image></image>
+        <date></date>
+        <status>Complete</status>
+    </project>
+    <project slug="educalia">
+        <name>Educália</name>
+        <presentation>Programatic development of the frontend and administration area.</presentation>
+        <description>
+            <![CDATA[
+            <p>Have nothing to say about it.</p>
+            <p>Not at all.</p>
+            ]]>
+        </description>
+        <url>http://www.educalia.com.br/</url>
+        <keywords></keywords>
+        <image></image>
+        <date></date>
+        <status>Complete</status>
+    </project>
+    <project slug="zona-de-ideias">
+        <name>Zona de Ideias</name>
+        <presentation>Programatic development of the frontend and administration area.</presentation>
+        <description>
+            <![CDATA[
+            <p>Have nothing to say about it.</p>
+            <p>Not at all.</p>
+            ]]>
+        </description>
+        <url>http://www.lmo-zonadeideias.pt/</url>
+        <keywords></keywords>
+        <image></image>
+        <date></date>
+        <status>Complete</status>
     </project>
 </projects>

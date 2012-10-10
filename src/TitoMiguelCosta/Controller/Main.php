@@ -3,7 +3,6 @@
 namespace TitoMiguelCosta\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\DomCrawler\Crawler;
 use Silex\Application;
 
@@ -15,34 +14,39 @@ use Silex\Application;
 class Main
 {
 
-    public function links(Application $app)
+    public function linksAction(Application $app)
     {
-        return new Response($app['twig']->render('links.twig', array()));
+        return $app['twig']->render('links.twig', array());
     }
 
-    public function index(Application $app)
+    public function indexAction(Application $app)
     {
         return $app['twig']->render('home.twig', array());
     }
 
-    public function profile(Application $app)
+    public function profileAction(Application $app)
     {
         return $app['twig']->render('profile.twig', array());
     }
+    public function studiesAction(Application $app)
+    {
+        return $app['twig']->render('studies.twig', array());
+    }
 
-    public function projects(Application $app)
+    public function projectsAction(Application $app)
     {
         $crawler = new Crawler();
         $crawler->addXmlContent(file_get_contents(PROJECT_ROOT . '/data/xml/projects.xml'));
         $projects = $crawler->filterXPath('//project');
+        $in_progress = $crawler->filterXPath('//project[status="In progress"]');
 
         return $app['twig']->render(
             'projects.twig',
-            array('projects' => $projects)
+            array('projects' => $projects, 'in_progress' => $in_progress)
         );
     }
 
-    public function project(Application $app, $slug)
+    public function projectAction(Application $app, $slug)
     {
         $crawler = new Crawler();
         $crawler->addXmlContent(file_get_contents(PROJECT_ROOT . '/data/xml/projects.xml'));
@@ -53,7 +57,7 @@ class Main
                 ));
     }
 
-    public function contact(Application $app, Request $request)
+    public function contactAction(Application $app, Request $request)
     {
         $defaults = array(
             'name' => '',
@@ -79,7 +83,7 @@ class Main
                     'form' => $form->createView()
                 ));
     }
-    public function work(Application $app, Request $request)
+    public function workAction(Application $app, Request $request)
     {
         $form = $app['form.factory']->create(new \TitoMiguelCosta\Form\Work());
 

@@ -1,5 +1,5 @@
 {
-    "hash": "7431ca40f6d8ca6ed3dd4b4fe991d72a",
+    "hash": "aba98622820034d08577740272aeff69",
     "packages": [
         {
             "name": "doctrine/common",
@@ -504,12 +504,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Form",
-                "reference": "b7e7fefbec3c56f95d1022506b728fc883cd2db7"
+                "reference": "6ef4a567d4222e7c0186d41f736160f949756c51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Form/zipball/b7e7fefbec3c56f95d1022506b728fc883cd2db7",
-                "reference": "b7e7fefbec3c56f95d1022506b728fc883cd2db7",
+                "url": "https://github.com/symfony/Form/zipball/6ef4a567d4222e7c0186d41f736160f949756c51",
+                "reference": "6ef4a567d4222e7c0186d41f736160f949756c51",
                 "shasum": ""
             },
             "require": {
@@ -526,7 +526,7 @@
                 "symfony/validator": "2.1.*",
                 "symfony/http-foundation": "2.1.*"
             },
-            "time": "1349363877",
+            "time": "1349868277",
             "type": "library",
             "extra": {
                 "branch-alias": {

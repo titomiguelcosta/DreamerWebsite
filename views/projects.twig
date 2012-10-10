@@ -15,7 +15,12 @@
                 <p></p>
             </div>
             <div class="yui3-u-1-3">
-                <h1>In progress</h1>
+                <h2>In progress</h2>
+                <ul class="unstyled">
+                {% for project in in_progress %}
+                    <li><a href="{{ path('project', {'slug': project.getAttribute('slug')}) }}">{{ project.getElementsByTagName('name').item(0).nodeValue }}</a></li>
+                {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
