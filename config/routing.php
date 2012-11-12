@@ -8,3 +8,4 @@ $app->match('/work', 'TitoMiguelCosta\Controller\Main::workAction')->bind('work'
 $app->get('/projects', 'TitoMiguelCosta\Controller\Main::projectsAction')->bind('projects');
 $app->get('/project/{slug}', 'TitoMiguelCosta\Controller\Main::projectAction')->bind('project');
 $app->match('/contacts', 'TitoMiguelCosta\Controller\Main::contactAction')->bind('contact');
+$app->get('/programming', 'TitoMiguelCosta\Controller\Main::programmingAction')->bind('programming');

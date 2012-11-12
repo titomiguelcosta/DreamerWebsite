@@ -32,6 +32,10 @@ class Main
     {
         return $app['twig']->render('studies.twig', array());
     }
+    public function programmingAction(Application $app)
+    {
+        return $app['twig']->render('programming.twig', array());
+    }
 
     public function projectsAction(Application $app)
     {

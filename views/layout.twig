@@ -58,12 +58,7 @@
                         <div id="menu" class="yui3-u-3-5">
                             <ul class="inline">
                                 <li class="first{% if path('contact') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('contact') }}">Contact</a></li>
-                                <li class="second{% if path('work') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('work') }}">Work</a></li>
-                                <li class="third{% if path('homepage') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('homepage') }}">Social</a></li>
-                                <li class="second{% if path('links') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('links') }}">Links</a></li>
-                                <li class="third{% if path('homepage') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('homepage') }}">Blog</a></li>
-                                <li class="second{% if path('studies') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('studies') }}">Studies</a></li>
-                                <li class="third{% if path('homepage') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('homepage') }}">Programming</a></li>
+                                <li class="third{% if path('programming') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('programming') }}">Programming</a></li>
                                 <li class="second{% if path('projects') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('projects') }}">Projects</a></li>
                                 <li class="first{% if path('profile') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('profile') }}">Profile</a></li>
                             </ul>
