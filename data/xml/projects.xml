@@ -3,16 +3,22 @@
 <projects>
     <project slug="university-of-azores">
         <name>University of Azores</name>
-        <presentation>Development of a content management system.</presentation>
+        <presentation>Responsible for the development and maitainance of the web publication of the University.</presentation>
         <description>
             <![CDATA[
-            <p>I love this site.</p><p>And a few more</p>
+            <p>This is by far the most complex and challenging project but I have been involved.</p>
+            <p>It started back in 2002 with a development of a simple website and ended up with a complex system that supports the entire web publication of the Uiveristy.</p>
+            <p>At the moment, most of development is in Symfony 1.4. A content managmente system was development taking into consideration the necessities of the University.</p>
+            <p>All web servers run Linux and integrate external services through web services calls.</p>
+            <p>A symfony admin theme was realesed open source.</p>
+            <p>A few of the services that are integrated: Google Apps Education, Microsft Active Directory and Oracle Databases.</p>
+            <p>Some of the php applications in use: WordPress, Moodle and Mahara.</p>
             ]]>
         </description>
         <url>http://www.uac.pt/</url>
         <keywords>frontend and backend development, maintainance, migration, services integration, linux server administration</keywords>
         <image></image>
-        <date></date>
+        <date>Since 2002 to nowadays</date>
         <status>In progress</status>
     </project>
     <project slug="casas-acorianas">
