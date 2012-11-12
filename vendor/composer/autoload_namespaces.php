@@ -10,7 +10,7 @@ return array(
     'TitoMiguelCosta' => $baseDir . '/src',
     'Symfony\\Component\\Validator' => $vendorDir . '/symfony/validator/',
     'Symfony\\Component\\Translation' => $vendorDir . '/symfony/translation/',
-    'Symfony\\Component\\Routing' => $vendorDir . '/symfony/routing/',
+    'Symfony\\Component\\Routing\\' => $vendorDir . '/symfony/routing/',
     'Symfony\\Component\\OptionsResolver' => $vendorDir . '/symfony/options-resolver/',
     'Symfony\\Component\\Locale' => $vendorDir . '/symfony/locale/',
     'Symfony\\Component\\HttpKernel' => $vendorDir . '/symfony/http-kernel/',

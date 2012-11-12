@@ -18,7 +18,7 @@
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "2012-08-29 08:04:14",
+            "time": "2012-08-29 01:04:14",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -51,7 +51,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -75,7 +75,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/dbal/zipball/912c2de3a7b702db9568f7da147c5c65a792eb98",
+                "url": "https://github.com/doctrine/dbal/archive/912c2de3a7b702db9568f7da147c5c65a792eb98.zip",
                 "reference": "912c2de3a7b702db9568f7da147c5c65a792eb98",
                 "shasum": ""
             },
@@ -265,7 +265,7 @@
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2012-06-17 20:55:34",
+            "time": "2012-06-17 13:55:34",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -775,44 +775,44 @@
         },
         {
             "name": "symfony/routing",
-            "version": "2.1.x-dev",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/Routing",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing",
-                "reference": "1fa470936dbeb4e59a3fd8fdd72f8922ee43a6ae"
+                "reference": "8fdb2e2a1dcd3b58e187b95a301e2ebe021ea013"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Routing/archive/1fa470936dbeb4e59a3fd8fdd72f8922ee43a6ae.zip",
-                "reference": "1fa470936dbeb4e59a3fd8fdd72f8922ee43a6ae",
+                "url": "https://github.com/symfony/Routing/archive/8fdb2e2a1dcd3b58e187b95a301e2ebe021ea013.zip",
+                "reference": "8fdb2e2a1dcd3b58e187b95a301e2ebe021ea013",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "symfony/config": "2.1.*",
-                "symfony/yaml": "2.1.*",
-                "symfony/http-kernel": "2.1.*",
-                "doctrine/common": ">=2.2,<2.4-dev"
+                "doctrine/common": ">=2.2,<2.4-dev",
+                "symfony/config": "2.2.*",
+                "symfony/yaml": "2.2.*",
+                "symfony/http-kernel": "2.2.*"
             },
             "suggest": {
                 "doctrine/common": ">=2.2,<2.4-dev",
-                "symfony/config": "2.1.*",
-                "symfony/yaml": "2.1.*"
+                "symfony/config": "2.2.*",
+                "symfony/yaml": "2.2.*"
             },
-            "time": "1352368308",
+            "time": "1352722009",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\Routing": ""
+                    "Symfony\\Component\\Routing\\": ""
                 }
             },
             "license": [
