@@ -22,11 +22,10 @@
         <meta property="og:description" content="Tito Miguel Costa, Refactoring Ideas" />
 
         <!-- javascript -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
         <script src="{{ app.request.basePath }}/js/main.js" type="text/javascript"></script>
 
         <!-- stylesheets -->
-        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.6.0/build/cssreset/cssreset-min.css&3.6.0/build/cssgrids/cssgrids-min.css&3.6.0/build/cssfonts/cssfonts-min.css" />
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Enriqueta:400,700" />
         <link rel="stylesheet" type="text/css" href="{{ app.request.basePath }}/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="{{ app.request.basePath }}/css/bootstrap-responsive.min.css" />
@@ -35,28 +34,27 @@
     </head>
     <body>
         {% block banner %}
-        <div id="line" class="yui3-g">
-            <div class="yui3-u-1-5 square first"></div>
-            <div class="yui3-u-1-5 square second"></div>
-            <div class="yui3-u-1-5 square third"></div>
-            <div class="yui3-u-1-5 square fourth"></div>
-            <div class="yui3-u-1-5 square fifth"></div>
+        <div id="line" class="row-fluid">
+            <div class="square first"></div>
+            <div class="square second"></div>
+            <div class="square third"></div>
+            <div class="square fourth"></div>
+            <div class="square fifth"></div>
         </div>
         <div id="banner">
         </div>
         {% endblock %}
-
         <div id="wrapper">
-            <div id="contents" class="center">
-                <header class="yui3-g">
-                    <div class="yui3-u-2-5">
+            <div class="container">
+                <header class="row">
+                    <div class="span8">
                         <a href="{{ path('homepage') }}"><img src="/images/logo-purple.png" align="left" alt="Tito Miguel Costa" width="70" height="56" /></a>
                         <div id="name"><a href="{{ path('homepage') }}"><span class="tags">&lt;</span>titomiguelcosta <span class="tags">/&gt;</span></a></div>
                         <div id="slogan">{% block slogan %}Refactoring Ideas{% endblock %}</div>
                     </div>
                     {% block menu %}
-                        <div id="menu" class="yui3-u-3-5">
-                            <ul class="inline">
+                        <div id="menu" class="pull-right span4">
+                            <ul class="unstyled">
                                 <li class="first{% if path('contact') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('contact') }}">Contact</a></li>
                                 <li class="third{% if path('programming') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('programming') }}">Programming</a></li>
                                 <li class="second{% if path('projects') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('projects') }}">Projects</a></li>
@@ -64,15 +62,13 @@
                             </ul>
                         </div>
                     {% endblock %}
-
                 </header>
                 {% block body %}{% endblock %}
             </div>
         </div>
-
         {% block footer %}
         <div id="footer">
-            <footer class="center"><div id="credits">&copy; Tito Miguel Costa</div></footer>
+            <footer class="container"><div id="credits" class="pull-right">&copy; Tito Miguel Costa</div></footer>
         </div>
         {% endblock %}
     </body>

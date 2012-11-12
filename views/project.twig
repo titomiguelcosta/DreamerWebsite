@@ -1,9 +1,8 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-<div id="profile" class="main">
-    <div class="yui3-g">
-        <div class="yui3-u-2-3">
+    <div id="profile" class="main container">
+        <div class="span8">
             <h1>{{ project.eq(0).text() }}</h1>
             <p><strong>{{ project.eq(1).text() }}</strong></p>
                 {{ project.eq(2).text() | raw }}
@@ -11,7 +10,7 @@
             <p><a href="{{ project.eq(3).text()}}" target="_blank">{{ project.eq(3).text() }}</a></p>
             <small>{{ project.eq(4).text() }}</small>
         </div>
-        <div class="yui3-u-1-3">
+        <div class="span4">
             <h1>Other projects</h1>
             <ul class="unstyled">
                 {% for project in projects %}
@@ -20,5 +19,4 @@
             </ul>
         </div>
     </div>
-</div>
 {% endblock %}

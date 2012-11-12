@@ -2,29 +2,27 @@
 
 {% block menu %}{% endblock %}
 
-{% block slogan %}A pragmatic web developer with Symfony in mind{% endblock %}
-
 {% block body %}
-    <div id="home" class="yui3-g">
-        <div class="yui3-u-1-4">
+    <div id="home" class="row">
+        <div class="span3">
             <div class="content first">
                 <p>Who am i? Get to know me a little better.</p>
                 <a href="{{ path('profile') }}">&lt;Profile /&gt;</a>
             </div>
         </div>
-        <div class="yui3-u-1-4">
+        <div class="span3">
             <div class="content second">
                 <p>Check out some of my projects.</p>
                 <a href="{{ path('projects') }}">&lt;Projects /&gt;</a>
             </div>
         </div>
-        <div class="yui3-u-1-4">
+        <div class="span3">
             <div class="content third">
                 <p>My programming background and mottos.</p>
                 <a href="{{ path('programming') }}">&lt;Code /&gt;</a>
             </div>
         </div>
-        <div class="yui3-u-1-4">
+        <div class="span3">
             <div class="content ninth">
                 <p>Let me know your opinion. Leave me your comments.</p>
                 <a href="{{ path('contact') }}">&lt;Contact /&gt;</a>

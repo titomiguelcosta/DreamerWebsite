@@ -6,7 +6,7 @@ html, body {
     width: 100%;
 }
 header {
-    margin: 0 0 15px 15px;
+    margin: 15px 0 25px;
 }
 header img {
     margin: 0 8px 0 0;
@@ -40,7 +40,6 @@ footer #credits {
 }
 .center {
     margin:auto;
-    width: 960px;
 }
 #wrapper {
     background-color: #ccc;
@@ -51,8 +50,8 @@ footer #credits {
     height: 187px;
     font-size: 30px;
     text-align: right;
-    padding: 0 20px;
-    margin: 0 7px 7px 0; /* gutters */
+    padding: 0 10px;
+    margin: 5px -10px 10px; /* gutters */
     position: relative;
     /*    border: 5px solid transparent;*/
     background-image: none;
@@ -77,12 +76,12 @@ footer #credits {
 }
 .main {
     min-height: 230px;
-    margin-bottom: 10px;
-    padding: 10px 15px 15px;
 }
 /** Line */
 #line .square {
     height: 5px;
+    width: 20%;
+    float: left;
 }
 h1 {
     margin-top: 0;

@@ -26,6 +26,7 @@ header #slogan {
 .main {
     background-color: #c6c6c6;
     border: 7px solid #C0C0C0;
+    padding: 5px 15px;
 }
 /*#home .content.first:hover, #home .content.ninth:hover {
     border: 5px solid #BD6C54;
