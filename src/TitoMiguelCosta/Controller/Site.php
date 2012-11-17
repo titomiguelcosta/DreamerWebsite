@@ -11,30 +11,32 @@ use Silex\Application;
  *
  * @author titomiguelcosta
  */
-class Main
+class Site
 {
 
     public function linksAction(Application $app)
     {
-        return $app['twig']->render('links.twig', array());
+        return $app['twig']->render('site/links.twig', array());
     }
 
     public function indexAction(Application $app)
     {
-        return $app['twig']->render('home.twig', array());
+        return $app['twig']->render('site/home.twig', array());
     }
 
     public function profileAction(Application $app)
     {
-        return $app['twig']->render('profile.twig', array());
+        return $app['twig']->render('site/profile.twig', array());
     }
+
     public function studiesAction(Application $app)
     {
-        return $app['twig']->render('studies.twig', array());
+        return $app['twig']->render('site/studies.twig', array());
     }
+
     public function programmingAction(Application $app)
     {
-        return $app['twig']->render('programming.twig', array());
+        return $app['twig']->render('site/programming.twig', array());
     }
 
     public function projectsAction(Application $app)
@@ -44,10 +46,10 @@ class Main
         $projects = $crawler->filterXPath('//project');
         $in_progress = $crawler->filterXPath('//project[status="In progress"]');
 
-        return $app['twig']->render(
-            'projects.twig',
-            array('projects' => $projects, 'in_progress' => $in_progress)
-        );
+        return $app['twig']->render('site/projects.twig', array(
+                    'projects' => $projects,
+                    'in_progress' => $in_progress
+                ));
     }
 
     public function projectAction(Application $app, $slug)
@@ -55,7 +57,7 @@ class Main
         $crawler = new Crawler();
         $crawler->addXmlContent(file_get_contents(PROJECT_ROOT . '/data/xml/projects.xml'));
 
-        return $app['twig']->render('project.twig', array(
+        return $app['twig']->render('site/project.twig', array(
                     'project' => $crawler->filterXPath('//project[@slug="' . $slug . '"]')->children(),
                     'projects' => $crawler->filterXPath('//project[not(@slug="' . $slug . '")]')
                 ));
@@ -70,10 +72,12 @@ class Main
 
         $form = $app['form.factory']->create(new \TitoMiguelCosta\Form\Contact(), $defaults);
 
-        if ('POST' == $request->getMethod()) {
+        if ('POST' == $request->getMethod())
+        {
             $form->bind($request);
 
-            if ($form->isValid()) {
+            if ($form->isValid())
+            {
                 $data = $form->getData();
                 $app['dispatcher']->dispatch(\TitoMiguelCosta\Event\Contact::SUBMIT, new \TitoMiguelCosta\Event\Contact($app, $data));
 
@@ -83,18 +87,21 @@ class Main
             }
         }
 
-        return $app['twig']->render('contact.twig', array(
+        return $app['twig']->render('site/contact.twig', array(
                     'form' => $form->createView()
                 ));
     }
+
     public function workAction(Application $app, Request $request)
     {
         $form = $app['form.factory']->create(new \TitoMiguelCosta\Form\Work());
 
-        if ('POST' == $request->getMethod()) {
+        if ('POST' == $request->getMethod())
+        {
             $form->bind($request);
 
-            if ($form->isValid()) {
+            if ($form->isValid())
+            {
                 $data = $form->getData();
                 $app['dispatcher']->dispatch(\TitoMiguelCosta\Event\Work::SUBMIT, new \TitoMiguelCosta\Event\Work($app, $data));
 
@@ -104,8 +111,9 @@ class Main
             }
         }
 
-        return $app['twig']->render('work.twig', array(
+        return $app['twig']->render('site/work.twig', array(
                     'form' => $form->createView()
                 ));
     }
+
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<blog>
+    <post slug="university-of-azores">
+        <title>MySQL and phpMyAdmin on Fedora 16</title>
+        <resume>How to setup MySQL and phpMyAdmin on Fedora 16</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <p>For my surprise, after installing MySQL server, there was no service mysqld in /etc/init.d, so i could not start mysql server with #/etc/init.d/mysqld start</p>
+<pre class="prettyprint linenums">
+class Voila {
+    public:
+      // Voila
+      static const string VOILA = "Voila";
+
+      // will not interfere with embedded tags.
+}
+</pre>
+                <p>Installation (mysql 5.5.16)</p>
+                <p>#yum install mysql-server</p>
+                <p>So it seems that now, to start a service with must run the command systemctl</p>
+                <p>#systemctl start mysqld.service</p>
+                <p>In case you want to enable the mysql when you start your computer:</p>
+<pre class="prettyprint linenums language-php">
+&lt;?php
+    echo "Hello World!";
+</pre>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>Since 2002 to nowadays</date>
+        <category>Tutorial</category>
+        <tags>MySQL, Fedora, phpMyAdmin</tags>
+    </post>
+</blog>

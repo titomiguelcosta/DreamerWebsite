@@ -31,9 +31,10 @@ header #slogan {
     width: 100%;
     margin-top: 10px;
     font-size: 12px;
+    padding-bottom: 10px;
 }
 footer {
-    text-align: right;
+    text-align: left;
 }
 footer #credits {
     margin-right: 35px !important;
@@ -97,7 +98,8 @@ h2 {
 }
 #menu li {
     float: right;
-    margin: 5px 0 0;
+    margin: 5px 0 0 2px;
+
 }
 #menu a:link, #menu a:visited {
     text-transform: none;

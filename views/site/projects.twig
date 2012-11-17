@@ -9,7 +9,6 @@
                     {% for project in projects %}
                     <dt><a href="{{ path('project', {'slug': project.getAttribute('slug')}) }}">{{ project.getElementsByTagName('name').item(0).nodeValue }}</a></dt>
                     <dd>{{ project.getElementsByTagName('presentation').item(0).nodeValue }}</dd>
-                    </li>
                     {% endfor %}
                 </dl>
                 <p></p>
