@@ -6,6 +6,17 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Zend\\Version\\' => $vendorDir . '/zendframework/zend-version/',
+    'Zend\\Validator\\' => $vendorDir . '/zendframework/zend-validator/',
+    'Zend\\Uri\\' => $vendorDir . '/zendframework/zend-uri/',
+    'Zend\\Stdlib\\' => $vendorDir . '/zendframework/zend-stdlib/',
+    'Zend\\ServiceManager\\' => $vendorDir . '/zendframework/zend-servicemanager/',
+    'Zend\\Loader\\' => $vendorDir . '/zendframework/zend-loader/',
+    'Zend\\I18n\\' => $vendorDir . '/zendframework/zend-i18n/',
+    'Zend\\Http\\' => $vendorDir . '/zendframework/zend-http/',
+    'Zend\\Filter\\' => $vendorDir . '/zendframework/zend-filter/',
+    'Zend\\Escaper\\' => $vendorDir . '/zendframework/zend-escaper/',
+    'ZendGData' => $vendorDir . '/zendframework/zendgdata/library/',
     'Twig_' => $vendorDir . '/twig/twig/lib/',
     'TitoMiguelCosta' => $baseDir . '/src',
     'Symfony\\Component\\Validator' => $vendorDir . '/symfony/validator/',
