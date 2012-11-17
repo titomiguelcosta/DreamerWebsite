@@ -11,6 +11,7 @@ return array(
     'Zend\\Uri\\' => $vendorDir . '/zendframework/zend-uri/',
     'Zend\\Stdlib\\' => $vendorDir . '/zendframework/zend-stdlib/',
     'Zend\\ServiceManager\\' => $vendorDir . '/zendframework/zend-servicemanager/',
+    'Zend\\Paginator\\' => $vendorDir . '/zendframework/zend-paginator/',
     'Zend\\Loader\\' => $vendorDir . '/zendframework/zend-loader/',
     'Zend\\I18n\\' => $vendorDir . '/zendframework/zend-i18n/',
     'Zend\\Http\\' => $vendorDir . '/zendframework/zend-http/',
