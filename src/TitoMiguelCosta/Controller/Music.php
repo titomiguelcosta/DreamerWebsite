@@ -4,6 +4,7 @@ namespace TitoMiguelCosta\Controller;
 
 use ZendGData\YouTube;
 use ZendGData\AuthSub;
+use ZendGData\Query;
 use Silex\Application;
 
 /**
@@ -20,22 +21,20 @@ class Music
 
         $yt = new YouTube($client, 'Tito Miguel Costa', '3889946677.apps.googleusercontent.com', 'AI39si5q_CDI0h2XJG2xlrIpzMDR-7L9Vx50-6gUEbHKPKnZ_nO9DzL8x8Mll6DOLn9cmBulApMJACKOviOOMpqeU8VsjwgMuQ');
         $yt->setMajorProtocolVersion(2);
-        $videoEntry = $yt->getVideoEntry('the0KZLEacs');
-        echo 'Video: ' . $videoEntry->getVideoTitle() . "\n";
-        echo 'Video ID: ' . $videoEntry->getVideoId() . "\n";
-        echo 'Updated: ' . $videoEntry->getUpdated() . "\n";
-        echo 'Description: ' . $videoEntry->getVideoDescription() . "\n";
-        echo 'Category: ' . $videoEntry->getVideoCategory() . "\n";
-        echo 'Tags: ' . implode(", ", $videoEntry->getVideoTags()) . "\n";
-        echo 'Watch page: ' . $videoEntry->getVideoWatchPageUrl() . "\n";
-        echo 'Flash Player Url: ' . $videoEntry->getFlashPlayerUrl() . "\n";
-        echo 'Duration: ' . $videoEntry->getVideoDuration() . "\n";
-        echo 'View count: ' . $videoEntry->getVideoViewCount() . "\n";
-        echo 'Rating: ' . $videoEntry->getVideoRatingInfo() . "\n";
-        echo 'Geo Location: ' . $videoEntry->getVideoGeoLocation() . "\n";
-        echo 'Recorded on: ' . $videoEntry->getVideoRecorded() . "\n";
 
-        die();
+        $query = new Query('https://gdata.youtube.com/feeds/api/playlists/PL3E4772C48425800C');
+        $query->setMaxResults(5);
+        $query->setStartIndex($page);
+
+        $videos = $yt->getPlaylistVideoFeed($query);
+
+//        foreach ($videos as $videoEntry)
+//        {
+//
+//            echo  '<li>'.$videoEntry->getVideoTitle().': '.$videoEntry->getVideoId().'</li>';
+//                      die(var_dump($videoEntry));
+//        }
+//        die();
 
         return $app['twig']->render(
             'music/list.twig',

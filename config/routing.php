@@ -13,7 +13,7 @@ $app->get('/programming', 'TitoMiguelCosta\Controller\Site::programmingAction')-
 $app->get('/blog', 'TitoMiguelCosta\Controller\Blog::listAction')->bind('blog_list');
 $app->get('/blog/{slug}', 'TitoMiguelCosta\Controller\Blog::postAction')->bind('blog_post');
 
-$app->get('/music/{page}', 'TitoMiguelCosta\Controller\Music::listAction')->bind('music');
+$app->get('/music/{page}', 'TitoMiguelCosta\Controller\Music::listAction')->value('page', '1')->bind('music');
 
 $app->get('/auth', 'TitoMiguelCosta\Controller\Main::authAction')->bind('auth');
 $app->get('/token', 'TitoMiguelCosta\Controller\Main::tokenAction')->bind('token');
