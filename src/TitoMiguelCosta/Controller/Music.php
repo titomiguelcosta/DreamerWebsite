@@ -3,7 +3,7 @@
 namespace TitoMiguelCosta\Controller;
 
 use ZendGData\YouTube;
-use Zend\Http\Client;
+use ZendGData\AuthSub;
 use Silex\Application;
 
 /**
@@ -15,12 +15,8 @@ class Music
 {
     public function listAction(Application $app, $page = 1)
     {
-        $service = \ZendGData\YouTube::AUTH_SERVICE_NAME;
-        $adapter = new \Zend\Http\Client\Adapter\Curl();
-        $httpClient = new \ZendGData\HttpClient();
-        $httpClient->setAdapter($adapter);
-        $client = \ZendGData\AuthSub::getHttpClient();
-
+        $client = AuthSub::getHttpClient('1/EZCzmMPZCLQ-16JG9LjmN1myfavTTrv_ncw0NYJuoh4');
+        $client->setOptions(array('sslverifypeer' => false));
 
         $yt = new YouTube($client, 'Tito Miguel Costa', '3889946677.apps.googleusercontent.com', 'AI39si5q_CDI0h2XJG2xlrIpzMDR-7L9Vx50-6gUEbHKPKnZ_nO9DzL8x8Mll6DOLn9cmBulApMJACKOviOOMpqeU8VsjwgMuQ');
         $yt->setMajorProtocolVersion(2);
