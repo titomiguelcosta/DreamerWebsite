@@ -13,9 +13,9 @@ use ZendGData\AuthSub;
 class Main
 {
 
-    public function authAction(Application $app)
+    public function youtubeAuthAction(Application $app)
     {
-        $next = $app['url_generator']->generate('token', array(), true);
+        $next = $app['url_generator']->generate('youtube_token', array(), true);
         $scope = 'http://gdata.youtube.com';
         $secure = false;
         $session = true;
@@ -23,7 +23,7 @@ class Main
         return $app->redirect(AuthSub::getAuthSubTokenUri($next, $scope, $secure, $session));
     }
 
-    public function tokenAction(Application $app)
+    public function youtubeTokenAction(Application $app)
     {
         if (!isset($_SESSION['sessionToken']) && !isset($_GET['token']))
         {

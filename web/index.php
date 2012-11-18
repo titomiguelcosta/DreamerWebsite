@@ -9,13 +9,12 @@ require_once __DIR__.'/../config/services.php';
 require_once __DIR__.'/../config/routing.php';
 require_once __DIR__.'/../config/events.php';
 
-/* with cache */
-//use Symfony\Component\HttpKernel\HttpCache\HttpCache;
-//use Symfony\Component\HttpKernel\HttpCache\Store;
-//use Symfony\Component\HttpFoundation\Request;
-//$cache = new HttpCache($app, new Store(__DIR__.'/../data/cache'));
-//$request = Request::createFromGlobals();
-//$response = $cache->handle($request);
+use Symfony\Component\HttpKernel\HttpCache\HttpCache;
+use Symfony\Component\HttpKernel\HttpCache\Store;
+use Symfony\Component\HttpFoundation\Request;
 
-/* without cache */
-$app->run();
+$cache = new HttpCache($app, new Store(__DIR__.'/../data/cache'));
+$request = Request::createFromGlobals();
+$response = $cache->handle($request);
+$response->send();
+$cache->terminate($request, $response);

@@ -3,6 +3,7 @@
 namespace TitoMiguelCosta\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\DomCrawler\Crawler;
 use Silex\Application;
 
@@ -13,25 +14,19 @@ use Silex\Application;
  */
 class Site
 {
-
-    public function linksAction(Application $app)
-    {
-        return $app['twig']->render('site/links.twig', array());
-    }
-
     public function indexAction(Application $app)
     {
-        return $app['twig']->render('site/home.twig', array());
+        /* @var $response \Symfony\Component\HttpFoundation\Response */
+        $response = new Response($app['twig']->render('site/home.twig', array()));
+        $response->setPublic();
+        $response->setExpires(new \DateTime('+60 seconds'));
+
+        return $response;
     }
 
     public function profileAction(Application $app)
     {
         return $app['twig']->render('site/profile.twig', array());
-    }
-
-    public function studiesAction(Application $app)
-    {
-        return $app['twig']->render('site/studies.twig', array());
     }
 
     public function programmingAction(Application $app)
@@ -88,30 +83,6 @@ class Site
         }
 
         return $app['twig']->render('site/contact.twig', array(
-                    'form' => $form->createView()
-                ));
-    }
-
-    public function workAction(Application $app, Request $request)
-    {
-        $form = $app['form.factory']->create(new \TitoMiguelCosta\Form\Work());
-
-        if ('POST' == $request->getMethod())
-        {
-            $form->bind($request);
-
-            if ($form->isValid())
-            {
-                $data = $form->getData();
-                $app['dispatcher']->dispatch(\TitoMiguelCosta\Event\Work::SUBMIT, new \TitoMiguelCosta\Event\Work($app, $data));
-
-                $app['session']->setFlash('name', $data['name']);
-
-                return $app->redirect($app['url_generator']->generate('work'));
-            }
-        }
-
-        return $app['twig']->render('site/work.twig', array(
                     'form' => $form->createView()
                 ));
     }
