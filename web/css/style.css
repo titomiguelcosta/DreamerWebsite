@@ -127,3 +127,7 @@ a:hover, a:active {
     border: 2px solid #ddd;
     margin: 5px 0;
 }
+#images #container {
+    text-align: center;
+    margin: 0 auto;
+}

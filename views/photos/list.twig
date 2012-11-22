@@ -23,20 +23,20 @@
     <div id="images" class="main">
         <div class="row-fluid">
             <div class="span12">
-                <h1>Images</h1>
+                <h1>Photos</h1>
 
-                <small>page {{ pages.current }} of {{ pages.pageCount }} in a total of {{ pages.totalItemCount }} images</small>
+                <small>page {{ pages.current }} of {{ pages.pageCount }} in a total of {{ pages.totalItemCount }} photos</small>
 
                 {% if pages.pageCount > 0 %}
                 <div class="paginator">
                     {% if pages.previous is defined %}
-                        <a href="{{ path('images', { 'page': pages.previous }) }}">&lt; Previous</a> |
+                        <a href="{{ path('photos', { 'page': pages.previous }) }}">&lt; Previous</a> |
                     {% endif %}
 
                     <!-- Numbered page links -->
                     {% for page in pages.pagesInRange %}
                         {% if page != pages.current %}
-                        <a href="{{ path('images', { 'page': page }) }}">
+                        <a href="{{ path('photos', { 'page': page }) }}">
                           {{ page }}
                         </a> |
                         {% else %}
@@ -45,18 +45,17 @@
                     {% endfor %}
 
                     {% if pages.next is defined %}
-                        <a href="{{ path('images', { 'page': pages.next }) }}">Next &gt;</a>
+                        <a href="{{ path('photos', { 'page': pages.next }) }}">Next &gt;</a>
                     {% endif %}
                 </div>
                 {% endif %}
 
                 <div id="container">
-                        {% for index, image in images %}
-                            <div class="box">
-                                <img src="{{ image.Small.uri }}" alt="{{ image.title }}"/>
-                            </div>
-                        {% endfor %}
-                    </ul>
+                    {% for index, image in images %}
+                        <div class="box">
+                            <img src="{{ image.Small.uri }}" alt="{{ image.title }}"/>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

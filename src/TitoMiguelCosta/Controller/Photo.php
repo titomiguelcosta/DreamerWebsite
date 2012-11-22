@@ -13,9 +13,9 @@ use Zend\Paginator\Adapter\Null as NullIterator;
  *
  * @author titomiguelcosta
  */
-class Image
+class Photo
 {
-    public function listAction(Application $app, $page = 1, $per_page = 3)
+    public function listAction(Application $app, $page = 1, $per_page = 10)
     {
         $flickr = new Flickr(FLICKR_KEY);
 
@@ -39,7 +39,7 @@ class Image
         $paginator->setItemCountPerPage($per_page);
 
         $response = new Response($app['twig']->render(
-            'images/list.twig',
+            'photos/list.twig',
             array('images' => $images, 'pages' => $paginator->getPages())
         ));
 
