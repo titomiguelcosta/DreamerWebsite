@@ -4,9 +4,9 @@ namespace TitoMiguelCosta\Controller;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Response;
-
-use ZendService\Flickr\Flickr;
-use Zend\Http\Client as HttpClient;
+use TitoMiguelCosta\Flickr\Flickr;
+use Zend\Paginator\Paginator;
+use Zend\Paginator\Adapter\Null as NullIterator;
 
 /**
  * Description of Controller
@@ -15,16 +15,32 @@ use Zend\Http\Client as HttpClient;
  */
 class Image
 {
-    public function listAction(Application $app, $page = 1)
+    public function listAction(Application $app, $page = 1, $per_page = 3)
     {
-        $httpClient = new HttpClient(Flickr::URI_BASE);
-        $flickr = new Flickr(FLICKR_KEY, $httpClient);
+        $flickr = new Flickr(FLICKR_KEY);
 
-        $images = $flickr->tagSearch('php');
+        $images = $flickr->userGallery('titomiguelcosta', '5035846-72157632069326521', array(
+            'per_page' => $per_page,
+            'page' => (int) $page
+        ));
+
+//        $images = $flickr->tagSearch('chicken', array(
+//            'per_page' => $per_page,
+//            'page' => (int) $page
+//        ));
+
+//        $images = $flickr->userSearch('titomiguelcosta', array(
+//            'per_page' => $per_page,
+//            'page' => (int) $page
+//        ));
+
+        $paginator = new Paginator(new NullIterator($images->totalResults()));
+        $paginator->setCurrentPageNumber($page);
+        $paginator->setItemCountPerPage($per_page);
 
         $response = new Response($app['twig']->render(
             'images/list.twig',
-            array('images' => $images)
+            array('images' => $images, 'pages' => $paginator->getPages())
         ));
 
         $response->setPublic();

@@ -108,7 +108,7 @@ class Flickr
 
         // now search for photos
         $request = new HttpRequest;
-        $request->setUri('/services/rest/');
+        $request->setUri('http://api.flickr.com/services/rest/');
         $request->getQuery()->fromArray($options);
         $response = $this->httpClient->send($request);
 
@@ -165,7 +165,7 @@ class Flickr
 
         // now search for photos
         $request = new HttpRequest;
-        $request->setUri('/services/rest/');
+        $request->setUri('http://api.flickr.com/services/rest/');
         $request->getQuery()->fromArray($options);
         $response = $this->httpClient->send($request);
 
@@ -210,7 +210,7 @@ class Flickr
 
         // now search for photos
         $request = new HttpRequest;
-        $request->setUri('/services/rest/');
+        $request->setUri('http://api.flickr.com/services/rest/');
         $request->getQuery()->fromArray($options);
         $response = $this->httpClient->send($request);
 
@@ -249,7 +249,7 @@ class Flickr
         }
 
         $request = new HttpRequest;
-        $request->setUri('/services/rest/');
+        $request->setUri('http://api.flickr.com/services/rest/');
         $request->getQuery()->fromArray($options);
         $response = $this->httpClient->send($request);
 
@@ -287,7 +287,7 @@ class Flickr
         $options = array('api_key' => $this->apiKey, 'method' => $method, 'find_email' => (string)$email);
 
         $request = new HttpRequest;
-        $request->setUri('/services/rest/');
+        $request->setUri('http://api.flickr.com/services/rest/');
         $request->getQuery()->fromArray($options);
         $response = $this->httpClient->send($request);
 
@@ -322,7 +322,7 @@ class Flickr
         $options = array('api_key' => $this->apiKey, 'method' => $method, 'photo_id' => $id);
 
         $request = new HttpRequest;
-        $request->setUri('/services/rest/');
+        $request->setUri('http://api.flickr.com/services/rest/');
         $request->getQuery()->fromArray($options);
         $response = $this->httpClient->send($request);
 

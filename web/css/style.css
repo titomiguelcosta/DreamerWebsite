@@ -123,3 +123,7 @@ dl dt a {
 a:hover, a:active {
     text-decoration: none;
 }
+#images .box img {
+    border: 2px solid #ddd;
+    margin: 5px 0;
+}

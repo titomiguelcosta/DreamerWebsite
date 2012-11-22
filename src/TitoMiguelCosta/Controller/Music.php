@@ -36,7 +36,6 @@ class Music
         $paginator->setCurrentPageNumber($page);
         $paginator->setItemCountPerPage($query->getMaxResults());
 
-
         $response = new Response($app['twig']->render(
             'music/list.twig',
             array('videos' => $videos, 'pages' => $paginator->getPages())
