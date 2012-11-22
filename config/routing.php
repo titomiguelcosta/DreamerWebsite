@@ -12,5 +12,7 @@ $app->get('/blog/{slug}', 'TitoMiguelCosta\Controller\Blog::postAction')->bind('
 
 $app->get('/music/{page}', 'TitoMiguelCosta\Controller\Music::listAction')->value('page', '1')->bind('music');
 
+$app->get('/images/{page}', 'TitoMiguelCosta\Controller\Image::listAction')->value('page', '1')->bind('images');
+
 $app->get('/youtube/auth', 'TitoMiguelCosta\Controller\Main::youtubeAuthAction')->bind('youtube_auth');
 $app->get('/youtube/token', 'TitoMiguelCosta\Controller\Main::youtubeTokenAction')->bind('youtube_token');

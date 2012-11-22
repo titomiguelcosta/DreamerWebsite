@@ -17,6 +17,7 @@ return array(
     'Zend\\Http\\' => $vendorDir . '/zendframework/zend-http/',
     'Zend\\Filter\\' => $vendorDir . '/zendframework/zend-filter/',
     'Zend\\Escaper\\' => $vendorDir . '/zendframework/zend-escaper/',
+    'ZendService' => $vendorDir . '/zendframework/zendservice-flickr/library/',
     'ZendGData' => $vendorDir . '/zendframework/zendgdata/library/',
     'Twig_' => $vendorDir . '/twig/twig/lib/',
     'TitoMiguelCosta' => $baseDir . '/src',

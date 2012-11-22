@@ -1,5 +1,5 @@
 {
-    "hash": "e6649584e815c625cbe0c50de2ec6c8f",
+    "hash": "95fbd6583329968f1a64db3de5011b90",
     "packages": [
         {
             "name": "doctrine/common",
@@ -83,7 +83,7 @@
                 "php": ">=5.3.2",
                 "doctrine/common": ">=2.2.0,<=2.2.99"
             },
-            "time": "1349518977",
+            "time": "2012-10-06 10:22:57",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -140,7 +140,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "1352622754",
+            "time": "2012-11-11 08:32:34",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -215,7 +215,7 @@
                 "symfony/css-selector": ">=2.1,<2.3-dev",
                 "symfony/dom-crawler": ">=2.1,<2.3-dev"
             },
-            "time": "1352821595",
+            "time": "2012-11-13 15:46:35",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -315,7 +315,7 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1352368308",
+            "time": "2012-11-08 09:51:48",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -362,7 +362,7 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1352368308",
+            "time": "2012-11-08 09:51:48",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -415,7 +415,7 @@
             "suggest": {
                 "symfony/css-selector": "2.1.*"
             },
-            "time": "1352368308",
+            "time": "2012-11-08 09:51:48",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -469,7 +469,7 @@
                 "symfony/dependency-injection": "2.1.*",
                 "symfony/http-kernel": "2.1.*"
             },
-            "time": "1352368308",
+            "time": "2012-11-08 09:51:48",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -527,7 +527,7 @@
                 "symfony/validator": "2.1.*",
                 "symfony/http-foundation": "2.1.*"
             },
-            "time": "1352535315",
+            "time": "2012-11-10 08:15:15",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -563,18 +563,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation",
-                "reference": "2ec414314c836e418301a7a251e2e4d5f6d46924"
+                "reference": "1019af12f75155fdf9b90240d22f7fa5a0e16ceb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/HttpFoundation/archive/2ec414314c836e418301a7a251e2e4d5f6d46924.zip",
-                "reference": "2ec414314c836e418301a7a251e2e4d5f6d46924",
+                "url": "https://github.com/symfony/HttpFoundation/archive/1019af12f75155fdf9b90240d22f7fa5a0e16ceb.zip",
+                "reference": "1019af12f75155fdf9b90240d22f7fa5a0e16ceb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1352824146",
+            "time": "2012-11-16 16:51:07",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -642,7 +642,7 @@
                 "symfony/dependency-injection": "2.1.*",
                 "symfony/finder": "2.1.*"
             },
-            "time": "1352985780",
+            "time": "2012-11-15 13:23:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -692,7 +692,7 @@
             "suggest": {
                 "ext-intl": ">=5.3.3"
             },
-            "time": "1352824146",
+            "time": "2012-11-13 16:29:06",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -739,7 +739,7 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1352368308",
+            "time": "2012-11-08 09:51:48",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -780,12 +780,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing",
-                "reference": "ad25445e4d61c32c012eed3d75e9f0bc7298f064"
+                "reference": "52e7becbf50c3ab1bdc4516b530bcd5c1275ca49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Routing/archive/ad25445e4d61c32c012eed3d75e9f0bc7298f064.zip",
-                "reference": "ad25445e4d61c32c012eed3d75e9f0bc7298f064",
+                "url": "https://github.com/symfony/Routing/archive/52e7becbf50c3ab1bdc4516b530bcd5c1275ca49.zip",
+                "reference": "52e7becbf50c3ab1bdc4516b530bcd5c1275ca49",
                 "shasum": ""
             },
             "require": {
@@ -802,7 +802,7 @@
                 "symfony/config": "2.2.*",
                 "symfony/yaml": "2.2.*"
             },
-            "time": "1353004236",
+            "time": "2012-11-19 14:19:02",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -838,12 +838,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Translation",
-                "reference": "0e32a19712ab341e87754042614917ee95a4fea3"
+                "reference": "806431a802d237e15fe38dca0b0460d512854652"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Translation/archive/0e32a19712ab341e87754042614917ee95a4fea3.zip",
-                "reference": "0e32a19712ab341e87754042614917ee95a4fea3",
+                "url": "https://github.com/symfony/Translation/archive/806431a802d237e15fe38dca0b0460d512854652.zip",
+                "reference": "806431a802d237e15fe38dca0b0460d512854652",
                 "shasum": ""
             },
             "require": {
@@ -857,7 +857,7 @@
                 "symfony/config": "2.1.*",
                 "symfony/yaml": "2.1.*"
             },
-            "time": "1352368308",
+            "time": "2012-11-21 15:37:42",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -921,7 +921,7 @@
                 "symfony/yaml": "2.1.*",
                 "symfony/security": "2.1.*"
             },
-            "time": "1352368308",
+            "time": "2012-11-08 09:51:48",
             "type": "symfony-bridge",
             "extra": {
                 "branch-alias": {
@@ -978,7 +978,7 @@
                 "symfony/http-foundation": "2.1.*",
                 "symfony/yaml": "2.1.*"
             },
-            "time": "1352824146",
+            "time": "2012-11-13 16:29:06",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1013,18 +1013,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "11368e7e08bc1c9626317fe28e3fdd1855e17198"
+                "reference": "9b75e2c7ae51b66fd4bb2ffbf1d2f28a8604e8f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/archive/11368e7e08bc1c9626317fe28e3fdd1855e17198.zip",
-                "reference": "11368e7e08bc1c9626317fe28e3fdd1855e17198",
+                "url": "https://github.com/fabpot/Twig/archive/9b75e2c7ae51b66fd4bb2ffbf1d2f28a8604e8f6.zip",
+                "reference": "9b75e2c7ae51b66fd4bb2ffbf1d2f28a8604e8f6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1353099404",
+            "time": "2012-11-19 07:06:38",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1058,11 +1058,11 @@
         },
         {
             "name": "zendframework/zend-escaper",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/Escaper",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_Escaper-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Escaper-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1094,11 +1094,11 @@
         },
         {
             "name": "zendframework/zend-filter",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/Filter",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_Filter-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Filter-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1138,11 +1138,11 @@
         },
         {
             "name": "zendframework/zend-http",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/Http",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_Http-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Http-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1177,11 +1177,11 @@
         },
         {
             "name": "zendframework/zend-i18n",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/I18n",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_I18n-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_I18n-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1216,11 +1216,11 @@
         },
         {
             "name": "zendframework/zend-loader",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/Loader",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_Loader-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Loader-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1255,11 +1255,11 @@
         },
         {
             "name": "zendframework/zend-paginator",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/Paginator",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_Paginator-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Paginator-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1291,11 +1291,11 @@
         },
         {
             "name": "zendframework/zend-servicemanager",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/ServiceManager",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_ServiceManager-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_ServiceManager-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1330,11 +1330,11 @@
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/Stdlib",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_Stdlib-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Stdlib-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1369,11 +1369,11 @@
         },
         {
             "name": "zendframework/zend-uri",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/Uri",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_Uri-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Uri-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1407,11 +1407,11 @@
         },
         {
             "name": "zendframework/zend-validator",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/Validator",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_Validator-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Validator-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1453,11 +1453,11 @@
         },
         {
             "name": "zendframework/zend-version",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "target-dir": "Zend/Version",
             "dist": {
                 "type": "zip",
-                "url": "http://packages.zendframework.com/composer/Zend_Version-2.0.3.zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Version-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1510,7 +1510,7 @@
             "require-dev": {
                 "zendframework/zend-i18n": ">=2.0.0"
             },
-            "time": "1349187431",
+            "time": "2012-10-02 14:17:11",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1532,6 +1532,49 @@
                 "zf2",
                 "gdata"
             ]
+        },
+        {
+            "name": "zendframework/zendservice-flickr",
+            "version": "2.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://packages.zendframework.com/composer/ZendService_Flickr-2.0.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-http": ">=2.0.0",
+                "zendframework/zend-uri": ">=2.0.0",
+                "zendframework/zend-version": ">=2.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "ZendService": "library/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "OOP wrapper for the Flickr web service",
+            "homepage": "http://packages.zendframework.com/",
+            "keywords": [
+                "zf2",
+                "flickr"
+            ],
+            "support": {
+                "email": "fw-general-subscribe@lists.zend.com",
+                "irc": "irc://irc.freenode.net/zftalk",
+                "issues": "https://github.com/zendframework/zf2/issues",
+                "source": "https://github.com/zendframework/zf2"
+            }
         }
     ],
     "packages-dev": null,
