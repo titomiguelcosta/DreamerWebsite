@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <projects>
-    <project slug="university-of-azores">
-        <name>University of Azores</name>
-        <presentation>Responsible for the development and maitainance of the web publication of the University.</presentation>
+    <project slug="zorbus">
+        <name>Zorbus</name>
+        <presentation>Zorbus is a content managment system built on top of Symfony2 and integrated with SonataAdmin.</presentation>
         <description>
             <![CDATA[
             <p>This is by far the most complex and challenging project but I have been involved.</p>
@@ -15,98 +15,38 @@
             <p>Some of the php applications in use: WordPress, Moodle and Mahara.</p>
             ]]>
         </description>
-        <url>http://www.uac.pt/</url>
-        <keywords>frontend and backend development, maintainance, migration, services integration, linux server administration</keywords>
+        <url>https://github.com/Zorbus</url>
+        <keywords>Symfony2, cms</keywords>
         <image></image>
         <date>Since 2002 to nowadays</date>
         <status>In progress</status>
     </project>
-    <project slug="casas-acorianas">
-        <name>Casas Açorianas</name>
-        <presentation>Maintainance of the portal Casas Açorianas</presentation>
+    <project slug="symfony-plugin-tmcTwitterBootstrapPlugin">
+        <name>tmcTwitterBootstrapPlugin</name>
+        <presentation>A theme for symfony generator admin</presentation>
         <description>
             <![CDATA[
             <p>Have nothing to say about it.</p>
             <p>Not at all.</p>
             ]]>
         </description>
-        <url>http://www.casasacorianas.com/</url>
-        <keywords>maintainance and linux server administration</keywords>
+        <url>https://github.com/titomiguelcosta/tmcTwitterBootstrapPlugin</url>
+        <keywords>symfony, plugin, theme</keywords>
         <image></image>
-        <date></date>
-        <status>In progress</status>
+        <date>End of 2011</date>
+        <status>Mantainance</status>
     </project>
-    <project slug="new-studio-arquitectos">
-        <name>New Studio Arquitectos</name>
-        <presentation>Programatic development of the frontend and </presentation>
+    <project slug="symfony-plugin-tmcI18nPlugin">
+        <name>tmcI18nPlugin</name>
+        <presentation>A symfony plugin that adds support for a database backend for translation replacing xliff files</presentation>
         <description>
             <![CDATA[
             <p>Have nothing to say about it.</p>
             <p>Not at all.</p>
             ]]>
         </description>
-        <url>http://www.newstudio.pt/</url>
-        <keywords>frontend and backend development</keywords>
-        <image></image>
-        <date></date>
-        <status>Complete</status>
-    </project>
-    <project slug="moinho-da-bibi">
-        <name>Moinho da Bibi</name>
-        <presentation>Programatic development of the frontend and administration area.</presentation>
-        <description>
-            <![CDATA[
-            <p>Have nothing to say about it.</p>
-            <p>Not at all.</p>
-            ]]>
-        </description>
-        <url>http://www.moinhodabibi.net/</url>
-        <keywords>frontend and backend development, migration</keywords>
-        <image></image>
-        <date></date>
-        <status>Complete</status>
-    </project>
-    <project slug="baratix">
-        <name>Baratix</name>
-        <presentation>Programatic development of the frontend and administration area.</presentation>
-        <description>
-            <![CDATA[
-            <p>Have nothing to say about it.</p>
-            <p>Not at all.</p>
-            ]]>
-        </description>
-        <url>http://www.baratix.com.br/</url>
-        <keywords>frontend and backend development, services integration</keywords>
-        <image></image>
-        <date></date>
-        <status>Complete</status>
-    </project>
-    <project slug="educalia">
-        <name>Educália</name>
-        <presentation>Programatic development of the frontend and administration area.</presentation>
-        <description>
-            <![CDATA[
-            <p>Have nothing to say about it.</p>
-            <p>Not at all.</p>
-            ]]>
-        </description>
-        <url>http://www.educalia.com.br/</url>
-        <keywords></keywords>
-        <image></image>
-        <date></date>
-        <status>Complete</status>
-    </project>
-    <project slug="zona-de-ideias">
-        <name>Zona de Ideias</name>
-        <presentation>Programatic development of the frontend and administration area.</presentation>
-        <description>
-            <![CDATA[
-            <p>Have nothing to say about it.</p>
-            <p>Not at all.</p>
-            ]]>
-        </description>
-        <url>http://www.lmo-zonadeideias.pt/</url>
-        <keywords></keywords>
+        <url>https://github.com/titomiguelcosta/tmcI18nPlugin</url>
+        <keywords>symfony, plugin, i18n</keywords>
         <image></image>
         <date></date>
         <status>Complete</status>
