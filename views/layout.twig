@@ -70,7 +70,7 @@
                         <div id="menu" class="pull-right span6">
                             <ul class="unstyled">
                                 <li class="first{% if path('contact') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('contact') }}">Contact</a></li>
-                                <li class="third{% if path('programming') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('programming') }}">Programming</a></li>
+                                <li class="third{% if path('code') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('code') }}">Code</a></li>
                                 <li class="second{% if path('projects') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('projects') }}">Projects</a></li>
                                 <li class="first{% if path('profile') == app.request.getPathInfo() %} active{% endif %}"><a href="{{ path('profile') }}">Profile</a></li>
                             </ul>

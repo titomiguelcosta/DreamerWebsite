@@ -5,7 +5,7 @@ $app->get('/profile', 'TitoMiguelCosta\Controller\Site::profileAction')->bind('p
 $app->get('/projects', 'TitoMiguelCosta\Controller\Site::projectsAction')->bind('projects');
 $app->get('/project/{slug}', 'TitoMiguelCosta\Controller\Site::projectAction')->bind('project');
 $app->match('/contacts', 'TitoMiguelCosta\Controller\Site::contactAction')->bind('contact');
-$app->get('/programming', 'TitoMiguelCosta\Controller\Site::programmingAction')->bind('programming');
+$app->get('/code', 'TitoMiguelCosta\Controller\Site::codeAction')->bind('code');
 
 $app->get('/blog', 'TitoMiguelCosta\Controller\Blog::listAction')->bind('blog_list');
 $app->get('/blog/{slug}', 'TitoMiguelCosta\Controller\Blog::postAction')->bind('blog_post');
