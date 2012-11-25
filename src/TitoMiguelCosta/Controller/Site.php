@@ -29,9 +29,9 @@ class Site
         return $app['twig']->render('site/profile.twig', array());
     }
 
-    public function programmingAction(Application $app)
+    public function codeAction(Application $app)
     {
-        return $app['twig']->render('site/programming.twig', array());
+        return $app['twig']->render('site/code.twig', array());
     }
 
     public function projectsAction(Application $app)
