@@ -27,7 +27,7 @@ class Blog
     {
         $crawler = new Crawler();
         $crawler->addXmlContent(file_get_contents(PROJECT_ROOT . '/data/xml/blog.xml'));
-        $posts = $crawler->filterXPath("//post[category='".$category."']");
+        $posts = $crawler->filterXPath('//post[category[text()="'.$category.'"]]');
 
         return $app['twig']->render(
             'blog/list.twig',
