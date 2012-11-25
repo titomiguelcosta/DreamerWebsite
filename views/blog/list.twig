@@ -1,15 +1,21 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-    <div id="blog" class="main row-fluid">
-        <div class="span12">
-            <h1>Blog</h1>
-            <dl>
-                {% for post in posts %}
-                <dt><a href="{{ path('blog_post', {'slug': post.getAttribute('slug')}) }}">{{ post.getElementsByTagName('title').item(0).nodeValue }}</a></dt>
-                <dd>{{ post.getElementsByTagName('resume').item(0).nodeValue }}</dd>
-                {% endfor %}
-            </dl>
+    <div id="blog" class="main">
+        <div class="row-fluid">
+            <div class="span12">
+                <h1>Blog</h1>
+                {% if category is defined %}
+                <h2>{{ category | title  }} category</h2>
+                {% endif %}
+
+                <dl>
+                    {% for post in posts %}
+                    <dt><a href="{{ path('blog_post', {'slug': post.getAttribute('slug')}) }}">{{ post.getElementsByTagName('title').item(0).nodeValue }}</a></dt>
+                    <dd>{{ post.getElementsByTagName('resume').item(0).nodeValue }}</dd>
+                    {% endfor %}
+                </dl>
+            </div>
         </div>
     </div>
 {% endblock %}

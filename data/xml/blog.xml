@@ -1,37 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <blog>
-    <post slug="university-of-azores">
+    <post slug="mysql-and-phpmyadmin-on-fedora-16">
         <title>MySQL and phpMyAdmin on Fedora 16</title>
         <resume>How to setup MySQL and phpMyAdmin on Fedora 16</resume>
         <content>
             <![CDATA[
             <div class="post">
-                <p>For my surprise, after installing MySQL server, there was no service mysqld in /etc/init.d, so i could not start mysql server with #/etc/init.d/mysqld start</p>
-<pre class="prettyprint linenums">
-class Voila {
-    public:
-      // Voila
-      static const string VOILA = "Voila";
+                <p>For my surprise, after installing MySQL server, there was no service mysqld in /etc/init.d, so I could not start mysql server with the command /etc/init.d/mysqld start</p>
 
-      // will not interfere with embedded tags.
-}
-</pre>
-                <p>Installation (mysql 5.5.16)</p>
-                <p>#yum install mysql-server</p>
-                <p>So it seems that now, to start a service with must run the command systemctl</p>
-                <p>#systemctl start mysqld.service</p>
+                <h3>Installating MySQL</h3>
+                <div class="prettyprint">
+                    # yum install mysql-server
+                </div>
+
+                <p>So it seems that now, to start a service we must run the command systemctl.</p>
+
+                <div class="prettyprint">
+                    # systemctl start mysqld.service
+                </div>
+
                 <p>In case you want to enable the mysql when you start your computer:</p>
-<pre class="prettyprint linenums language-php">
-&lt;?php
-    echo "Hello World!";
+
+                <div class="prettyprint">
+                    # systemctl enable mysqld.service
+                </div>
+
+                <p>Another thing that hit me by surprise is that phpMyAdmin doesn’t work out of the box, you need to configure some options.</p>
+                <p>Edit the files /etc/httpd/conf.d/phpMyAdmin.conf and /etc/phpMyAdmin/config.inc.php (main one).</p>
+                <p>In my case, I set a random string to the blowfish_secret option, changed auth_type to cookie instead of the default http, and changed to TRUE the option to allow no password (AllowNoPassword).</p>
+                <p>After a restart of the apache server (# systemctl restart httpd.service), I was ready to go.</p>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>11 November, 2012</date>
+        <category>tutorial</category>
+        <tags>MySQL, Fedora, phpMyAdmin</tags>
+    </post>
+    <post slug="avoid-password-prompt-on-the-command-line">
+        <title>Avoid password prompt on the command line</title>
+        <resume>Configure ssh to login automatically on a remote server</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <p>In case you often connect to remote server and get bored of typing the password all the time, there is a solution.</p>
+
+                <p>Create a public key, running the command</p>
+
+                <div class="prettyprint">
+                $ ssh-keygen -t rsa
+                </div>
+
+                <p>A file ~/.ssh/id_rsa.pub will be created with your public key.</p>
+
+                <p><strong>Now, publish the key to the server</strong></p>
+
+                <div class="prettyprint">
+                cat ~/.ssh/id_rsa.pub | ssh USER@DOMAIN.COM "cat >> .ssh/authorized_keys"
+                </div>
+
+                <p>And this will be the last time you will be asked for the password. Test if everything went as expect executing</p>
+
+                <div class="prettyprint">
+                ssh USER@DOMAIN.COM
+                </div>
+
+                <p>You should login immediately, without being asked for the password.</p>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>25 April, 2012</date>
+        <category>tutorial</category>
+        <tags>SSH, Bash</tags>
+    </post>
+    <post slug="google-chrome-fonts-fix">
+        <title>Google Chrome fonts fix</title>
+        <resume>Fix the renderization of fonts on Google Chrome</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <p>Google Chrome version 7.0.517.44 in my Fedora 13 box renders fonts in a funny way even after the instalation of the windows fonts.</p>
+                <p>Fixed the problem creating the file ~/.fonts.conf with the following xml code:</p>
+
+<pre class="prettyprint">
+&lt;match target="font"&gt;
+    &lt;edit name="autohint" mode="assign"&gt;
+        &lt;bool&gt;true&lt;/bool&gt;
+    &lt;/edit&gt;
+    &lt;edit name="hinting" mode="assign"&gt;
+        &lt;bool>true&lt;/bool&gt;
+    &lt;/edit&gt;
+    &lt;edit mode="assign" name="hintstyle"&gt;
+        &lt;const&gt;hintslight&lt;/const&gt;
+    &lt;/edit&gt;
+&lt;/match&gt;
 </pre>
             </div>
             ]]>
         </content>
         <image></image>
-        <date>Since 2002 to nowadays</date>
-        <category>Tutorial</category>
-        <tags>MySQL, Fedora, phpMyAdmin</tags>
+        <date>25 April, 2012</date>
+        <category>fix</category>
+        <tags>Fonts, Google Chrome, Fedora</tags>
     </post>
 </blog>

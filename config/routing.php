@@ -9,6 +9,7 @@ $app->get('/programming', 'TitoMiguelCosta\Controller\Site::programmingAction')-
 
 $app->get('/blog', 'TitoMiguelCosta\Controller\Blog::listAction')->bind('blog_list');
 $app->get('/blog/{slug}', 'TitoMiguelCosta\Controller\Blog::postAction')->bind('blog_post');
+$app->get('/blog/{category}/category', 'TitoMiguelCosta\Controller\Blog::categoryAction')->bind('blog_category');
 
 $app->get('/music/{page}', 'TitoMiguelCosta\Controller\Music::listAction')->value('page', '1')->bind('music');
 

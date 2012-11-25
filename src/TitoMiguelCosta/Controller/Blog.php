@@ -23,6 +23,17 @@ class Blog
             array('posts' => $posts)
         );
     }
+    public function categoryAction(Application $app, $category)
+    {
+        $crawler = new Crawler();
+        $crawler->addXmlContent(file_get_contents(PROJECT_ROOT . '/data/xml/blog.xml'));
+        $posts = $crawler->filterXPath("//post[category='".$category."']");
+
+        return $app['twig']->render(
+            'blog/list.twig',
+            array('posts' => $posts, 'category' => $category)
+        );
+    }
 
     public function postAction(Application $app, $slug)
     {

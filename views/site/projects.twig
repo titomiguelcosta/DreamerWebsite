@@ -1,24 +1,26 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-    <div id="profile" class="row-fluid">
-        <div class="span8">
-            <h1>Projects</h1>
-            <dl>
-                {% for project in projects %}
-                <dt><a href="{{ path('project', {'slug': project.getAttribute('slug')}) }}">{{ project.getElementsByTagName('name').item(0).nodeValue }}</a></dt>
-                <dd>{{ project.getElementsByTagName('presentation').item(0).nodeValue }}</dd>
+    <div id="profile" class="main">
+        <div class="row-fluid">
+            <div class="span8">
+                <h1>Projects</h1>
+                <dl>
+                    {% for project in projects %}
+                    <dt><a href="{{ path('project', {'slug': project.getAttribute('slug')}) }}">{{ project.getElementsByTagName('name').item(0).nodeValue }}</a></dt>
+                    <dd>{{ project.getElementsByTagName('presentation').item(0).nodeValue }}</dd>
+                    {% endfor %}
+                </dl>
+                <p></p>
+            </div>
+            <div class="span4">
+                <h2>In progress</h2>
+                <ul class="unstyled">
+                {% for project in in_progress %}
+                    <li><a href="{{ path('project', {'slug': project.getAttribute('slug')}) }}">{{ project.getElementsByTagName('name').item(0).nodeValue }}</a></li>
                 {% endfor %}
-            </dl>
-            <p></p>
-        </div>
-        <div class="span4">
-            <h2>In progress</h2>
-            <ul class="unstyled">
-            {% for project in in_progress %}
-                <li><a href="{{ path('project', {'slug': project.getAttribute('slug')}) }}">{{ project.getElementsByTagName('name').item(0).nodeValue }}</a></li>
-            {% endfor %}
-            </ul>
+                </ul>
+            </div>
         </div>
     </div>
 {% endblock %}

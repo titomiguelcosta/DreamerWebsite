@@ -1,25 +1,27 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-    <div class="main row-fluid">
-        <div class="span8">
-            <h1>Profile</h1>
-            <p>My name is Tito Miguel Costa and I'm a portuguese certified PHP web developer.</p>
+    <div class="main">
+        <div class="row-fluid">
+            <div class="span8">
+                <h1>Profile</h1>
+                <p>My name is Tito Miguel Costa and I'm a portuguese certified PHP web developer.</p>
 
-            <h2>Studies</h2>
-            <p>Back in 2007, I took my degree in Science and Computer Technology at the <a href="http://www.uac.pt/" target="_blank">University of Azores</a>.</p>
-            <p>In 2011, I completed the first year studies of Master in Multimedia at the <a href="http://www.up.pt/" target="_blank">University of Oporto</a>.</p>
+                <h2>Studies</h2>
+                <p>Back in 2007, I took my degree in Science and Computer Technology at the <a href="http://www.uac.pt/" target="_blank">University of Azores</a>.</p>
+                <p>In 2011, I completed the first year studies of Master in Multimedia at the <a href="http://www.up.pt/" target="_blank">University of Oporto</a>.</p>
 
-            <h2>Background</h2>
-            <p>Since my early days as a programmer, my passion has always been the development of web sites and applications applying the most modern patterns and technolgies using Open Source code.</p>
-            <p>After having a go with several frameworks in the PHP world, <a href="http://symfony.com" target="_blank">Symfony</a> has been my choice for the last couple of years, using <a href="http://framework.zend.com" target="_blank">Zend</a> components when needed.</p>
+                <h2>Background</h2>
+                <p>Since my early days as a programmer, my passion has always been the development of web sites and applications applying the most modern patterns and technolgies using Open Source code.</p>
+                <p>After having a go with several frameworks in the PHP world, <a href="http://symfony.com" target="_blank">Symfony</a> has been my choice for the last couple of years, using <a href="http://framework.zend.com" target="_blank">Zend</a> components when needed.</p>
 
-            <h2>Experience</h2>
-            <p>Have developed small to mid size web applications, take a look at some of my <a href="{{ path('projects') }}">projects</a> and <a href="{{ path('programming') }}">studies</a>.</p>
-        </div>
-        <div class="span4">
-            <h2>Contact</h2>
-            <p>Feel free to <a href="{{ path('contact') }}">contact me</a>, share your project and ideas. Good colaborations are always welcome.</p>
+                <h2>Experience</h2>
+                <p>Have developed small to mid size web applications, take a look at some of my <a href="{{ path('projects') }}">projects</a> and <a href="{{ path('programming') }}">studies</a>.</p>
+            </div>
+            <div class="span4">
+                <h2>Contact</h2>
+                <p>Feel free to <a href="{{ path('contact') }}">contact me</a>, share your project and ideas. Good colaborations are always welcome.</p>
+            </div>
         </div>
     </div>
 {% endblock %}
