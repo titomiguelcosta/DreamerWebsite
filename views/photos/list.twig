@@ -20,43 +20,41 @@
 {% endblock %}
 
 {% block body %}
-    <div id="images" class="main">
-        <div class="row-fluid">
-            <div class="span12">
-                <h1>Photos</h1>
+    <div id="images" class="main row-fluid">
+        <div class="span12">
+            <h1>Photos</h1>
 
-                <small>page {{ pages.current }} of {{ pages.pageCount }} in a total of {{ pages.totalItemCount }} photos</small>
+            <small>page {{ pages.current }} of {{ pages.pageCount }} in a total of {{ pages.totalItemCount }} photos</small>
 
-                {% if pages.pageCount > 0 %}
-                <div class="paginator">
-                    {% if pages.previous is defined %}
-                        <a href="{{ path('photos', { 'page': pages.previous }) }}">&lt; Previous</a> |
-                    {% endif %}
-
-                    <!-- Numbered page links -->
-                    {% for page in pages.pagesInRange %}
-                        {% if page != pages.current %}
-                        <a href="{{ path('photos', { 'page': page }) }}">
-                          {{ page }}
-                        </a> |
-                        {% else %}
-                            {{ page }} |
-                        {% endif %}
-                    {% endfor %}
-
-                    {% if pages.next is defined %}
-                        <a href="{{ path('photos', { 'page': pages.next }) }}">Next &gt;</a>
-                    {% endif %}
-                </div>
+            {% if pages.pageCount > 0 %}
+            <div class="paginator">
+                {% if pages.previous is defined %}
+                    <a href="{{ path('photos', { 'page': pages.previous }) }}">&lt; Previous</a> |
                 {% endif %}
 
-                <div id="container">
-                    {% for index, image in images %}
-                        <div class="box">
-                            <img src="{{ image.Small.uri }}" alt="{{ image.title }}"/>
-                        </div>
-                    {% endfor %}
-                </div>
+                <!-- Numbered page links -->
+                {% for page in pages.pagesInRange %}
+                    {% if page != pages.current %}
+                    <a href="{{ path('photos', { 'page': page }) }}">
+                      {{ page }}
+                    </a> |
+                    {% else %}
+                        {{ page }} |
+                    {% endif %}
+                {% endfor %}
+
+                {% if pages.next is defined %}
+                    <a href="{{ path('photos', { 'page': pages.next }) }}">Next &gt;</a>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            <div id="container">
+                {% for index, image in images %}
+                    <div class="box">
+                        <img src="{{ image.Small.uri }}" alt="{{ image.title }}"/>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
