@@ -1,5 +1,9 @@
 {% extends 'layout.twig' %}
 
+{% block title %}
+    {{ parent() }} | Photos
+{% endblock %}
+
 {% block javascripts %}
     {{ parent() }}
     <script src="{{ app.request.basePath }}/js/jquery.masonry.min.js"></script>
