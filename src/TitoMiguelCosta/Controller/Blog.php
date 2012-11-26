@@ -80,7 +80,7 @@ class Blog
         foreach ($posts as $post)
         {
             $entry = $feed->createEntry();
-            $entry->setTitle('All Your Base Are Belong To Us');
+            $entry->setTitle($post->getElementsByTagName('title')->item(0)->nodeValue);
             $entry->setLink($app['url_generator']->generate('blog_post', array('slug' => $post->getAttribute('slug')), true));
             $entry->addAuthor(array(
                 'name'  => 'Tito Miguel Costa',
