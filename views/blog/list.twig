@@ -15,8 +15,11 @@
 
                 <dl>
                     {% for post in posts %}
-                    <dt><a href="{{ path('blog_post', {'slug': post.getAttribute('slug')}) }}">{{ post.getElementsByTagName('title').item(0).nodeValue }}</a></dt>
-                    <dd>{{ post.getElementsByTagName('resume').item(0).nodeValue }}</dd>
+                        <dt><a href="{{ path('blog_post', {'slug': post.getAttribute('slug')}) }}">{{ post.getElementsByTagName('title').item(0).nodeValue }}</a></dt>
+                        <dd>{{ post.getElementsByTagName('resume').item(0).nodeValue }}</dd>
+                    {% else %}
+                        <dt>No blog posts available</dt>
+                        <dd>Something went wrong</dd>
                     {% endfor %}
                 </dl>
 
