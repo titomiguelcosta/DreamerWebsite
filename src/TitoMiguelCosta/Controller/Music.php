@@ -38,7 +38,7 @@ class Music
 
         $response = new Response($app['twig']->render(
             'music/list.twig',
-            array('videos' => $videos, 'pages' => $paginator->getPages())
+            array('videos' => $videos, 'pages' => $paginator->getPages(), 'route' => 'music')
         ));
 
         $response->setPublic();

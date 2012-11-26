@@ -40,7 +40,7 @@ class Photo
 
         $response = new Response($app['twig']->render(
             'photos/list.twig',
-            array('images' => $images, 'pages' => $paginator->getPages())
+            array('images' => $images, 'pages' => $paginator->getPages(), 'route' => 'photos')
         ));
 
         $response->setPublic();

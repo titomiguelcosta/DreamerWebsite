@@ -1,0 +1,18 @@
+{% if pages.pageCount > 0 %}
+    <div class="pagination">
+        <ul>
+            {% if pages.previous is defined %}
+                <li><a href="{{ path(route, { 'page': pages.previous }) }}">&lt; Previous</a></li>
+            {% endif %}
+
+            <!-- Numbered page links -->
+            {% for page in pages.pagesInRange %}
+                <li><a href="{{ path(route, { 'page': page }) }}"{% if page == pages.current %} class="disabled"{% endif %}>{{ page }}</a></li>
+            {% endfor %}
+
+            {% if pages.next is defined %}
+                <li><a href="{{ path(route, { 'page': pages.next }) }}">Next &gt;</a></li>
+            {% endif %}
+        </ul>
+    </div>
+{% endif %}

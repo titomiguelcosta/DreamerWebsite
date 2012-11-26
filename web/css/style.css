@@ -156,3 +156,17 @@ hr {
     border: 1px solid #ccc;
     margin: 12px 0 0;
 }
+.pagination {
+    margin: 7px 0;
+}
+.pagination ul > li > a.disabled {
+    color: #777;
+}
+.pagination ul > li > a:link, .pagination ul > li > a:visited {
+    background-color: #d0d0d0;
+    border: 1px solid #c0c0c0;
+}
+.pagination ul > li > a:hover,.pagination ul > li > a:active {
+    background-color: #d9d9d9;
+    border: 1px solid #c0c0c0;
+}

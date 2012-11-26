@@ -19,6 +19,9 @@
                     <dd>{{ post.getElementsByTagName('resume').item(0).nodeValue }}</dd>
                     {% endfor %}
                 </dl>
+
+                <hr>
+                {% include 'include/paginator.twig' with {'pages': pages, 'route': route} %}
             </div>
         </div>
     </div>
