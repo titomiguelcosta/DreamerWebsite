@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <blog>
+    <post slug="cache-data-in-symfony2">
+        <title>Cache Data in Symfony2</title>
+        <resume>Use Doctrine library to cache data in Symfony2</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <p>Doctrine provides a Cache Layer. A very good one, indeed. So if you need to cache data use Doctrine/Commons.</p>
+
+                <p>This Cache Layer abstracts the caching functionality and provides already various different backends for your caching data.</p>
+
+                <p>These are already build-in in the master version:</p>
+                <ul>
+                    <li>APC</li>
+                    <li>Array</li>
+                    <li>Filesystem</li>
+                    <li>Memcache</li>
+                    <li>PhpFile</li>
+                    <li>Redis</li>
+                    <li>WinCache</li>
+                    <li>Xcache</li>
+                    <li>ZendData</li>
+                </ul>
+
+                <p>You could even create your own on top of the CacheProvider class and the Cache interface.</p>
+
+                <p>In your Symfony2 project simply register your cache service of choice and your ready to go.</p>
+                <p>In your config.yml or services.yml add:</p>
+
+<pre class="prettyprint" lang="yml">
+cache:
+    class: Doctrine\Common\Cache\PhpFileCache
+    arguments: [%kernel.cache_dir%]
+</pre>
+
+                <p>And in your controller you can call the service and save and load data from the cache.</p>
+
+<pre class="prettyprint">
+$cache = $this->get('cache');
+$cache->setNamespace('mynamespace.cache');
+
+if (false === ($cached_data = $cache->fetch($cache_key)))
+{
+    $cached_data = $SOMEAPI->getData($params);
+    $cache->save($cache_key, $cached_data, 3600);//TTL 1h
+}
+</pre>
+
+                <p>As you can see you can set a namespace for your cache data, so that you can easy use it for different scenarions in the same app.</p>
+                <p>Further you can set a time-to-live (TTL) in seconds as third parameter of the save method.</p>
+
+                <p>So after all symfony2 has a caching mechanism for data, its just a little hidden in the Doctrine/Commons dependency.</p>
+
+                <small><a href="http://nerdpress.org/2012/07/10/caching-data-in-symfony2/" target="_blank">Original source</a></small>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>23 July, 2012</date>
+        <category>tutorial</category>
+        <tags>Symfony2, Doctrine, Cache</tags>
+    </post>
     <post slug="mysql-and-phpmyadmin-on-fedora-16">
         <title>MySQL and phpMyAdmin on Fedora 16</title>
         <resume>How to setup MySQL and phpMyAdmin on Fedora 16</resume>
@@ -101,7 +162,7 @@
             ]]>
         </content>
         <image></image>
-        <date>25 April, 2012</date>
+        <date>22 April, 2012</date>
         <category>fix</category>
         <tags>Fonts, Google Chrome, Fedora</tags>
     </post>

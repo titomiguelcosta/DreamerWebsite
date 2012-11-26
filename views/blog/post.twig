@@ -50,8 +50,10 @@
             <div class="span4">
                 <h1>Other posts</h1>
                 <ul class="unstyled">
-                    {% for post in posts %}
-                        <li><a href="{{ path('blog_post', {'slug': post.getAttribute('slug')}) }}">{{ post.getElementsByTagName('title').item(0).nodeValue }}</a></li>
+                    {% for other in posts %}
+                        {% if other.getAttribute('slug') != slug %}
+                        <li><a href="{{ path('blog_post', {'slug': other.getAttribute('slug')}) }}">{{ other.getElementsByTagName('title').item(0).nodeValue }}</a></li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>

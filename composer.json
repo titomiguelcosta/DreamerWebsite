@@ -21,7 +21,8 @@
         "doctrine/dbal": "2.2.*",
         "zendframework/zendgdata": "2.0.*",
         "zendframework/zend-paginator": "2.0.*",
-        "zendframework/zendservice-flickr": "2.0.*"
+        "zendframework/zendservice-flickr": "2.0.*",
+        "zendframework/zend-feed": "2.0.*"
     },
     "autoload": {
         "psr-0": {

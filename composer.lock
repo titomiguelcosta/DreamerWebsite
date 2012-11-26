@@ -1,5 +1,5 @@
 {
-    "hash": "95fbd6583329968f1a64db3de5011b90",
+    "hash": "1d6fcb2cd95536823256a1b8841145a8",
     "packages": [
         {
             "name": "doctrine/common",
@@ -71,19 +71,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal",
-                "reference": "912c2de3a7b702db9568f7da147c5c65a792eb98"
+                "reference": "7331fdbf662a3c8f541100017e3a1db9e10507fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/dbal/archive/912c2de3a7b702db9568f7da147c5c65a792eb98.zip",
-                "reference": "912c2de3a7b702db9568f7da147c5c65a792eb98",
+                "url": "https://github.com/doctrine/dbal/archive/7331fdbf662a3c8f541100017e3a1db9e10507fe.zip",
+                "reference": "7331fdbf662a3c8f541100017e3a1db9e10507fe",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "doctrine/common": ">=2.2.0,<=2.2.99"
             },
-            "time": "2012-10-06 10:22:57",
+            "time": "2012-11-25 18:06:51",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -175,12 +175,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Silex.git",
-                "reference": "7e5e1f88990c010351093691a7ca01e2e94c2706"
+                "reference": "0829298b374167464842ad2c52e574dc6140dccf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Silex/archive/7e5e1f88990c010351093691a7ca01e2e94c2706.zip",
-                "reference": "7e5e1f88990c010351093691a7ca01e2e94c2706",
+                "url": "https://github.com/fabpot/Silex/archive/0829298b374167464842ad2c52e574dc6140dccf.zip",
+                "reference": "0829298b374167464842ad2c52e574dc6140dccf",
                 "shasum": ""
             },
             "require": {
@@ -215,7 +215,7 @@
                 "symfony/css-selector": ">=2.1,<2.3-dev",
                 "symfony/dom-crawler": ">=2.1,<2.3-dev"
             },
-            "time": "2012-11-13 15:46:35",
+            "time": "2012-11-26 10:32:44",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -505,12 +505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Form",
-                "reference": "47bfc613d6d2033e4992fa4252036c9357a173f2"
+                "reference": "40d10c9c7677c373bd699a7e81db52ccb0933f35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Form/archive/47bfc613d6d2033e4992fa4252036c9357a173f2.zip",
-                "reference": "47bfc613d6d2033e4992fa4252036c9357a173f2",
+                "url": "https://github.com/symfony/Form/archive/40d10c9c7677c373bd699a7e81db52ccb0933f35.zip",
+                "reference": "40d10c9c7677c373bd699a7e81db52ccb0933f35",
                 "shasum": ""
             },
             "require": {
@@ -527,7 +527,7 @@
                 "symfony/validator": "2.1.*",
                 "symfony/http-foundation": "2.1.*"
             },
-            "time": "2012-11-10 08:15:15",
+            "time": "2012-11-25 10:54:09",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -780,12 +780,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing",
-                "reference": "52e7becbf50c3ab1bdc4516b530bcd5c1275ca49"
+                "reference": "1410f46bfb9702b1040c4894b167635bc61552d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Routing/archive/52e7becbf50c3ab1bdc4516b530bcd5c1275ca49.zip",
-                "reference": "52e7becbf50c3ab1bdc4516b530bcd5c1275ca49",
+                "url": "https://github.com/symfony/Routing/archive/1410f46bfb9702b1040c4894b167635bc61552d7.zip",
+                "reference": "1410f46bfb9702b1040c4894b167635bc61552d7",
                 "shasum": ""
             },
             "require": {
@@ -802,7 +802,7 @@
                 "symfony/config": "2.2.*",
                 "symfony/yaml": "2.2.*"
             },
-            "time": "2012-11-19 14:19:02",
+            "time": "2012-11-23 10:39:55",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -957,12 +957,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Validator",
-                "reference": "e5359af4e6594a5faa6395c200d3418e97a9cfbe"
+                "reference": "0bc3fbc466c1cca845f42de99abb41284c7cde85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Validator/archive/e5359af4e6594a5faa6395c200d3418e97a9cfbe.zip",
-                "reference": "e5359af4e6594a5faa6395c200d3418e97a9cfbe",
+                "url": "https://github.com/symfony/Validator/archive/0bc3fbc466c1cca845f42de99abb41284c7cde85.zip",
+                "reference": "0bc3fbc466c1cca845f42de99abb41284c7cde85",
                 "shasum": ""
             },
             "require": {
@@ -978,7 +978,7 @@
                 "symfony/http-foundation": "2.1.*",
                 "symfony/yaml": "2.1.*"
             },
-            "time": "2012-11-13 16:29:06",
+            "time": "2012-11-25 21:04:02",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1013,18 +1013,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "9b75e2c7ae51b66fd4bb2ffbf1d2f28a8604e8f6"
+                "reference": "b58df0e1ae4b664f561bfaeffdb673829daa6b79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/archive/9b75e2c7ae51b66fd4bb2ffbf1d2f28a8604e8f6.zip",
-                "reference": "9b75e2c7ae51b66fd4bb2ffbf1d2f28a8604e8f6",
+                "url": "https://github.com/fabpot/Twig/archive/b58df0e1ae4b664f561bfaeffdb673829daa6b79.zip",
+                "reference": "b58df0e1ae4b664f561bfaeffdb673829daa6b79",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2012-11-19 07:06:38",
+            "time": "2012-11-26 10:25:49",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1084,6 +1084,50 @@
             "keywords": [
                 "zf2",
                 "escaper"
+            ],
+            "support": {
+                "email": "fw-general-subscribe@lists.zend.com",
+                "irc": "irc://irc.freenode.net/zftalk",
+                "issues": "https://github.com/zendframework/zf2/issues",
+                "source": "https://github.com/zendframework/zf2"
+            }
+        },
+        {
+            "name": "zendframework/zend-feed",
+            "version": "2.0.4",
+            "target-dir": "Zend/Feed",
+            "dist": {
+                "type": "zip",
+                "url": "http://packages.zendframework.com/composer/Zend_Feed-2.0.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-escaper": "self.version",
+                "zendframework/zend-stdlib": "self.version",
+                "zendframework/zend-servicemanager": "self.version",
+                "zendframework/zend-uri": "self.version",
+                "zendframework/zend-version": "self.version"
+            },
+            "suggest": {
+                "zendframework/zend-validator": "Zend\\Validator component"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Feed\\": ""
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides functionality for consuming RSS and Atom feeds",
+            "homepage": "http://packages.zendframework.com/",
+            "keywords": [
+                "zf2",
+                "feed"
             ],
             "support": {
                 "email": "fw-general-subscribe@lists.zend.com",

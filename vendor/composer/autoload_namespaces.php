@@ -16,6 +16,7 @@ return array(
     'Zend\\I18n\\' => $vendorDir . '/zendframework/zend-i18n/',
     'Zend\\Http\\' => $vendorDir . '/zendframework/zend-http/',
     'Zend\\Filter\\' => $vendorDir . '/zendframework/zend-filter/',
+    'Zend\\Feed\\' => $vendorDir . '/zendframework/zend-feed/',
     'Zend\\Escaper\\' => $vendorDir . '/zendframework/zend-escaper/',
     'ZendService' => $vendorDir . '/zendframework/zendservice-flickr/library/',
     'ZendGData' => $vendorDir . '/zendframework/zendgdata/library/',
