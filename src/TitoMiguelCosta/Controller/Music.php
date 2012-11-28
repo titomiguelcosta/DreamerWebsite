@@ -24,9 +24,10 @@ class Music
         $yt = new YouTube($client, null, null, 'AI39si5q_CDI0h2XJG2xlrIpzMDR-7L9Vx50-6gUEbHKPKnZ_nO9DzL8x8Mll6DOLn9cmBulApMJACKOviOOMpqeU8VsjwgMuQ');
         $yt->setMajorProtocolVersion(2);
 
+        $max_per_page = 4;
         $query = new Query('https://gdata.youtube.com/feeds/api/playlists/PL3E4772C48425800C');
-        $query->setMaxResults(4);
-        $query->setStartIndex($page);
+        $query->setMaxResults($max_per_page);
+        $query->setStartIndex(($page-1) * $max_per_page + 1);
 
         $videos = $yt->getPlaylistVideoFeed($query);
 
