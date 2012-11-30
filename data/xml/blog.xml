@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <blog>
+    <post slug="integrate-zend2-packages-with-composer">
+        <title>How to integrate Zend2 packages with Composer</title>
+        <resume>Making use of the Zend2 packages</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <p>In case you use <a href="http://getcomposer.org/" target="_blank">composer</a> to manage the dependencies of your PHP project, it will be very easy to integrate Zend2 packages.</p>
+                <p>Zend2 has its own repository, doesn't use <a href="https://packagist.org/" target="_blank">packagist</a>, so you will need to configure it in your composer.json file.</p>
+<pre class="prettyprint lang-json">
+"repositories": [
+    {
+        "type": "composer",
+        "url": "http://packages.zendframework.com/"
+    }
+]
+</pre>
+                <p>After adding the Zend2 repository, you can easily download <a href="http://packages.zendframework.com/">any of the packages</a> available. All you have to do is specifiy it in the require section of composer.json file.</p>
+<pre class="prettyprint lang-json">
+"require": {
+    "zendframework/zendgdata": "2.0.*",
+    "zendframework/zend-paginator": "2.0.*",
+    "zendframework/zendservice-flickr": "2.0.*",
+    "zendframework/zend-feed": "2.0.*"
+}
+</pre>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>20 October, 2012</date>
+        <category>tutorial</category>
+        <tags>Zend2, Composer, Packages</tags>
+    </post>
     <post slug="cache-data-in-symfony2">
         <title>Cache Data in Symfony2</title>
         <resume>Use Doctrine library to cache data in Symfony2</resume>
@@ -8,9 +41,7 @@
             <![CDATA[
             <div class="post">
                 <p>Doctrine provides a Cache Layer. A very good one, indeed. So if you need to cache data use Doctrine/Commons.</p>
-
                 <p>This Cache Layer abstracts the caching functionality and provides already various different backends for your caching data.</p>
-
                 <p>These are already build-in in the master version:</p>
                 <ul>
                     <li>APC</li>
@@ -23,21 +54,16 @@
                     <li>Xcache</li>
                     <li>ZendData</li>
                 </ul>
-
                 <p>You could even create your own on top of the CacheProvider class and the Cache interface.</p>
-
                 <p>In your Symfony2 project simply register your cache service of choice and your ready to go.</p>
                 <p>In your config.yml or services.yml add:</p>
-
-<pre class="prettyprint" lang="yml">
+<pre class="prettyprint lang-yml">
 cache:
     class: Doctrine\Common\Cache\PhpFileCache
     arguments: [%kernel.cache_dir%]
 </pre>
-
                 <p>And in your controller you can call the service and save and load data from the cache.</p>
-
-<pre class="prettyprint">
+<pre class="prettyprint lang-php">
 $cache = $this->get('cache');
 $cache->setNamespace('mynamespace.cache');
 
@@ -47,12 +73,9 @@ if (false === ($cached_data = $cache->fetch($cache_key)))
     $cache->save($cache_key, $cached_data, 3600);//TTL 1h
 }
 </pre>
-
                 <p>As you can see you can set a namespace for your cache data, so that you can easy use it for different scenarions in the same app.</p>
                 <p>Further you can set a time-to-live (TTL) in seconds as third parameter of the save method.</p>
-
                 <p>So after all symfony2 has a caching mechanism for data, its just a little hidden in the Doctrine/Commons dependency.</p>
-
                 <small><a href="http://nerdpress.org/2012/07/10/caching-data-in-symfony2/" target="_blank">Original source</a></small>
             </div>
             ]]>
@@ -69,24 +92,18 @@ if (false === ($cached_data = $cache->fetch($cache_key)))
             <![CDATA[
             <div class="post">
                 <p>For my surprise, after installing MySQL server, there was no service mysqld in /etc/init.d, so I could not start mysql server with the command /etc/init.d/mysqld start</p>
-
                 <h3>Installating MySQL</h3>
                 <div class="prettyprint">
                     # yum install mysql-server
                 </div>
-
                 <p>So it seems that now, to start a service we must run the command systemctl.</p>
-
                 <div class="prettyprint">
                     # systemctl start mysqld.service
                 </div>
-
                 <p>In case you want to enable the mysql when you start your computer:</p>
-
                 <div class="prettyprint">
                     # systemctl enable mysqld.service
                 </div>
-
                 <p>Another thing that hit me by surprise is that phpMyAdmin doesn’t work out of the box, you need to configure some options.</p>
                 <p>Edit the files /etc/httpd/conf.d/phpMyAdmin.conf and /etc/phpMyAdmin/config.inc.php (main one).</p>
                 <p>In my case, I set a random string to the blowfish_secret option, changed auth_type to cookie instead of the default http, and changed to TRUE the option to allow no password (AllowNoPassword).</p>
@@ -106,27 +123,19 @@ if (false === ($cached_data = $cache->fetch($cache_key)))
             <![CDATA[
             <div class="post">
                 <p>In case you often connect to remote server and get bored of typing the password all the time, there is a solution.</p>
-
                 <p>Create a public key, running the command</p>
-
                 <div class="prettyprint">
-                $ ssh-keygen -t rsa
+                    $ ssh-keygen -t rsa
                 </div>
-
                 <p>A file ~/.ssh/id_rsa.pub will be created with your public key.</p>
-
                 <p><strong>Now, publish the key to the server</strong></p>
-
                 <div class="prettyprint">
-                cat ~/.ssh/id_rsa.pub | ssh USER@DOMAIN.COM "cat >> .ssh/authorized_keys"
+                    cat ~/.ssh/id_rsa.pub | ssh USER@DOMAIN.COM "cat >> .ssh/authorized_keys"
                 </div>
-
                 <p>And this will be the last time you will be asked for the password. Test if everything went as expect executing</p>
-
                 <div class="prettyprint">
-                ssh USER@DOMAIN.COM
+                    ssh USER@DOMAIN.COM
                 </div>
-
                 <p>You should login immediately, without being asked for the password.</p>
             </div>
             ]]>
@@ -166,4 +175,119 @@ if (false === ($cached_data = $cache->fetch($cache_key)))
         <category>fix</category>
         <tags>Fonts, Google Chrome, Fedora</tags>
     </post>
+    <post slug="custom-parameters-in-a-symfony2-project">
+        <title>How to set custom parameters in a Symfony2 project</title>
+        <resume>Use the service container to manage config values</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <p>In symfony 1.* we had app.yml, so we would define custom parameters and access them anywhere with the get static method of the sfConfig class. In Symfony2, there is no such thing as app.yml. In case we want to define custom parameters, we create a new file in app/config, for instance, settings.yml or settings.ini, an include it in the config.yml as an external resource (we could use the existing file parameters.ini, but not to mess up, I prefer to use a different file).</p>
+                <p>So, in config.yml (or just in config_dev.yml if you prefer to make it available only in the dev environment)</p>
+<pre class="prettyprint">
+imports:
+    - { resource: settings.yml }
+</pre>
+                <p>In settings.yml define your parameters:</p>
+<pre class="prettyprint">
+parameters:
+    shared_folder: '/home/shared'
+</pre>
+                <p>To access this parameter in a controller:</p>
+<pre class="prettyprint lang-php">
+public function indexAction()
+{
+    $shared_folder = $this->container->getParameter('shared_folder');
+}
+</pre>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>4 March, 2012</date>
+        <category>tutorial</category>
+        <tags>Symfony2, Container, Parameters</tags>
+    </post>
+    <post slug="define-bundle-hierarchy-in-symfony2">
+        <title>How to define a bundle as having a parent</title>
+        <resume>Bundle hierarchy in Symfony2</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <p>As mentioned in the Symfony2 documentation, bundles can be organized hierarchically, this makes it easy to override controllers or templates. Unfortunately, the documentation lacks in showing how this can be achieved.</p>
+                <p>Imagine that you are using the FOSUserBundle, and you create your own bundle named ZorbusUserBundle, to make ZorbusUserBundle a child of FOSUserBundle you need to create a method getParent in the ZorbusUserBundle class (src/Zorbus/UserBundle/ZorbusUserBundle.php) and return a string with the name of FOSUserBundle.</p>
+<pre class="prettyprint lang-css">
+&lt;?php
+namespace Zorbus\UserBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class ZorbusUserBundle extends Bundle
+{
+    public function getParent()
+    {
+        return ‘FOSUserBundle’;
+    }
+}
+</pre>
+                <p>Don’t forget to clear the cache to make it work, even in dev environment. For this moment on, just replicate the structure of the FOSUserBundle in ZorbusUserBundle and it will be the one used by Symfony2, overrinding the parent bundle.</p>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>4 March, 2012</date>
+        <category>tutorial</category>
+        <tags>Symfony2, Doctrine, Cache</tags>
+    </post>
+    <post slug="version-symfony2-project-with-git">
+        <title>How to version a Symfony2 project with git</title>
+        <resume>step by step to use git in a Symfony2 project</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <ol>
+                    <li>at the root of the Symfony2 project create a file named .gitignore, this file will contain entries to be ignored by git</li>
+                    <li>add to the .gitignore the following entries:
+                        <ul class="unstyled prettyprint">
+                            <li>/web/bundles/</li>
+                            <li>/app/bootstrap*</li>
+                            <li>/app/cache/*</li>
+                            <li>/app/logs/*</li>
+                            <li>/vendor/</li>
+                            <li>/app/config/parameters.ini</li>
+                        </ul>
+                    </li>
+                    <li>initialize the git repository:
+<pre class="prettyprint">$ git init</pre>
+                    </li>
+                    <li>add all the project files but the ones in the .gitignore file
+<pre class="prettyprint">$ git add .</pre>
+                    </li>
+                    <li>create an initial commit
+<pre class="prettyprint">$ git commit -m "initial commit"</pre>
+                    </li>
+                    <li>To publish the project to GitHub, follow the <a href="http://help.github.com/linux-set-up-git/" target="_blank">official tutorial</a></li>
+                </ol>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>4 September, 2011</date>
+        <category>tutorial</category>
+        <tags>Symfony2, Git</tags>
+    </post>
+<!--    <post slug="">
+        <title></title>
+        <resume></resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>4 March, 2012</date>
+        <category>tutorial</category>
+        <tags>Symfony2, Doctrine, Cache</tags>
+    </post>-->
 </blog>
