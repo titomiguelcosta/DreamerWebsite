@@ -52,7 +52,6 @@ footer #credits {
     font-size: 30px;
     text-align: right;
     padding: 0 10px;
-    margin: 5px -10px 10px; /* gutters */
     position: relative;
     /*    border: 5px solid transparent;*/
     background-image: none;
@@ -169,4 +168,12 @@ hr {
 .pagination ul > li > a:hover,.pagination ul > li > a:active {
     background-color: #d9d9d9;
     border: 1px solid #c0c0c0;
+}
+.span3 {
+    margin-bottom: 5px;
+}
+@media (min-width: 1000px) {
+    .span3 .content.second, .span3 .content.third, .span3 .content.ninth {
+        margin-left: -20px !important;
+    }
 }
