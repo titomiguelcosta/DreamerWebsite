@@ -173,7 +173,14 @@ hr {
     margin-bottom: 5px;
 }
 @media (min-width: 1000px) {
-    .span3 .content.second, .span3 .content.third, .span3 .content.ninth {
-        margin-left: -20px !important;
+    .span3 .content.first {
+        margin-right: -10px !important;
+    }
+    .span3 .content.second, .span3 .content.third {
+        margin-right: -10px !important;
+        margin-left: -10px !important;
+    }
+    .span3 .content.ninth {
+        margin-left: -10px !important;
     }
 }
