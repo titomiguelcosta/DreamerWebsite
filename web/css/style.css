@@ -6,15 +6,15 @@ html, body {
     width: 100%;
 }
 header {
-    margin: 15px 0 25px;
+    margin: 5px 0 12px;
 }
 header img {
-    margin: 0 8px 0 0;
+    margin: 0 10px;
 }
 header #name {
     font-size: 28px;
     font-weight: bold;
-    margin: 0 0 12px 0;
+    margin: 15px 0 12px 0;
 }
 header a:link, header a:visited {
     text-decoration: none;
