@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <blog>
+<!--    <post slug="">
+        <title></title>
+        <resume></resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>4 March, 2012</date>
+        <category>tutorial</category>
+        <tags>Symfony2, Doctrine, Cache</tags>
+    </post>-->
     <post slug="integrate-zend2-packages-with-composer">
         <title>How to integrate Zend2 packages with Composer</title>
         <resume>Making use of the Zend2 packages</resume>
@@ -30,7 +44,7 @@
             ]]>
         </content>
         <image></image>
-        <date>20 October, 2012</date>
+        <date>26 November, 2012</date>
         <category>tutorial</category>
         <tags>Zend2, Composer, Packages</tags>
     </post>
@@ -81,7 +95,7 @@ if (false === ($cached_data = $cache->fetch($cache_key)))
             ]]>
         </content>
         <image></image>
-        <date>23 July, 2012</date>
+        <date>23 November, 2012</date>
         <category>tutorial</category>
         <tags>Symfony2, Doctrine, Cache</tags>
     </post>
@@ -141,7 +155,7 @@ if (false === ($cached_data = $cache->fetch($cache_key)))
             ]]>
         </content>
         <image></image>
-        <date>25 April, 2012</date>
+        <date>25 June, 2012</date>
         <category>tutorial</category>
         <tags>SSH, Bash</tags>
     </post>
@@ -171,7 +185,7 @@ if (false === ($cached_data = $cache->fetch($cache_key)))
             ]]>
         </content>
         <image></image>
-        <date>22 April, 2012</date>
+        <date>22 May, 2012</date>
         <category>fix</category>
         <tags>Fonts, Google Chrome, Fedora</tags>
     </post>
@@ -203,7 +217,7 @@ public function indexAction()
             ]]>
         </content>
         <image></image>
-        <date>4 March, 2012</date>
+        <date>5 May, 2012</date>
         <category>tutorial</category>
         <tags>Symfony2, Container, Parameters</tags>
     </post>
@@ -234,13 +248,13 @@ class ZorbusUserBundle extends Bundle
             ]]>
         </content>
         <image></image>
-        <date>4 March, 2012</date>
+        <date>22 March, 2012</date>
         <category>tutorial</category>
         <tags>Symfony2, Doctrine, Cache</tags>
     </post>
     <post slug="version-symfony2-project-with-git">
         <title>How to version a Symfony2 project with git</title>
-        <resume>step by step to use git in a Symfony2 project</resume>
+        <resume>Step by step to use git in a Symfony2 project</resume>
         <content>
             <![CDATA[
             <div class="post">
@@ -275,19 +289,74 @@ class ZorbusUserBundle extends Bundle
         <category>tutorial</category>
         <tags>Symfony2, Git</tags>
     </post>
-<!--    <post slug="">
-        <title></title>
-        <resume></resume>
+    <post slug="free-xhtml-css-templates">
+        <title>Free open source xhtml/css templates</title>
+        <resume>Ready to use xhtml/css templates</resume>
         <content>
             <![CDATA[
             <div class="post">
-                
+                <p>A list of websites that offer free open source xhtml/css templates, it will come handy if you are a good designer like me.</p>
+                <ul>
+                    <li><a href="http://www.templatemo.com/" target="_blank">http://www.templatemo.com/</a></li>
+                    <li><a href="http://www.oswd.org/" target="_blank">http://www.oswd.org/</a></li>
+                    <li><a href="http://opensourcetemplates.org/" target="_blank">http://opensourcetemplates.org/</a></li>
+                    <li><a href="http://www.os-templates.com/" target="_blank">http://www.os-templates.com/</a></li>
+                    <li><a href="http://csstemplatesfree.net/" target="_blank">http://csstemplatesfree.net/</a></li>
+                    <li><a href="http://www.oswt.co.uk/" target="_blank">http://www.oswt.co.uk/</a></li>
+                    <li><a href="http://templates.arcsin.se" target="_blank">http://templates.arcsin.se</a></li>
+                    <li><a href="http://csstemplatesfree.net" target="_blank">http://csstemplatesfree.net</a></li>
+                    <li><a href="http://www.getfreewebdesigns.com/free-xhtml-templates/" target="_blank">http://www.getfreewebdesigns.com/free-xhtml-templates/</a></li>
+                    <li><a href="http://www.freecsstemplates.org/" target="_blank">http://www.freecsstemplates.org/</a></li>
+                    <li><a href="http://www.solucija.com/templates/free" target="_blank">http://www.solucija.com/templates/free</a></li>
+                    <li><a href="http://www.styleshout.com/free-templates.php" target="_blank">http://www.styleshout.com/free-templates.php</a></li>
+                    <li><a href="http://www.freelayoutsworld.com/free-layouts/" target="_blank">http://www.freelayoutsworld.com/free-layouts/</a></li>
+                    <li><a href="http://www.zymic.com/free-templates/" target="_blank">http://www.zymic.com/free-templates/</a></li>
+                    <li><a href="http://www.sixshootermedia.com/free-templates/" target="_blank">http://www.sixshootermedia.com/free-templates/</a></li>
+                </ul>
             </div>
             ]]>
         </content>
         <image></image>
-        <date>4 March, 2012</date>
+        <date>22 March, 2011</date>
+        <category>resources</category>
+        <tags>Templates</tags>
+    </post>
+    <post slug="manage-package-xml-file">
+        <title>Manage package.xml for pear packages</title>
+        <resume>Using the pfm command to the rescue</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <p>When creating pear packages, it is a pain to generate the package.xml file if you do it by hand.</p>
+                <p>To the rescue there is a package called <a href="http://pear.php.net/package/PEAR_PackageFileManager_Cli" target="_blank">PackageFileManager_Cli</a> available in the pear repository.</p>
+                <p>At the moment, the package is in alpha and not not maintained anymore, but works as expected. So far, no bugs.</p>
+                <h4>Deployment</h4>
+                <p>As root:</p>
+<pre class="prettyprint">
+$ sudo bash
+# pear config-set preferred_state alpha
+# pear install -a PEAR_PackageFileManager_Cli
+# exit
+</pre>
+                <p>After running the previous commands, a new command called <strong>pfm</strong> will be available, just execute it at the root of your project.</p>
+                <p>Follow the instructions and at the end you will get the package.xml file. An extra step will be needed before generating the final tgz package.</p>
+                <p>Open the file package.xml and replace all the occurences of role=”php” with role=”data", otherwise those files won't be included in the package.</p>
+                <p>With vim, execute</p>
+<pre class="prettyprint">
+:%s/role=”php/role=”data
+:x
+</pre>
+                <p>To generate the tgz file run</p>
+<pre class="prettyprint">
+$ pear package
+</pre>
+                <p>When you need to update the package.xml file, just execute again the pfm command, no need to edit the file by hand unless you add new php files.</p>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>4 March, 2011</date>
         <category>tutorial</category>
         <tags>Symfony2, Doctrine, Cache</tags>
-    </post>-->
+    </post>
 </blog>
