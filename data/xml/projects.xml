@@ -3,31 +3,103 @@
 <projects>
     <project slug="zorbus">
         <name>Zorbus</name>
-        <presentation>Zorbus is a content managment system built on top of Symfony2 and integrated with SonataAdmin.</presentation>
+        <presentation>Zorbus is a content managment system built on top of Symfony2</presentation>
         <description>
             <![CDATA[
-            <p>This is by far the most complex and challenging project but I have been involved.</p>
-            <p>It started back in 2002 with a development of a simple website and ended up with a complex system that supports the entire web publication of the Uiveristy.</p>
-            <p>At the moment, most of development is in Symfony 1.4. A content managmente system was development taking into consideration the necessities of the University.</p>
-            <p>All web servers run Linux and integrate external services through web services calls.</p>
-            <p>A symfony admin theme was realesed open source.</p>
-            <p>A few of the services that are integrated: Google Apps Education, Microsft Active Directory and Oracle Databases.</p>
-            <p>Some of the php applications in use: WordPress, Moodle and Mahara.</p>
+                <p>Zorbus has the goal to create a content managment system on top of Symfony2 framework.</p>
+                <p>Zorbus is made of several bundles, and makes it easy to manage pages on a website through drap and drop.</p>
+                <p>All the bundles are available on <a href="https://github.com/Zorbus" target="_blank">GitHub</a> and <a href="https://packagist.org/search/?q=zorbus">Packagist</a> and can be used independently of Zorbus in any Symfony2 project.</p>
+                <p>At the moment, Zorbus is made of the following bundles in alphabetic order:</p>
+                <dl>
+                    <dt><a href="https://github.com/Zorbus/ZorbusArticleBundle" target="_blank">ZorbusArticleBundle</a></dt>
+                    <dd>An article can be seen like a post in a blog, an easy way to publish categorized and tagged content.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusBannerBundle" target="_blank">ZorbusBannerBundle</a></dt>
+                    <dd>Create banners and slideshows.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusBlockBundle" target="_blank">ZorbusBlockBundle</a></dt>
+                    <dd>In the Zorbus perspective, a page is made up of blocks.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusDocumentBundle" target="_blank">ZorbusDocumentBundle</a></dt>
+                    <dd>A document is a downloaded file that can be linked from any content published on the site.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusGalleryBundle" target="_blank">ZorbusGalleryBundle</a></dt>
+                    <dd>Organize photos into albuns.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusGlossaryBundle" target="_blank">ZorbusGlossaryBundle</a></dt>
+                    <dd>Manage glossaries and their term definitions.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusLinkBundle" target="_blank">ZorbusLinkBundle</a></dt>
+                    <dd>Group links in a hierarchy way.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusMenuBundle" target="_blank">ZorbusMenuBundle</a></dt>
+                    <dd>This bundle allows to create hierarchy menus.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusNewsletterBundle" target="_blank">ZorbusNewsletterBundle</a></dt>
+                    <dd>A bundle to manage newsletters.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusPageBundle" target="_blank">ZorbusPageBundle</a></dt>
+                    <dd>A page is made up of blocks, metadata and url.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusPollBundle" target="_blank">ZorbusPollBundle</a></dt>
+                    <dd>Ask your users their preferences with polls.</dd>
+                    <dt><a href="https://github.com/Zorbus/ZorbusTrafficBundle" target="_blank">ZorbusTrafficBundle</a></dt>
+                    <dd>Monitors the traffic of the website registering inbound and outbund links</dd>
+                </dl>
+                <p>All the bundles have entities (no odm support at the moment) and admin classes integrated with the <a href="http://sonata-project.org/bundles/admin/master/doc/index.html" target="_blank">SonataAdminBundle</a>.</p>
+                <p>You can easily setup Zorbus using composer. Just create a new project using the <a href="https://github.com/Zorbus/ZorbusSymfonyBootstrapBundle" target="_blank">ZorbusBootstrap</a> repository. Follow the five configuration steps and you are ready to go.</p>
+                <p>In case you want to give it a go, test it <a href="http://zorbus.titomiguelcosta.com/admin/dashboard">online</a> using zorbus as username and 1234567 as password.</p>
+                <p>Feel free to improve it and report issues.</p>
             ]]>
         </description>
         <url>https://github.com/Zorbus</url>
         <keywords>Symfony2, cms</keywords>
         <image></image>
-        <date>Since 2002 to nowadays</date>
+        <date>Since mid 2012 to nowadays</date>
         <status>In progress</status>
+    </project>
+    <project slug="titomiguelcosta-my-personal-website">
+        <name>MyPersonalWebsite</name>
+        <presentation>My personal website powered by Silex with some Zend2 packages and Symfony2 components</presentation>
+        <description>
+            <![CDATA[
+            <p>Since my own website is an experimental project, I've decided to release it open source.</p>
+            <h4>Features</h4>
+            <ul>
+                <li>Powered by <a href="http://silex.sensiolabs.org/" target="_blank">Silex</a> with <a href="http://silex.sensiolabs.org/doc/providers/twig.html" target="_blank">Twig</a>, <a href="http://silex.sensiolabs.org/doc/providers/form.html" target="_blank">Form</a> and <a href="http://silex.sensiolabs.org/doc/providers/validator.html" target="_blank">Validator</a> service providers</li>
+                <li>Integration of <a href="https://developers.google.com/youtube/" target="_blank">YouTube's api</a> through <a href="http://packages.zendframework.com/" target="_blank">ZendGData</a> package</li>
+                <li>Integration of <a href="http://www.flickr.com/services/api/" target="_blank">Flickr's api</a> through <a href="http://packages.zendframework.com/" target="_blank">ZendFlickr</a> service</li>
+                <li>Data pagination using the <a href="http://packages.zendframework.com/" target="_blank">ZendPaginator</a> package</li>
+                <li>Generation of RSS Feed using the <a href="http://packages.zendframework.com/" target="_blank">ZendFeed</a> package</li>
+                <li>Manipulation of xml files using <a href="http://symfony.com/doc/current/components/dom_crawler.html" target="_blank">DowCrawler</a> and <a href="http://symfony.com/doc/current/components/css_selector.html" target="_blank">CssSelector</a> components (needs improvement)</li>
+            </ul>
+            ]]>
+        </description>
+        <url>https://github.com/titomiguelcosta/myPersonalWebsite</url>
+        <keywords>Silex, YouTube, Flickr, Paginator, Feed</keywords>
+        <image></image>
+        <date>Late 2012</date>
+        <status>Mantainance</status>
+    </project>
+    <project slug="symfony2-bootstrap">
+        <name>Symfony2Bootstrap</name>
+        <presentation>A web interface to ease the process of setup a new Symfony2 project</presentation>
+        <description>
+            <![CDATA[
+            <p>The setup of a Symfony2 project is repetitive and slow.</p>
+            <p>We end up picking configuring composer to add new repositories and new packages and wait for it to download and setup.</p>
+            <p>This project aims to ease the process by offering a web interface that allows user to select the Symfony version, the repositories and a bundles to be included and takes care of all the process.</p>
+            <p>There is a <a href="http://symfonybootstrap.titomiguelcosta.com/" target="_blank">demo online</a> not really functional because my server has limited resources but you are free to <a href="https://github.com/Zorbus/ZorbusSymfonyBootstrapBundle" taget="_blank">download the project</a> on GitHub and test it on your own box.</p>
+            <p>I consider it would be nice to have an official version by Symfony the same way <a href="http://twitter.github.com/bootstrap/customize.html" target="_blank">TwitterBootstrap</a> or <a href="http://jqueryui.com/download/" target="_blank">JQuery UI</a> offers.</p>
+            ]]>
+        </description>
+        <url>https://github.com/Zorbus/ZorbusSymfonyBootstrapBundle</url>
+        <keywords>Symfony2, bootstrap</keywords>
+        <image></image>
+        <date>Late 2012</date>
+        <status>Mantainance</status>
     </project>
     <project slug="symfony-plugin-tmcTwitterBootstrapPlugin">
         <name>tmcTwitterBootstrapPlugin</name>
-        <presentation>A theme for symfony generator admin</presentation>
+        <presentation>A twitter bootstrap theme for the symfony 1.4 admin generator</presentation>
         <description>
             <![CDATA[
-            <p>Have nothing to say about it.</p>
-            <p>Not at all.</p>
+            <h4>Features</h4>
+            <ul>
+                <li>a theme that integrates <a href="http://twitter.github.com/bootstrap/" class="_blank">Twitter Bootstrap</a> for symfony admin generator</li>
+                <li>a sfGuardAuth module to replace the default layout of the sfDoctrineGuardPlugin</li>
+                <li>generate admin with show view, option to set the max results in list view</li>
+            </ul>
             ]]>
         </description>
         <url>https://github.com/titomiguelcosta/tmcTwitterBootstrapPlugin</url>
@@ -38,17 +110,24 @@
     </project>
     <project slug="symfony-plugin-tmcI18nPlugin">
         <name>tmcI18nPlugin</name>
-        <presentation>A symfony plugin that adds support for a database backend for translation replacing xliff files</presentation>
+        <presentation>A symfony 1.4 plugin that adds MySQL support for internationalization instead of XLIFF files</presentation>
         <description>
             <![CDATA[
-            <p>Have nothing to say about it.</p>
-            <p>Not at all.</p>
+            <p>The use of XLIFF files for translation is not pratical, specially if the person editing the file does not know much about xml format.</p>
+            <p>This plugin offers the possibility to use a MySQL backend for translations.</p>
+            <h4>Features</h4>
+            <ul>
+                <li>Automatically clears cache when a new entry is added</li>
+                <li>Allows the extraction of translations from PHP files</li>
+                <li>Database backend that can be integrated with symfony admin generator</li>
+            </ul>
+            <p>Check the <a href="https://github.com/titomiguelcosta/tmcI18nPlugin" target="_blank">GitHub repository</a> for deployment instructions.</p>
             ]]>
         </description>
         <url>https://github.com/titomiguelcosta/tmcI18nPlugin</url>
         <keywords>symfony, plugin, i18n</keywords>
         <image></image>
-        <date></date>
-        <status>Complete</status>
+        <date>End of 2011</date>
+        <status>Mantainance</status>
     </project>
 </projects>
