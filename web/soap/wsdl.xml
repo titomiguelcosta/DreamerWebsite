@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://titomiguelcosta.local/soap/server.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Galinha" targetNamespace="http://titomiguelcosta.local/soap/server.php">
+    <types>
+        <xsd:schema targetNamespace="http://titomiguelcosta.local/soap/server.php"/>
+    </types>
+    <portType name="GalinhaPort">
+        <operation name="getPost">
+            <documentation>Returns array with post entry details</documentation>
+            <input message="tns:getPostIn"/>
+            <output message="tns:getPostOut"/>
+        </operation>
+    </portType>
+    <binding name="GalinhaBinding" type="tns:GalinhaPort">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getPost">
+            <soap:operation soapAction="http://titomiguelcosta.local/soap/server.php#getPost"/>
+            <input>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://titomiguelcosta.local/soap/server.php"/>
+            </input>
+            <output>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://titomiguelcosta.local/soap/server.php"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="GalinhaService">
+        <port name="GalinhaPort" binding="tns:GalinhaBinding">
+            <soap:address location="http://titomiguelcosta.local/soap/server.php"/>
+        </port>
+    </service>
+    <message name="getPostIn">
+        <part name="slug" type="xsd:string"/>
+    </message>
+    <message name="getPostOut">
+        <part name="return" type="soap-enc:Array"/>
+    </message>
+</definitions>

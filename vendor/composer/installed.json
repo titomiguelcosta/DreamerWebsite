@@ -1,56 +1,5 @@
 [
     {
-        "name": "twig/twig",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "git://github.com/fabpot/Twig.git",
-            "reference": "b58df0e1ae4b664f561bfaeffdb673829daa6b79"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://github.com/fabpot/Twig/archive/b58df0e1ae4b664f561bfaeffdb673829daa6b79.zip",
-            "reference": "b58df0e1ae4b664f561bfaeffdb673829daa6b79",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.2.4"
-        },
-        "time": "2012-11-26 10:25:49",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.12-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Twig_": "lib/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Armin Ronacher",
-                "email": "armin.ronacher@active-4.com"
-            }
-        ],
-        "description": "Twig, the flexible, fast, and secure template language for PHP",
-        "homepage": "http://twig.sensiolabs.org",
-        "keywords": [
-            "templating"
-        ]
-    },
-    {
         "name": "doctrine/common",
         "version": "2.2.3",
         "version_normalized": "2.2.3.0",
@@ -174,56 +123,6 @@
             }
         ],
         "description": "Symfony Routing Component",
-        "homepage": "http://symfony.com"
-    },
-    {
-        "name": "symfony/http-foundation",
-        "version": "2.1.x-dev",
-        "version_normalized": "2.1.9999999.9999999-dev",
-        "target-dir": "Symfony/Component/HttpFoundation",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/HttpFoundation",
-            "reference": "795ac45c188ee2a729db4513e9dfd30b16a0ed35"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://github.com/symfony/HttpFoundation/archive/795ac45c188ee2a729db4513e9dfd30b16a0ed35.zip",
-            "reference": "795ac45c188ee2a729db4513e9dfd30b16a0ed35",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "time": "2012-11-29 11:32:44",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.1-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Symfony\\Component\\HttpFoundation": "",
-                "SessionHandlerInterface": "Symfony/Component/HttpFoundation/Resources/stubs"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "http://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony HttpFoundation Component",
         "homepage": "http://symfony.com"
     },
     {
@@ -1663,6 +1562,265 @@
         "keywords": [
             "zf2",
             "feed"
+        ],
+        "support": {
+            "email": "fw-general-subscribe@lists.zend.com",
+            "irc": "irc://irc.freenode.net/zftalk",
+            "issues": "https://github.com/zendframework/zf2/issues",
+            "source": "https://github.com/zendframework/zf2"
+        }
+    },
+    {
+        "name": "zendframework/zend-memory",
+        "version": "2.0.4",
+        "version_normalized": "2.0.4.0",
+        "target-dir": "Zend/Memory",
+        "dist": {
+            "type": "zip",
+            "url": "http://packages.zendframework.com/composer/Zend_Memory-2.0.4.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Zend\\Memory\\": ""
+            }
+        },
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": " ",
+        "homepage": "http://packages.zendframework.com/",
+        "keywords": [
+            "zf2",
+            "memory"
+        ],
+        "support": {
+            "email": "fw-general-subscribe@lists.zend.com",
+            "irc": "irc://irc.freenode.net/zftalk",
+            "issues": "https://github.com/zendframework/zf2/issues",
+            "source": "https://github.com/zendframework/zf2"
+        }
+    },
+    {
+        "name": "zendframework/zendpdf",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
+        "dist": {
+            "type": "zip",
+            "url": "http://packages.zendframework.com/composer/ZendPdf-2.0.1.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "zendframework/zend-memory": ">=2.0.0",
+            "zendframework/zend-stdlib": ">=2.0.0"
+        },
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "ZendPdf": "library/"
+            }
+        },
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": "Zend Pdf Component",
+        "homepage": "http://packages.zendframework.com/",
+        "keywords": [
+            "zf2",
+            "pdf"
+        ],
+        "support": {
+            "email": "fw-general-subscribe@lists.zend.com",
+            "irc": "irc://irc.freenode.net/zftalk",
+            "issues": "https://github.com/zendframework/zf2/issues",
+            "source": "https://github.com/zendframework/zf2"
+        }
+    },
+    {
+        "name": "twig/twig",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/fabpot/Twig.git",
+            "reference": "6d40dbdf8b3036014e3e279f82af0c1d1a7faacb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/fabpot/Twig/archive/6d40dbdf8b3036014e3e279f82af0c1d1a7faacb.zip",
+            "reference": "6d40dbdf8b3036014e3e279f82af0c1d1a7faacb",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.4"
+        },
+        "time": "2012-12-01 07:00:48",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.12-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Twig_": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Armin Ronacher",
+                "email": "armin.ronacher@active-4.com"
+            }
+        ],
+        "description": "Twig, the flexible, fast, and secure template language for PHP",
+        "homepage": "http://twig.sensiolabs.org",
+        "keywords": [
+            "templating"
+        ]
+    },
+    {
+        "name": "symfony/http-foundation",
+        "version": "2.1.x-dev",
+        "version_normalized": "2.1.9999999.9999999-dev",
+        "target-dir": "Symfony/Component/HttpFoundation",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/HttpFoundation",
+            "reference": "b6ef9fa1552d9efe388f76e80a75bb16804a6b75"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/symfony/HttpFoundation/archive/b6ef9fa1552d9efe388f76e80a75bb16804a6b75.zip",
+            "reference": "b6ef9fa1552d9efe388f76e80a75bb16804a6b75",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2012-11-30 12:53:14",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.1-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Symfony\\Component\\HttpFoundation": "",
+                "SessionHandlerInterface": "Symfony/Component/HttpFoundation/Resources/stubs"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "http://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony HttpFoundation Component",
+        "homepage": "http://symfony.com"
+    },
+    {
+        "name": "zendframework/zend-server",
+        "version": "2.0.4",
+        "version_normalized": "2.0.4.0",
+        "target-dir": "Zend/Server",
+        "dist": {
+            "type": "zip",
+            "url": "http://packages.zendframework.com/composer/Zend_Server-2.0.4.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "zendframework/zend-stdlib": "self.version"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Zend\\Server\\": ""
+            }
+        },
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": " ",
+        "homepage": "http://packages.zendframework.com/",
+        "keywords": [
+            "zf2",
+            "server"
+        ],
+        "support": {
+            "email": "fw-general-subscribe@lists.zend.com",
+            "irc": "irc://irc.freenode.net/zftalk",
+            "issues": "https://github.com/zendframework/zf2/issues",
+            "source": "https://github.com/zendframework/zf2"
+        }
+    },
+    {
+        "name": "zendframework/zend-soap",
+        "version": "2.0.4",
+        "version_normalized": "2.0.4.0",
+        "target-dir": "Zend/Soap",
+        "dist": {
+            "type": "zip",
+            "url": "http://packages.zendframework.com/composer/Zend_Soap-2.0.4.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "zendframework/zend-server": "self.version",
+            "zendframework/zend-stdlib": "self.version",
+            "zendframework/zend-uri": "self.version"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Zend\\Soap\\": ""
+            }
+        },
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": " ",
+        "homepage": "http://packages.zendframework.com/",
+        "keywords": [
+            "zf2",
+            "soap"
         ],
         "support": {
             "email": "fw-general-subscribe@lists.zend.com",
