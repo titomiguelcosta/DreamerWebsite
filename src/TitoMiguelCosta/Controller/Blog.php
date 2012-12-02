@@ -133,7 +133,7 @@ class Blog
 
         return $response;
     }
-    public function clientAction(Application $app, $slug)
+    public function clientAction(Application $app, Request $request, $slug)
     {
         //$soap = new Client($app['url_generator']->generate('blog_soap_wsdl',  array(), true));
         $soap = new Client($request->getBasePath().'/soap/wsdl.xml');
