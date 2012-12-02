@@ -9,7 +9,7 @@ $app->get('/code', 'TitoMiguelCosta\Controller\Site::codeAction')->bind('code');
 
 $app->get('/blog/feed', 'TitoMiguelCosta\Controller\Blog::feedAction')->bind('blog_feed');
 $app->get('/blog/soap/client/{slug}', 'TitoMiguelCosta\Controller\Blog::clientAction')->bind('blog_soap_client');
-$app->get('/blog/soap/server', 'TitoMiguelCosta\Controller\Blog::serverAction')->bind('blog_soap_server');
+$app->match('/blog/soap/server', 'TitoMiguelCosta\Controller\Blog::serverAction')->bind('blog_soap_server');
 $app->get('/blog/soap/wsdl', 'TitoMiguelCosta\Controller\Blog::wsdlAction')->bind('blog_soap_wsdl');
 $app->get('/blog/{page}', 'TitoMiguelCosta\Controller\Blog::listAction')->assert('page', '\d+')->value('page', '1')->bind('blog_list');
 $app->get('/blog/{slug}', 'TitoMiguelCosta\Controller\Blog::postAction')->bind('blog_post');

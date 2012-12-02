@@ -16,7 +16,6 @@ use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Zend\Soap\AutoDiscover;
 use Zend\Soap\Server;
 use Zend\Soap\Client;
-use TitoMiguelCosta\SOAP\Blog as SoapBlog;
 
 /**
  * Description of Controller
@@ -135,17 +134,19 @@ class Blog
     }
     public function clientAction(Application $app, Request $request, $slug)
     {
-        //$soap = new Client($app['url_generator']->generate('blog_soap_wsdl',  array(), true));
-        $soap = new Client($request->getBasePath().'/soap/wsdl.xml');
-        
-        $post = $soap->getPost($slug);
+        $soap = new Client($app['url_generator']->generate('blog_soap_wsdl',  array(), true));
+        $post = array();
+        try {
+            $post = $soap->getPost($slug);
+        }catch(\Exception $e)
+        {
+        }
         
         return new Response(print_r($post, true), 200, array('Content-Type' => 'text/txt'));
     }
     public function serverAction(Application $app, Request $request)
     {
-        //$soap = new Server($app['url_generator']->generate('blog_soap_wsdl',  array(), true));
-        $soap = new Server($request->getBasePath().'/soap/wsdl.xml');
+        $soap = new Server($app['url_generator']->generate('blog_soap_wsdl',  array(), true));
         $soap->setClass('\TitoMiguelCosta\SOAP\Blog');
         
         $response = new Response();
@@ -161,10 +162,13 @@ class Blog
         $soap = new AutoDiscover();
         $soap->setClass('\TitoMiguelCosta\SOAP\Blog');
         $soap->setUri($app['url_generator']->generate('blog_soap_server',  array(), true));
-        //$soap->setServiceName('TitoMiguelCostaBlog');
+        $soap->setServiceName('TitoMiguelCostaBlog');
+        $xml = $soap->toXml();
+        
         $response = new Response();
-        $response->setContent($soap->toXml());
-
+        $response->setContent($xml);
+        $response->headers->set('Content-Type', 'text/xml');
+        $response->setTtl(86400);
         return $response;
     }
 }

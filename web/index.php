@@ -4,6 +4,8 @@ require_once __DIR__.'/../config/settings.php';
 
 $app = new Silex\Application();
 $app['debug'] = false;
+$app['root_dir'] = __DIR__;
+
 
 require_once __DIR__.'/../config/services.php';
 require_once __DIR__.'/../config/routing.php';
