@@ -1,30 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://titomiguelcosta.local/soap/server.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Galinha" targetNamespace="http://titomiguelcosta.local/soap/server.php">
+
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.titomiguelcosta.com/blog/soap/server" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Blog" targetNamespace="http://www.titomiguelcosta.com/blog/soap/server">
     <types>
-        <xsd:schema targetNamespace="http://titomiguelcosta.local/soap/server.php"/>
+        <xsd:schema targetNamespace="http://www.titomiguelcosta.com/blog/soap/server"/>
     </types>
-    <portType name="GalinhaPort">
+    <portType name="BlogPort">
         <operation name="getPost">
             <documentation>Returns array with post entry details</documentation>
             <input message="tns:getPostIn"/>
             <output message="tns:getPostOut"/>
         </operation>
     </portType>
-    <binding name="GalinhaBinding" type="tns:GalinhaPort">
+    <binding name="BlogBinding" type="tns:BlogPort">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
         <operation name="getPost">
-            <soap:operation soapAction="http://titomiguelcosta.local/soap/server.php#getPost"/>
+            <soap:operation soapAction="http://www.titomiguelcosta.com/blog/soap/server#getPost"/>
             <input>
-                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://titomiguelcosta.local/soap/server.php"/>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.titomiguelcosta.com/blog/soap/server"/>
             </input>
             <output>
-                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://titomiguelcosta.local/soap/server.php"/>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.titomiguelcosta.com/blog/soap/server"/>
             </output>
         </operation>
     </binding>
-    <service name="GalinhaService">
-        <port name="GalinhaPort" binding="tns:GalinhaBinding">
-            <soap:address location="http://titomiguelcosta.local/soap/server.php"/>
+    <service name="BlogService">
+        <port name="BlogPort" binding="tns:BlogBinding">
+            <soap:address location="http://www.titomiguelcosta.com/blog/soap/server"/>
         </port>
     </service>
     <message name="getPostIn">

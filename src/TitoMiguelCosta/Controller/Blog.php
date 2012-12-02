@@ -135,16 +135,17 @@ class Blog
     }
     public function clientAction(Application $app, $slug)
     {
-        $soap = new Client($app['url_generator']->generate('blog_soap_wsdl',  array(), true));
-        $soap = new Client('http://titomiguelcosta.local/soap/wsdl.php');
+        //$soap = new Client($app['url_generator']->generate('blog_soap_wsdl',  array(), true));
+        $soap = new Client($request->getBasePath().'/soap/wsdl.xml');
         
-        $post = $soap->getPost("aa");
+        $post = $soap->getPost($slug);
         
         return new Response(print_r($post, true), 200, array('Content-Type' => 'text/txt'));
     }
     public function serverAction(Application $app, Request $request)
     {
-        $soap = new Server($app['url_generator']->generate('blog_soap_wsdl',  array(), true));
+        //$soap = new Server($app['url_generator']->generate('blog_soap_wsdl',  array(), true));
+        $soap = new Server($request->getBasePath().'/soap/wsdl.xml');
         $soap->setClass('\TitoMiguelCosta\SOAP\Blog');
         
         $response = new Response();
@@ -163,7 +164,7 @@ class Blog
         //$soap->setServiceName('TitoMiguelCostaBlog');
         $response = new Response();
         $response->setContent($soap->toXml());
-        
+
         return $response;
     }
 }

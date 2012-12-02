@@ -14,7 +14,7 @@ class Blog
      */
     public function getPost($slug)
     {
-        $data = array('aaa', 'bbc', 'aaa');
+        $data = array('aaar', 'bbc');
         
         $crawler = new Crawler();
         //$crawler->addXmlContent(file_get_contents(PROJECT_ROOT . '/data/xml/blog.xml'));

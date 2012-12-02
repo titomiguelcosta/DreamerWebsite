@@ -11,7 +11,7 @@ $wsdl->setClass('\TitoMiguelCosta\SOAP\Blog');
 
 // set SOAP action URI
 //$wsdl->setUri('http://titomiguelcosta.local/soap/server.php');
-$wsdl->setUri('http://titomiguelcosta.local/blog/soap/server');
+$wsdl->setUri('http://titomiguelcosta.local/soap/wsdl.xml');
 
 // handle request
 echo $wsdl->toXML();
