@@ -21,19 +21,79 @@
         <content>
             <![CDATA[
             <div class="post">
+                <p>Deployment is a very recurrent task and tends to be very repetitive and error prone when done manually.</p>
+                <p>It gets even worse if your application is behind a load balancer and you have to deploy to several servers at once.</p>
+                <p>Capifony comes to the rescue. It integrates easily with symfony1 and Symfony2 projects.</p>
+                <p>Before using Capifony we must decide the strategy we will use to deploy our code. In the documentation they present two cenarios. First one is the one I use. My dev code is published to a central git repository that production servers have access.</p>
+                <p>Here you have the sources I consulted to configure Capifony in my project.</p>
                 <ul>
                     <li><a href="http://capifony.org/" target="_blank">Official documentation</a></li>
                     <li><a href="http://blog.servergrove.com/2011/09/07/deploying-symfony2-projects-on-shared-hosting-with-capifony/" target="_blank">ServerGrove tutorial for shared hosts</a></li>
                     <li><a href="http://blog.servergrove.com/2010/07/12/symfony-git-capistrano-capifony/" target="_blank">ServerGrove tutorial for VPS hosts</a></li>
                     <li><a href="http://www.zalas.eu/multistage-deployment-of-symfony-applications-with-capifony" target="_blank">Tutorial on how to deploy on multiple servers</a></li>
-                </li>
+                </ul>
+                <p>Even with all that documentation it wasn't easy for me to setup the config file will all my requirements, so I publish my final version:</p>
+<pre type="prettyprint">
+#before "deploy:restart", "deploy:set_permissions"
+before "symfony:composer:install", "composer:copy_vendors"
+before "symfony:composer:update", "composer:copy_vendors"
+
+set :application, "MyApplication"
+
+# SSH settings
+set :serverName,  "www.example.com"
+set :domain,      "example.com"
+set :user,        "ubuntu"
+ssh_options[:port] = 22
+ssh_options[:keys] = ["/path/to/my/ssh/key.pem"]
+set :deploy_to,   "/var/www/example.com"
+set :app_path,    "app"
+
+# Repository settings
+set :repository,  "git@bitbucket.org:user/example.git"
+set :scm,         :git
+set :git_enable_submodules,  0
+
+# Symfony settings
+set :model_manager, "doctrine"
+role :web,        domain                         # Your HTTP server, Apache/etc
+role :app,        domain                         # This may be the same as your `Web` server
+role :db,         domain, :primary => true       # This is where Symfony2 migrations will run
+
+# Composer settings
+set :use_composer, true
+set :update_vendors, true
+set :vendors_mode, "install"
+
+namespace :composer do
+  task :copy_vendors, :except => { :no_release => true } do
+    capifony_pretty_print "--> Copy vendor file from previous release"
+
+    run "vendorDir=#{current_path}/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir #{latest_release}/vendor; fi;"
+    capifony_puts_ok
+  end
+end
+
+# General settings
+set :shared_files,    ["app/config/parameters.yml"]
+set :shared_children, [app_path + "/logs", web_path + "/uploads"]
+set :keep_releases,  3
+set :use_sudo, false
+set :writable_dirs,     [app_path + "/logs", app_path + "/cache", web_path + "/uploads"]
+set :webserver_user,    "www-data"
+set :permission_method, :acl
+set :use_set_permissions, true
+
+# Log level
+logger.level = Logger::MAX_LEVEL
+</pre>
             </div>
             ]]>
         </content>
         <image></image>
-        <date>4 March, 2012</date>
+        <date>5 December, 2012</date>
         <category>tutorial</category>
-        <tags>Symfony2, Doctrine, Cache</tags>
+        <tags>Capifony, Symfony2, Deployment</tags>
     </post>
     <post slug="integrate-zend2-packages-with-composer">
         <title>How to integrate Zend2 packages with Composer</title>
