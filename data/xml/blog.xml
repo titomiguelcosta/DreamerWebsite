@@ -15,6 +15,26 @@
         <category>tutorial</category>
         <tags>Symfony2, Doctrine, Cache</tags>
     </post>-->
+    <post slug="deploy-symfony2-project-with-capifony">
+        <title>Deploy a Symfony2 project with capifony</title>
+        <resume>Making deployment easier and less error prone</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <ul>
+                    <li><a href="http://capifony.org/" target="_blank">Official documentation</a></li>
+                    <li><a href="http://blog.servergrove.com/2011/09/07/deploying-symfony2-projects-on-shared-hosting-with-capifony/" target="_blank">ServerGrove tutorial for shared hosts</a></li>
+                    <li><a href="http://blog.servergrove.com/2010/07/12/symfony-git-capistrano-capifony/" target="_blank">ServerGrove tutorial for VPS hosts</a></li>
+                    <li><a href="http://www.zalas.eu/multistage-deployment-of-symfony-applications-with-capifony" target="_blank">Tutorial on how to deploy on multiple servers</a></li>
+                </li>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>4 March, 2012</date>
+        <category>tutorial</category>
+        <tags>Symfony2, Doctrine, Cache</tags>
+    </post>
     <post slug="integrate-zend2-packages-with-composer">
         <title>How to integrate Zend2 packages with Composer</title>
         <resume>Making use of the Zend2 packages</resume>

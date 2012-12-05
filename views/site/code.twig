@@ -7,32 +7,32 @@
 {% block body %}
     <div id="code" class="main">
         <h1>Code</h1>
-        <p>I'm mainly a PHP programmer, with JavaScript skills.</p>
-        <p>I put afford in designing with the best praticses in mind, making use of only open source tools out there.</p>
-        <p>Principles are <abbr title="Don't repeat yourself">DRY</abbr>, <abbr title="Keep it simples stupid">KISS</abbr> are in the order of my day.</p>
-        <p>By far, my favorite framework is Symfony. Using it since end of 2007, at that time version 1.0 has been released not long ago.</p>
-        <p>At the moment, new projects are implemented in Symfony2, using Zend2 components when needed. Maintability of older projects require me to continue using symfony 1.</p>
+        <p>I'm mainly a PHP programmer, with good JavaScript skills.</p>
+        <p>I concentrate my design efforts with the latest and best technical practices in mind, making use of only open source tools.</p>
+        <p>Principles like <abbr title="Don't repeat yourself">DRY</abbr>, <abbr title="Keep it simples stupid">KISS</abbr> are in the order of my day.</p>
+        <p>By far, my favorite framework is <a href="http://www.symfony.com" target="_blank">Symfony</a>. Which I have been using since 2007; when version 1.0 was newly released</p>
+        <p>Currently, my new projects are implemented in <a href="http://www.symfony.com" target="_blank">Symfony2</a>, using <a href="http://packages.zendframework.com/" target="_blank">Zend2 packages</a> when needed. Maintanance of older projects require me to continue using symfony 1.</p>
 
         <p>You can check my code on GitHub:</p>
         <ul>
             <li>For symfony1
                 <ul>
                 <li>the development of a theme for symfony generator admin making use of Twitter Bootstrap;</li>
-                <li>a plugin to support database backend for tranlation are the two most significant plugins released open source.</li>
+                <li>a plugin to support database backend for translation are the two most significant plugins released open source.</li>
                 </ul>
             </li>
             <li>For Symfony2
                 <ul>
-                <li>under the code name Zorbus, integrated with Sonata Admin, i have developed a content managment system, more than 10 bundles that respond to the main needs of web site, making it ease to maintain;</li>
-                <li>There are bundles to generate FAQs, Glossaries, Articles, Banners, Pages, Links, etc;</li>
+                <li>under the code name Zorbus, integrated with Sonata Admin, I have developed a content management system, more than ten bundles that respond to the main needs of web sites, making it easier to maintain;</li>
+                <li>there are bundles to generate FAQs, Glossaries, Articles, Banners, Pages, Links, etc;</li>
                 </ul>
             </li>
         </ul>
 
         <h2>Studies</h2>
-        <p>Whenever possible, I like to give a go to new technologies. Still looking for a change to try Angular JS and BeHat. This website is a good example, developed with Silex, usign XML and SQLite.</p>
-        <p>More you know, more there is to learn and investigate. There is more than one way of doing things, so sometimes is not easy to make decisions, but i'm always willing to give it a go.</p>
-        <p>One day I will nail Python, but at the moment, just taking the first steps.</p>
+        <p>Whenever possible, I like to give a go to new technologies. Still looking for a change to try Angular JS and BeHat. This website is a good example, developed with Silex, using Zend packages for generating pdf, a SOAP webservice and integrating with mulitple services. The code is released open source, available on GitHub, feel free to <a href="https://github.com/titomiguelcosta/myPersonalWebsite" target="_blank">take a look</a> and report issues.</p>
+        <p>The more you know, the more there is to learn and investigate. There is more than one way of doing things, so sometimes is not easy to make decisions, but I'm always willing think it through and utilize the best technical solution..</p>
+        <p>One day I will nail Python, but at the moment, I am eagerly taking the first steps.</p>
 
         <h2>Some of the software I couldn't live without:</h2>
         <ul>
@@ -46,19 +46,20 @@
         </ul>
 
 
-        <h2>A few of the websites in my bookmark where i spend infinite amount of hours</h2>
+        <h2>A few of the websites in my bookmark where I spend infinite amount of hours</h2>
         <ul>
-            <li>http://symfony.com</li>
-            <li>http://www.doctrine-project.org/</li>
-            <li>http://twig.sensiolabs.org/</li>
-            <li>http://net.tutsplus.com/</li>
-            <li>http://sixrevisions.com/</li>
-            <li>http://www.1stwebdesigner.com/</li>
-            <li>http://www.osnews.com/</li>
-            <li>http://twitter.github.com/bootstrap/</li>
-            <li>http://www.ted.com/</li>
+            <li><a href="http://symfony.com" target="_blank">http://symfony.com</a></li>
+            <li><a href="http://www.doctrine-project.org/" target="_blank">http://www.doctrine-project.org/</a></li>
+            <li><a href="http://twig.sensiolabs.org/" target="_blank">http://twig.sensiolabs.org/</a></li>
+            <li><a href="http://net.tutsplus.com/" target="_blank">http://net.tutsplus.com/</a></li>
+            <li><a href="http://sixrevisions.com/" target="_blank">http://sixrevisions.com/</a></li>
+            <li><a href="http://www.1stwebdesigner.com/" target="_blank">http://www.1stwebdesigner.com/</a></li>
+            <li><a href="http://www.osnews.com/" target="_blank">http://www.osnews.com/</a></li>
+            <li><a href="http://twitter.github.com/bootstrap/" target="_blank">http://twitter.github.com/bootstrap/</a></li>
         </ul>
-
-        <p>Check my blog and get to know what i'm up to.</p>
+        
+        <p>You can download the <a href="{{ app.request.basePath }}/subscriptions.xml.tar.gz">list of RSS feeds</a> that I'm subscribed to and import them on Google Reader.</p>
+        
+        <p>Check out <a href="{{ path('blog_list') }}">my blog</a> and get to know what I'm up to.</p>
     </div>
 {% endblock %}
