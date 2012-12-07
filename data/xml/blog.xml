@@ -28,14 +28,14 @@
                 </div>
                 <p>Then I had to configure Xdebug editing the file /etc/php5/apache2/conf.d/20-xdebug.ini. The file will look like:</p>
 <pre class="prettyprint">
-    zend_extension=/usr/lib/php5/20100525/xdebug.so
-    xdebug.remote_enable=on
-    xdebug.remote_handler=dbgp
-    xdebug.remote_mode=req
-    xdebug.remote_host=localhost
-    xdebug.remote_port=9000
-    xdebug.idekey="netbeans-xdebug"
-    xdebug.remote_log="/var/log/apache2/xdebug_remote.log"
+zend_extension=/usr/lib/php5/20100525/xdebug.so
+xdebug.remote_enable=on
+xdebug.remote_handler=dbgp
+xdebug.remote_mode=req
+xdebug.remote_host=localhost
+xdebug.remote_port=9000
+xdebug.idekey="netbeans-xdebug"
+xdebug.remote_log="/var/log/apache2/xdebug_remote.log"
 </pre>
                 <p>Next step is to configure NetBeans. Check the properties of your project.</p>
                 <ul>
@@ -44,9 +44,9 @@
                     <li>Click on the Advanced button, and in the Debug URL, choose the <i>Ask every time</i> option. This way you can change the url to point to another location other than the index page.</li>
                 </ul>
                 
-                <p>Insert breakpoint in your code with Ctrl+F8 or just click over the line number, a red square will show up.</p>
+                <p>Insert breakpoints in your code with Ctrl+F8 or just click over the line number, a red square will show up.</p>
                 <p>To start the debug, press Ctrl+F5 or click on the Debug Project button on the toolbar.</p>
-                <p>Edit the URL of the page you want to debug and press Start. A new tab on your browser will open and will remain blank. Get back to NetBeans play with Debug button on the toolbar.</p>
+                <p>Edit the URL of the page you want to debug and press Start. A new tab on your browser will open up and will remain blank. Get back to NetBeans play with Debug button on the toolbar.</p>
                 <p>Everytime you reach a breakpoint, execution will stop and you can check on the debug window the values of your variables.</p>
                 <p>Check out <a href="http://netbeans.org/kb/docs/php/debugging.html">the official NetBeans webpage</a> for more info.</p>
             </div>
