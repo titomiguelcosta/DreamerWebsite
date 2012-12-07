@@ -15,6 +15,48 @@
         <category>tutorial</category>
         <tags>Symfony2, Doctrine, Cache</tags>
     </post>-->
+    <post slug="debug-php-project-with-xdebug-on-netbeans">
+        <title>How to debug a PHP project with Xdebug on NetBeans</title>
+        <resume>Forget error_log or var_dump in your code</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <p><a href="http://xdebug.org/" target="_blank">Xdebug is a great tool to debug your PHP code, but make sure it is only used in your dev environment. It consumes a lot of memory and pages will load slower.</a>
+                <p>First thing is to install it. In my Ubuntu 12.10 box it was as simple as running:</p>
+                <div class="prettyprint">
+                    sudo apt-get install php5-xdebug
+                </div>
+                <p>Then I had to configure Xdebug editing the file /etc/php5/apache2/conf.d/20-xdebug.ini. The file will look like:</p>
+<pre class="prettyprint">
+    zend_extension=/usr/lib/php5/20100525/xdebug.so
+    xdebug.remote_enable=on
+    xdebug.remote_handler=dbgp
+    xdebug.remote_mode=req
+    xdebug.remote_host=localhost
+    xdebug.remote_port=9000
+    xdebug.idekey="netbeans-xdebug"
+    xdebug.remote_log="/var/log/apache2/xdebug_remote.log"
+</pre>
+                <p>Next step is to configure NetBeans. Check the properties of your project.</p>
+                <ul>
+                    <li>Make sure the Web root in the Sources categories points to your public forlder, web in a Symfony2 project</li>
+                    <li>In the Run Configuration category, specify the name of your controller, in a Symfony2 project will be app_dev.php</li>
+                    <li>Click on the Advanced button, and in the Debug URL, choose the <i>Ask every time</i> option. This way you can change the url to point to another location other than the index page.</li>
+                </ul>
+                
+                <p>Insert breakpoint in your code with Ctrl+F8 or just click over the line number, a red square will show up.</p>
+                <p>To start the debug, press Ctrl+F5 or click on the Debug Project button on the toolbar.</p>
+                <p>Edit the URL of the page you want to debug and press Start. A new tab on your browser will open and will remain blank. Get back to NetBeans play with Debug button on the toolbar.</p>
+                <p>Everytime you reach a breakpoint, execution will stop and you can check on the debug window the values of your variables.</p>
+                <p>Check out <a href="http://netbeans.org/kb/docs/php/debugging.html">the official NetBeans webpage</a> for more info.</p>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>4 March, 2012</date>
+        <category>tutorial</category>
+        <tags>Xdebug, Netbeans, Symfony2, Ubuntu</tags>
+    </post>
     <post slug="deploy-symfony2-project-with-capifony">
         <title>Deploy a Symfony2 project with capifony</title>
         <resume>Making deployment easier and less error prone</resume>
