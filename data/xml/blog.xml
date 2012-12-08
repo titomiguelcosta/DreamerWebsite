@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <blog>
 <!--    <post slug="">
         <title></title>
@@ -21,7 +21,7 @@
         <content>
             <![CDATA[
             <div class="post">
-                <p><a href="http://xdebug.org/" target="_blank">Xdebug is a great tool to debug your PHP code, but make sure it is only used in your dev environment. It consumes a lot of memory and pages will load slower.</a>
+                <p><a href="http://xdebug.org/" target="_blank">Xdebug is a great tool to debug your PHP code, but make sure it is only used in your dev environment. It consumes a lot of memory and pages will load slower.</a></p>
                 <p>First thing is to install it. In my Ubuntu 12.10 box it was as simple as running:</p>
                 <div class="prettyprint">
                     sudo apt-get install php5-xdebug
