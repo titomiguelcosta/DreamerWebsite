@@ -15,6 +15,32 @@
         <category>tutorial</category>
         <tags>Symfony2, Doctrine, Cache</tags>
     </post>-->
+    <post slug="conding-standards">
+        <title>Coding Standards</title>
+        <resume>PHP_CodeSniffer, PHP-CS-Fixer and NetBeans to the rescue</resume>
+        <content>
+            <![CDATA[
+            <div class="post">
+                <p>Since I'm mostly a Symfony programmer, I try to follow as much as possible their <a href="http://symfony.com/doc/master/contributing/code/standards.html" target="_blank">coding standards</a>, although I do not sympathize with some of their decisions.</p>
+                <p>There are mainly two points I disagree, for me:</p>
+                <ul>
+                    <li>A line break before braces in control structures increase readability (already happens on classes and methods)</li>
+                    <li>I prefer to use underscores for the name of variables instead of the camel case notation</li>
+                </ul>
+                <p>Sometimes I forget to follow the standards and it is boring to check back the code and fix it. Fortunately, there are a few tools that can help.</p>
+                <p><a href="http://pear.php.net/package/PHP_CodeSniffer" target="_blank">PHP_CodeSniffer</a> is a pear package that analyzes source code and reports the errors.</p>
+                <p>One limitation of <a href="http://pear.php.net/package/PHP_CodeSniffer" target="_blank">PHP_CodeSniffer</a> is that it doesn't automatically fixes the errors reported, <a href="http://cs.sensiolabs.org/" target="_blank">PHP-CS-Fixer</a> for the rescue.</p>
+                <p><a href="http://cs.sensiolabs.org/" target="_blank">PHP-CS-Fixer</a> is a phar file that complements <a href="http://pear.php.net/package/PHP_CodeSniffer" target="_blank">PHP_CodeSniffer</a>, fixing our source code taking into consideration the standard that project follows.</p>
+                <p>For last, there is NetBeans, with a simple ALT+SHIFT+F, it automatically formats code. You can <a href="{{ app.request.basePath }}/zip/NetBeansOptionsAll.zip">download my whole configurations</a> and import them in Tools > Options or use just <a href="{{ app.request.basePath }}/zip/NetBeansOptionsEditorPhp.zip" target="_blank">this file</a> just for PHP and Editor configurations (from NetBeans 7.2).</p>
+                <p>With these three tools, there's no reason not to adopt a conding standard and implement it in your PHP projects.</p>
+            </div>
+            ]]>
+        </content>
+        <image></image>
+        <date>8 December, 2012</date>
+        <category>tutorial</category>
+        <tags>Tools, NetBeans, Code</tags>
+    </post>
     <post slug="debug-php-project-with-xdebug-on-netbeans">
         <title>How to debug a PHP project with Xdebug on NetBeans</title>
         <resume>No more error_log or var_dump in your code</resume>
@@ -55,7 +81,7 @@ xdebug.remote_log="/var/log/apache2/xdebug_remote.log"
         <image></image>
         <date>7 December, 2012</date>
         <category>tutorial</category>
-        <tags>Xdebug, Netbeans, Symfony2, Ubuntu</tags>
+        <tags>Xdebug, NetBeans, Symfony2, Ubuntu</tags>
     </post>
     <post slug="deploy-symfony2-project-with-capifony">
         <title>Deploy a Symfony2 project with capifony</title>

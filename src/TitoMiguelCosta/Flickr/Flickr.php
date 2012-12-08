@@ -6,7 +6,6 @@ use DOMDocument;
 use Zend\Http\Request as HttpRequest;
 use ZendService\Flickr\ResultSet;
 
-
 class Flickr extends BaseFlickr
 {
     public function userGallery($query, $gallery_id, array $options = null)
@@ -15,7 +14,6 @@ class Flickr extends BaseFlickr
         static $defaultOptions = array('per_page' => 10,
                                        'page'     => 1,
                                        'extras'   => 'license, date_upload, date_taken, owner_name, icon_server');
-
 
         // can't access by username, must get ID first
         if (strchr($query, '@')) {

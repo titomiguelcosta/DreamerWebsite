@@ -78,9 +78,9 @@ class Blog
         $page
             ->setFont(Font::fontWithName(Font::FONT_HELVETICA), 16)
             ->drawText($post->eq(0)->text(), 10, $page->getHeight() - 20);
-        
+
         $pdf->pages[] = $page;
-        
+
 //        for the record: the way Symfony2 does it to generate the Content-Disposition header
 //        $d = $response->headers->makeDisposition(ResponseHeaderBag::DISPOSITION_ATTACHMENT, $slug.'.pdf');
 //        $response->headers->set('Content-Disposition', $d);
@@ -88,10 +88,10 @@ class Blog
             'Content-Type' => 'application/pdf',
             'Content-Disposition' => sprintf('attachment; filename="%s.pdf"', $slug)
         );
-        
+
         $response = new Response($pdf->render(), 200, $headers);
         $response->setTtl(86400); // 1 day
-        
+
         return $response;
     }
     public function feedAction(Application $app)
@@ -111,8 +111,7 @@ class Blog
             'uri'   => 'http://www.titomiguelcosta.com',
         ));
         $feed->setDateModified(time());
-        foreach ($posts as $post)
-        {
+        foreach ($posts as $post) {
             $entry = $feed->createEntry();
             $entry->setTitle($post->getElementsByTagName('title')->item(0)->nodeValue);
             $entry->setLink($app['url_generator']->generate('blog_post', array('slug' => $post->getAttribute('slug')), true));
@@ -138,23 +137,22 @@ class Blog
         $post = array();
         try {
             $post = $soap->getPost($slug);
-        }catch(\Exception $e)
-        {
+        } catch (\Exception $e) {
         }
-        
+
         return new Response(print_r($post, true), 200, array('Content-Type' => 'text/txt'));
     }
     public function serverAction(Application $app, Request $request)
     {
         $soap = new Server($app['url_generator']->generate('blog_soap_wsdl',  array(), true));
         $soap->setClass('\TitoMiguelCosta\SOAP\Blog');
-        
+
         $response = new Response();
-        
+
         ob_start();
         $soap->handle();
         $response->setContent(ob_get_clean());
-        
+
         return $response;
     }
     public function wsdlAction(Application $app)
@@ -164,11 +162,12 @@ class Blog
         $soap->setUri($app['url_generator']->generate('blog_soap_server',  array(), true));
         $soap->setServiceName('TitoMiguelCostaBlog');
         $xml = $soap->toXml();
-        
+
         $response = new Response();
         $response->setContent($xml);
         $response->headers->set('Content-Type', 'text/xml');
         $response->setTtl(86400);
+
         return $response;
     }
 }

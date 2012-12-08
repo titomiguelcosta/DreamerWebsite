@@ -24,6 +24,9 @@
                     <li><a href="{{ path('project', {'slug': project.getAttribute('slug')}) }}">{{ project.getElementsByTagName('name').item(0).nodeValue }}</a></li>
                 {% endfor %}
                 </ul>
+                
+                <h2>Blog</h2>
+                <p>Check out my <a href="{{ path('blog_list') }}">blog</a>, find out what I'm up to, and share your thoughts in the comment section.</p>
             </div>
         </div>
     </div>

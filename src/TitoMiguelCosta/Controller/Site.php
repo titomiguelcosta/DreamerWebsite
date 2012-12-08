@@ -67,12 +67,10 @@ class Site
 
         $form = $app['form.factory']->create(new \TitoMiguelCosta\Form\Contact(), $defaults);
 
-        if ('POST' == $request->getMethod())
-        {
+        if ('POST' == $request->getMethod()) {
             $form->bind($request);
 
-            if ($form->isValid())
-            {
+            if ($form->isValid()) {
                 $data = $form->getData();
                 $app['dispatcher']->dispatch(\TitoMiguelCosta\Event\Contact::SUBMIT, new \TitoMiguelCosta\Event\Contact($app, $data));
 

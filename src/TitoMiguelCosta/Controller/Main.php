@@ -25,12 +25,9 @@ class Main
 
     public function youtubeTokenAction(Application $app)
     {
-        if (!isset($_SESSION['sessionToken']) && !isset($_GET['token']))
-        {
+        if (!isset($_SESSION['sessionToken']) && !isset($_GET['token'])) {
             $this->authAction($app);
-        }
-        else if (!isset($_SESSION['sessionToken']) && isset($_GET['token']))
-        {
+        } elseif (!isset($_SESSION['sessionToken']) && isset($_GET['token'])) {
             $client = AuthSub::getHttpClient($_GET['token']);
             $client->setOptions(array('sslverifypeer' => false));
             die('Session: ' .AuthSub::getAuthSubSessionToken($_GET['token'], $client).'END');
