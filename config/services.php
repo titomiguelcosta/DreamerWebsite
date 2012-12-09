@@ -30,3 +30,6 @@ $app->register(new Silex\Provider\SwiftmailerServiceProvider(array(
         'auth_mode' => null
     )
 )));
+$app['exception.handler'] = $app->share(function ($app) {
+    return new TitoMiguelCosta\Listener\Exception($app);
+});
