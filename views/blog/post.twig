@@ -1,7 +1,7 @@
 {% extends 'layout.twig' %}
 
 {% block title %}
-    {{ parent() }} | Blog | {{ post.eq(0).text() }}
+    {{ parent() }} | Blog | {{ post.title }}
 {% endblock %}
 
 {% block javascripts %}
@@ -19,15 +19,15 @@
     <div id="blog" class="main">
         <div class="row-fluid">
             <div class="span8">
-                <h1>{{ post.eq(0).text() }}</h1>
-                <h2>{{ post.eq(1).text() }}</h2>
+                <h1>{{ post.title }}</h1>
+                <h2>{{ post.resume }}</h2>
 
-                {{ post.eq(2).text() | raw }}
+                {{ post.content | raw }}
 
-                <small>{{ post.eq(4).text() }}</small>
+                <small>{{ post.date }}</small>
 
-                <h5><a href="{{ path('blog_category', {'category': post.eq(5).text()}) }}">{{ post.eq(5).text() | title }}</a></h5>
-                <h6>{{ post.eq(6).text() }}</h6>
+                <h5><a href="{{ path('blog_category', {'category': post.category}) }}">{{ post.category | title }}</a></h5>
+                <h6>{{ post.tags }}</h6>
 
                 <hr>
                 <h2>Comments</h2>
@@ -35,7 +35,7 @@
 
                 <script type="text/javascript">
                     var disqus_shortname = 'titomiguelcosta';
-                    var disqus_title = '{{ post.eq(0).text() }}';
+                    var disqus_title = '{{ post.title }}';
                     var disqus_category_id = 'Blog';
                     (function() {
                         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -51,8 +51,8 @@
                 <h1>Other posts</h1>
                 <ul class="unstyled">
                     {% for other in posts %}
-                        {% if other.getAttribute('slug') != slug %}
-                        <li><a href="{{ path('blog_post', {'slug': other.getAttribute('slug')}) }}">{{ other.getElementsByTagName('title').item(0).nodeValue }}</a></li>
+                        {% if other.slug != slug %}
+                        <li><a href="{{ path('blog_post', {'slug': other.slug}) }}">{{ other.title }}</a></li>
                         {% endif %}
                     {% endfor %}
                 </ul>
