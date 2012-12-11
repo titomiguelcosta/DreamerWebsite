@@ -1,8 +1,0 @@
-<?php
-
-const FLICKR_KEY = 'f7299a1fae8338a847833b17be1184ce';
-const FLICKR_SECRET = '003e989639c5cfb5';
-const YOUTUBE_DEVELOPER_KEY = 'AI39si5q_CDI0h2XJG2xlrIpzMDR-7L9Vx50-6gUEbHKPKnZ_nO9DzL8x8Mll6DOLn9cmBulApMJACKOviOOMpqeU8VsjwgMuQ';
-const YOUTUBE_TOKEN = '1/EZCzmMPZCLQ-16JG9LjmN1myfavTTrv_ncw0NYJuoh4';
-
-define('PROJECT_ROOT', realpath(__DIR__.'/..'));
