@@ -18,10 +18,10 @@ class Music
 {
     public function listAction(Application $app, $page = 1)
     {
-        $client = AuthSub::getHttpClient('1/EZCzmMPZCLQ-16JG9LjmN1myfavTTrv_ncw0NYJuoh4');
+        $client = AuthSub::getHttpClient(YOUTUBE_TOKEN);
         $client->setOptions(array('sslverifypeer' => false));
 
-        $yt = new YouTube($client, null, null, 'AI39si5q_CDI0h2XJG2xlrIpzMDR-7L9Vx50-6gUEbHKPKnZ_nO9DzL8x8Mll6DOLn9cmBulApMJACKOviOOMpqeU8VsjwgMuQ');
+        $yt = new YouTube($client, null, null, YOUTUBE_DEVELOPER_KEY);
         $yt->setMajorProtocolVersion(2);
 
         $max_per_page = 4;

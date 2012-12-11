@@ -1,4 +1,6 @@
 nbproject
 data/cache/*
 data/sql/db.sqlite
+config/config.php
+web/googlec170080586be96c2.html
 *~
