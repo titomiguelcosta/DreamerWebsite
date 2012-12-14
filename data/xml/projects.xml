@@ -73,7 +73,7 @@
     </project>
     <project slug="symfony2-bootstrap">
         <name>Symfony2Bootstrap</name>
-        <presentation>A web interface to ease the process of seyting a new Symfony2 project</presentation>
+        <presentation>A web interface to ease the process of setting a new Symfony2 project</presentation>
         <description>
             <![CDATA[
             <p>The setup of a Symfony2 project is repetitive and slow.</p>

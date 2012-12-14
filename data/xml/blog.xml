@@ -22,8 +22,8 @@
             <![CDATA[
             <div class="post">
                 <p>I've started to use <a href="http://git-scm.com/" target="_blank">Git</a> a few months ago, letting behind <a href="http://bazaar.canonical.com/" target="_blank">Bazaar</a>. Nothing against <a href="http://bazaar.canonical.com/" target="_blank">Bazaar</a>, it does the work as expect, no issues, but since <a href="https://github.com/" target="_blank">GitHub</a> hosts all the projects that I care, the switch came naturally.</p>
-                <p>As long as I use a <abbr title="Version Control Software">VCS</a>, that's fine, can not image myself going back to the days where upload was done using an FTP client or even when rsync had its glory days.</p>
-                <p>At the moment, in the project I'm being part, I'm the only developer, so it is easy to avoid conflicts and no need to generate patches. My life doesn't get much complicated.</p>
+                <p>As long as I use a <abbr title="Version Control Software">VCS</abbr>, that's fine, can not image myself going back to the days where upload was done using an FTP client or even when rsync had its glory days.</p>
+                <p>At the moment, in the projects I'm involved, I'm the only developer, so it is easy to avoid conflicts and no need to generate patches. My life doesn't get much complicated.</p>
                 <p>When my project uses Symfony2, and that happens almost in every of my web projects, I initialize the project with composer and remove the original git repository and start one of my own.</p>
 <pre class="prettyprint">
 # git repository initialization
@@ -53,13 +53,13 @@ $ cd /var/git/example.com
 
 $ git init --bare
 </pre>
-                <p>In my local machine, I do the first push after configure the remote hosting normally called server.</p>
+                <p>In my local machine, I do the first push after adding the remote hosting normally called server.</p>
 <pre class="prettyprint">
 $ git remote add server git+ssh://user@example.com/var/git/example.com
 
 $ git push server master
 </pre>
-                <p>What follows is configuration of capifony, but since I already discuss it in a previous blog post, I won't repeat myself.</p>
+                <p>What follows is configuration of capifony, but since I already discuss it in a <a href="http://www.titomiguelcosta.com/blog/deploy-symfony2-project-with-capifony">previous blog post</a>, I won't repeat myself.</p>
                 <p>When time comes to finally get my hands dirty and work on the project, I always do a pull, even knowing I'm the only one with access to the repository, I consider it a good practise.</p>
                 <p>Right after, I do a composer update, commit the changes and create a new branch.</p>
                 <p>If everything works as expected, and I achieve my goals, I do a final commit in the new branch, go back to master and merge.</p>
