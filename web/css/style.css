@@ -29,15 +29,25 @@ header #slogan {
 }
 #footer {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 12px;
     padding-bottom: 10px;
+}
+#footer img {
+    padding: 5px;
+}
+#footer a {
+    display: inline-block;
+    margin-right: 1px;
+}
+#footer a:hover {
+    background-color: #C0C0C0;
 }
 footer {
     text-align: left;
 }
 footer #credits {
-    margin-right: 0 !important;
+    margin: 5px 0 0 !important;
 }
 .center {
     margin:auto;

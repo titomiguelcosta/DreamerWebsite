@@ -1,0 +1,46 @@
+{% extends 'layout.twig' %}
+
+{% block title %}
+    {{ parent() }} | Photos
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('/js/jquery.masonry.min.js') }}"></script>
+    <script type="text/javascript">
+        $(function() {
+            var $container = $('#container');
+
+            $container.imagesLoaded( function(){
+                $container.masonry({
+                    itemSelector : '.box',
+                    columnWidth: 240,
+                    gutterWidth: 10,
+                    isAnimated: true
+                });
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div id="images" class="main">
+        <div class="row-fluid">
+            <div class="span12">
+                <h1>Photos</h1>
+                <small>page {{ pages.current }} of {{ pages.pageCount }} in a total of {{ pages.totalItemCount }} photos</small>
+
+                <div id="container">
+                    {% for index, image in images %}
+                        <div class="box">
+                            <img src="{{ image.Small.uri }}" alt="{{ image.title }}"/>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <hr>
+                {% include 'include/paginator.twig' with {'pages': pages, 'route': route} %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

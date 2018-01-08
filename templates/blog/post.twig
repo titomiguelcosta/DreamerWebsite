@@ -1,0 +1,62 @@
+{% extends 'layout.twig' %}
+
+{% block title %}
+    {{ parent() }} | Blog | {{ post.title }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('/prettify/prettify.js') }}" type="text/javascript"></script>
+    <script type="text/javascript">$(function(){ prettyPrint(); });</script>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('/prettify/prettify.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div id="blog" class="main">
+        <div class="row-fluid">
+            <div class="span8">
+                <h1>{{ post.title }}</h1>
+                <h2>{{ post.resume }}</h2>
+
+                {{ post.content | raw }}
+
+                <small>{{ post.date }}</small>
+
+                <h5><a href="{{ path('blog_category', {'category': post.category}) }}">{{ post.category | title }}</a></h5>
+                <h6>{{ post.tags }}</h6>
+
+                <hr>
+                <h2>Comments</h2>
+                <div id="disqus_thread" class="prettyprint"></div>
+
+                <script type="text/javascript">
+                    var disqus_shortname = 'titomiguelcosta';
+                    var disqus_title = '{{ post.title }}';
+                    var disqus_category_id = 'Blog';
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript></noscript>
+                <!--<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>-->
+
+            </div>
+            <div class="span4">
+                <h1>Other posts</h1>
+                <ul class="unstyled">
+                    {% for other in posts %}
+                        {% if other.slug != slug %}
+                        <li><a href="{{ path('blog_post', {'slug': other.slug}) }}">{{ other.title }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

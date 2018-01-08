@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <projects>
+    <project slug="fusebox">
+        <name>Fusebox</name>
+        <presentation>Music Recommendation System</presentation>
+        <description>
+            <![CDATA[
+            <p>Music recommendation system that integrates Spotify with Slack.</p>
+            <p>At <a href="https://pixelfusion.co.nz/" target="_blank">Pixel Fusion</a>, we normally have background music playing from Spotify. It is not easy to please everyone and only a few people have control over the playlist. To give everyone access to the playlist, an integration with Slack was built that allows employees to queue new songs and lets everyone rate them. Based on audio features and ratings, machine learning is used to dynamically manage the playlist, removing and adding songs as it sees fit.</p>
+
+            <p>The project is powered by Python/Django and deployed to AWS through Jenkins.</p>
+
+            <h4>Libraries</h4>
+            <ul>
+                <li>Powered by <a href="https://www.djangoproject.com/" target="_blank">Django</a></li>
+                <li>Integration of <a href="https://developer.spotify.com/web-api/" target="_blank">Spotify's API</a> through <a href="https://github.com/plamere/spotipy" target="_blank">spotipy</a> package</li>
+                <li>Integration of <a href="https://api.slack.com/" target="_blank">Slack's api</a> through <a href="https://github.com/slackapi/python-slackclient" target="_blank">python-slackclient</a> library</li>
+            </ul>
+            ]]>
+        </description>
+        <url>https://github.com/titomiguelcosta/fusebox</url>
+        <keywords>Python, Django, Jenkins, Machine Learning, Slack, Spotify</keywords>
+        <image />
+        <date>August 2017</date>
+        <status>In progress</status>
+    </project>
+    <project slug="pocket">
+        <name>Pocket</name>
+        <presentation>Currency exchange helpers</presentation>
+        <description>
+            <![CDATA[
+            <p>Pocket is a collection of script to help calculate currency exchanges.</p>
+            <p>Pocket integrates with Transferwise to determine the current exchange rate between to currency and calculate the value of a rate to obtain a certain profit.</p>
+            <p>Pocket is built in Python and available as an API. It is deployed to AWS using Zappa (using Lambda and API Gateway services behind the scenes).</p>
+
+            <h4>Libraries</h4>
+            <ul>
+                <li>Powered by <a href="http://flask.pocoo.org/" target="_blank">Flask</a></li>
+                <li>Deployment to AWS API Gateway / Lambda using <a href="https://github.com/Miserlou/Zappa" target="_blank">Zappa</a></li>
+            </ul>
+            ]]>
+        </description>
+        <url>https://github.com/titomiguelcosta/pocket</url>
+        <keywords>Python, Flask, API, Zappa</keywords>
+        <image />
+        <date>September 2017</date>
+        <status>In progress</status>
+    </project>
+    <project slug="titomiguelcosta-my-personal-website">
+        <name>DreamerWebsite</name>
+        <presentation>My personal website powered by Silex with some Zend2 packages and Symfony2 components</presentation>
+        <description>
+            <![CDATA[
+            <p>Since my own website is an experimental project, I've decided to Open Source it.</p>
+            <h4>Features</h4>
+            <ul>
+                <li>Powered by <a href="http://silex.sensiolabs.org/" target="_blank">Silex</a> with <a href="http://silex.sensiolabs.org/doc/providers/twig.html" target="_blank">Twig</a>, <a href="http://silex.sensiolabs.org/doc/providers/form.html" target="_blank">Form</a> and <a href="http://silex.sensiolabs.org/doc/providers/validator.html" target="_blank">Validator</a> service providers</li>
+                <li>Integration of <a href="https://developers.google.com/youtube/" target="_blank">YouTube's api</a> through <a href="http://packages.zendframework.com/" target="_blank">ZendGData</a> package</li>
+                <li>Integration of <a href="http://www.flickr.com/services/api/" target="_blank">Flickr's api</a> through <a href="http://packages.zendframework.com/" target="_blank">ZendFlickr</a> service</li>
+                <li>Pagination using the <a href="http://packages.zendframework.com/" target="_blank">ZendPaginator</a> package</li>
+                <li>Generation of RSS Feed using the <a href="http://packages.zendframework.com/" target="_blank">ZendFeed</a> package</li>
+                <li>Manipulation of xml files using <a href="http://symfony.com/doc/current/components/dom_crawler.html" target="_blank">DowCrawler</a> and <a href="http://symfony.com/doc/current/components/css_selector.html" target="_blank">CssSelector</a> components (needs improvement)</li>
+            </ul>
+            ]]>
+        </description>
+        <url>https://github.com/titomiguelcosta/DreamerWebsite</url>
+        <keywords>Silex, YouTube, Flickr, Paginator, Feed</keywords>
+        <image />
+        <date>Late 2012</date>
+        <status>In progress</status>
+    </project>
     <project slug="zorbus">
         <name>Zorbus</name>
         <presentation>Zorbus is a content managment system built on top of Symfony2</presentation>
@@ -44,32 +113,9 @@
         </description>
         <url>https://github.com/Zorbus</url>
         <keywords>Symfony2, cms</keywords>
-        <image></image>
+        <image />
         <date>Since mid 2012 to nowadays</date>
-        <status>In progress</status>
-    </project>
-    <project slug="titomiguelcosta-my-personal-website">
-        <name>MyPersonalWebsite</name>
-        <presentation>My personal website powered by Silex with some Zend2 packages and Symfony2 components</presentation>
-        <description>
-            <![CDATA[
-            <p>Since my own website is an experimental project, I've decided to release it open source.</p>
-            <h4>Features</h4>
-            <ul>
-                <li>Powered by <a href="http://silex.sensiolabs.org/" target="_blank">Silex</a> with <a href="http://silex.sensiolabs.org/doc/providers/twig.html" target="_blank">Twig</a>, <a href="http://silex.sensiolabs.org/doc/providers/form.html" target="_blank">Form</a> and <a href="http://silex.sensiolabs.org/doc/providers/validator.html" target="_blank">Validator</a> service providers</li>
-                <li>Integration of <a href="https://developers.google.com/youtube/" target="_blank">YouTube's api</a> through <a href="http://packages.zendframework.com/" target="_blank">ZendGData</a> package</li>
-                <li>Integration of <a href="http://www.flickr.com/services/api/" target="_blank">Flickr's api</a> through <a href="http://packages.zendframework.com/" target="_blank">ZendFlickr</a> service</li>
-                <li>Data pagination using the <a href="http://packages.zendframework.com/" target="_blank">ZendPaginator</a> package</li>
-                <li>Generation of RSS Feed using the <a href="http://packages.zendframework.com/" target="_blank">ZendFeed</a> package</li>
-                <li>Manipulation of xml files using <a href="http://symfony.com/doc/current/components/dom_crawler.html" target="_blank">DowCrawler</a> and <a href="http://symfony.com/doc/current/components/css_selector.html" target="_blank">CssSelector</a> components (needs improvement)</li>
-            </ul>
-            ]]>
-        </description>
-        <url>https://github.com/titomiguelcosta/myPersonalWebsite</url>
-        <keywords>Silex, YouTube, Flickr, Paginator, Feed</keywords>
-        <image></image>
-        <date>Late 2012</date>
-        <status>Mantainance</status>
+        <status>Deprecated</status>
     </project>
     <project slug="symfony2-bootstrap">
         <name>Symfony2Bootstrap</name>
@@ -85,9 +131,9 @@
         </description>
         <url>https://github.com/Zorbus/ZorbusSymfonyBootstrapBundle</url>
         <keywords>Symfony2, bootstrap</keywords>
-        <image></image>
+        <image />
         <date>Late 2012</date>
-        <status>Mantainance</status>
+        <status>Deprecated</status>
     </project>
     <project slug="symfony-plugin-tmcTwitterBootstrapPlugin">
         <name>tmcTwitterBootstrapPlugin</name>
@@ -104,9 +150,9 @@
         </description>
         <url>https://github.com/titomiguelcosta/tmcTwitterBootstrapPlugin</url>
         <keywords>symfony, plugin, theme</keywords>
-        <image></image>
+        <image />
         <date>End of 2011</date>
-        <status>Mantainance</status>
+        <status>Deprecated</status>
     </project>
     <project slug="symfony-plugin-tmcI18nPlugin">
         <name>tmcI18nPlugin</name>
@@ -126,8 +172,8 @@
         </description>
         <url>https://github.com/titomiguelcosta/tmcI18nPlugin</url>
         <keywords>symfony, plugin, i18n</keywords>
-        <image></image>
+        <image />
         <date>End of 2011</date>
-        <status>Mantainance</status>
+        <status>Deprecated</status>
     </project>
 </projects>

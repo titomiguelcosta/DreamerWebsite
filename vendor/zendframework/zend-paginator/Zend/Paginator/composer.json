@@ -1,1 +1,0 @@
-{"name":"zendframework\/zend-paginator","description":" ","license":"BSD-3-Clause","keywords":["zf2","paginator"],"autoload":{"psr-0":{"Zend\\Paginator\\":""}},"target-dir":"Zend\/Paginator","require":{"php":">=5.3.3"},"version":"2.0.5","dist":{"url":"http:\/\/packages.zendframework.com\/composer\/Zend_Paginator-2.0.5.zip","type":"zip"}}

@@ -2,7 +2,10 @@
 
 const FLICKR_KEY = 'YOU_FLICKR_KEY';
 const FLICKR_SECRET = 'YOUR_FLICKR_SECRET';
+
 const YOUTUBE_DEVELOPER_KEY = 'YOUR_YOUTUBE_DEVELOPER_KEY';
 const YOUTUBE_TOKEN = 'YOUR_YOUTUBE_TOKEN';
+
+const DEBUG = false;
 
 define('PROJECT_ROOT', realpath(__DIR__.'/..'));

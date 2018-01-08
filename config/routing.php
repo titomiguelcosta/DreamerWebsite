@@ -20,6 +20,6 @@ $app->get('/music/{page}', 'TitoMiguelCosta\Controller\Music::listAction')->asse
 
 $app->get('/photos/{page}', 'TitoMiguelCosta\Controller\Photo::listAction')->assert('page', '\d+')->value('page', '1')->bind('photos');
 
-/** auxiliar routes */
+/** helper routes */
 $app->get('/youtube/auth', 'TitoMiguelCosta\Controller\Main::youtubeAuthAction')->bind('youtube_auth');
 $app->get('/youtube/token', 'TitoMiguelCosta\Controller\Main::youtubeTokenAction')->bind('youtube_token');

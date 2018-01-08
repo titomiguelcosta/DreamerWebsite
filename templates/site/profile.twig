@@ -1,0 +1,39 @@
+{% extends 'layout.twig' %}
+
+{% block title %}
+    {{ parent() }} | Profile
+{% endblock %}
+
+{% block body %}
+    <div class="main">
+        <div class="row-fluid">
+            <div class="span8" itemscope itemtype="http://data-vocabulary.org/Person">
+                <h1>Profile</h1>
+                <p>My name is <span itemprop="name">Tito Miguel Costa</span>, I'm from <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="country-name">Portugal</span></span>, and I'm a certified PHP <span itemprop="title">developer</span>.</p>
+                
+                <h2>Studies</h2>
+                <p>Back in 2007, I graduated in Science and Computer Technology at the <a href="http://www.uac.pt/" target="_blank">University of Azores</a>.</p>
+                <p>In 2011, I completed the first year studies of Master in Multimedia at the <a href="http://www.up.pt/" target="_blank">University of Oporto</a>.</p>
+
+                <h2>Background</h2>
+                <p>Since my early days as a programmer, my passion has always been around web development. From using plain old PHP code to applying the most modern patterns and technologies, giving preference to Open Source libraries whenever possible.</p>
+                <p>After experimenting with several frameworks in the PHP world, <a href="http://symfony.com" target="_blank">Symfony</a> has been my choice for the last couple of years, using packages from <a href="https://framework.zend.com" target="_blank">Zend</a> and <a href="https://thephpleague.com/" target="_blank">The League of Extraordinary Packages</a> whenever fit for purpose.</p>
+                <p>More recently, all thanks to machine learning, my programming language of preference tends towards Python, using <a href="http://flask.pocoo.org/" target="_blank">Flask</a>, <a href="https://www.djangoproject.com/" target="_blank">Django</a> and <a href="https://wagtail.io/" target="_blank">Wagtail</a> on my side projects.</p>
+
+                <h2>Experience</h2>
+                <p>I have developed a multitude of web applications and APIs, please take a look at some of my <a href="{{ path('projects') }}">projects</a> and <a href="{{ path('code') }}">code</a>.</p>
+
+                <h2>Hobbies</h2>
+                <p>When I'm away from the computer, most likely I'll be doing sports, swimming and tennis being on top of my preferences.</p>
+                <p>I also like to play chess, you can meet on <a href="http://www.chess.com/members/view/titomiguelcosta" target="_blank">chess.com</a>. You are welcome to challenge me for a game.</p>
+            </div>
+            <div class="span4">
+                <h2>Contact</h2>
+                <p>Feel free to <a href="{{ path('contact') }}">contact me</a>, share your project and ideas. Collaborations are always welcome.</p>
+                
+                <h2>CV</h2>
+                <p>Take a look at <a href="http://pt.linkedin.com/in/titomiguelcosta" target="_blank">my CV on LinkedIn</a> or <a href="{{ asset('/pdf/TitoMiguelCosta-CV.pdf') }}">download a PDF copy</a>.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
