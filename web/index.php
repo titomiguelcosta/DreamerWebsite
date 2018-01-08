@@ -3,7 +3,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 require_once __DIR__.'/../config/config.php';
 
 $app = new Silex\Application();
-$app['debug'] = false;
+$app['debug'] = defined("DEBUG") ? DEBUG : false;
 $app['root_dir'] = __DIR__;
 
 require_once __DIR__.'/../config/services.php';

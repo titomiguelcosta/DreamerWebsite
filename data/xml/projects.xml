@@ -30,7 +30,7 @@
         <presentation>Currency exchange helpers</presentation>
         <description>
             <![CDATA[
-            <p>Pocket is a collection of script to help calculate currency exchanges.</p>
+            <p>Pocket is a collection of scripts to help calculate currency exchanges.</p>
             <p>Pocket integrates with Transferwise to determine the current exchange rate between to currency and calculate the value of a rate to obtain a certain profit.</p>
             <p>Pocket is built in Python and available as an API. It is deployed to AWS using Zappa (using Lambda and API Gateway services behind the scenes).</p>
 
