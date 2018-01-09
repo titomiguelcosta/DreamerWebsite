@@ -6,6 +6,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\DomCrawler\Crawler;
 use Silex\Application;
+use TitoMiguelCosta\Form\Contact as ContactForm;
+use TitoMiguelCosta\Event\Contact as ContactEvent;
 
 /**
  * Description of Controller
@@ -65,24 +67,25 @@ class Site
             'email' => '',
         );
 
-        $form = $app['form.factory']->create(new \TitoMiguelCosta\Form\Contact(), $defaults);
+        $form = $app['form.factory']->create(ContactForm::class, $defaults);
 
         if ('POST' == $request->getMethod()) {
-            $form->bind($request);
+            $form->handleRequest($request);
 
             if ($form->isValid()) {
                 $data = $form->getData();
-                $app['dispatcher']->dispatch(\TitoMiguelCosta\Event\Contact::SUBMIT, new \TitoMiguelCosta\Event\Contact($app, $data));
+                $app['dispatcher']->dispatch(ContactEvent::SUBMIT, new ContactEvent($app, $data));
 
-                $app['session']->setFlash('name', $data['name']);
+                $app['session']->getFlashBag()->set('name', $data['name']);
 
                 return $app->redirect($app['url_generator']->generate('contact'));
             }
         }
 
-        return $app['twig']->render('site/contact.twig', array(
-                    'form' => $form->createView()
-                ));
+        return $app['twig']
+            ->render('site/contact.twig', array(
+                'form' => $form->createView()
+            ));
     }
 
 }

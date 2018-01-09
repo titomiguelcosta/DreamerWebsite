@@ -9,7 +9,7 @@
         <div class="row-fluid">
             <div class="span8">
                 <h1>Contact</h1>
-                {% if not app.session.hasFlash('name') %}
+                {% if not app.session.flashbag.has('name') %}
                 <form action="{{ path('contact') }}" method="post" class="form-horizontal">
                     <div class="control-group">
                         {{ form_errors(form.name) }}
@@ -39,13 +39,12 @@
                     <input type="submit" name="submit" value="Submit" class="btn" />
                 </form>
                 {% else %}
-                    <p>Thanks {{ app.session.getFlash('name') }}, your message was sent successfully.</p>
+                    <p>Thanks <strong>{{ app.session.flashbag.get('name')[0] }}</strong>, your message was sent successfully.</p>
                     <p>I'll get back to you as soon as possible.</p>
                 {% endif %}
             </div>
             <div class="span4">
                 <h2>Social</h2>
-                <a href="http://www.delicious.com/titomiguelcosta" target="_blank"><img src="{{ asset('/images/social/delicious.png') }}" alt="" width="32" height="32"></a>
                 <a href="http://www.delicious.com/titomiguelcosta" target="_blank"><img src="{{ asset('/images/social/delicious.png') }}" alt="" width="32" height="32"></a>
                 <a href="http://www.facebook.com/titomiguelcosta" target="_blank"><img src="{{ asset('/images/social/facebook.png') }}" alt="" width="32" height="32"></a>
                 <a href="http://www.flickr.com/photos/titomiguelcosta/" target="_blank"><img src="{{ asset('/images/social/flickr.png') }}" alt="" width="32" height="32"></a>

@@ -1,5 +1,8 @@
 <?php
-$app['dispatcher']->addListener(Symfony\Component\HttpKernel\KernelEvents::EXCEPTION, array($app['exception.handler'], 'handler'));
+
+if (!DEBUG) {
+    $app['dispatcher']->addListener(Symfony\Component\HttpKernel\KernelEvents::EXCEPTION, array($app['exception.handler'], 'handler'));
+}
 
 $app['dispatcher']->addListener(TitoMiguelCosta\Event\Contact::SUBMIT, array('TitoMiguelCosta\Listener\Contact', 'db'));
 $app['dispatcher']->addListener(TitoMiguelCosta\Event\Contact::SUBMIT, array('TitoMiguelCosta\Listener\Contact', 'email'));
