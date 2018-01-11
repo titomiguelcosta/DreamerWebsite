@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Silex\Application;
 use Zend\Paginator\Paginator;
-use Zend\Paginator\Adapter\Null as NullIterator;
+use Zend\Paginator\Adapter\NullFill as NullIterator;
 use Zend\Feed\Writer\Feed;
 use ZendPdf\PdfDocument;
 use ZendPdf\Page;
@@ -34,14 +34,6 @@ class Blog
         $total = $parser->totalPosts();
         $posts = $parser->getPosts(($page-1)*$max_per_page+1, $max_per_page*$page);
         
-        /**
-        $crawler = new Crawler();
-        $crawler->addXmlContent(file_get_contents(PROJECT_ROOT . '/data/xml/blog.xml'));
-
-        $total = $crawler->filterXPath('//post')->count();
-
-        $posts = $crawler->filterXPath(sprintf('//post[position() >= %d and position() <= %d]', ($page-1)*$max_per_page+1, $max_per_page*$page));
-        */
         $paginator = new Paginator(new NullIterator($total));
         $paginator->setCurrentPageNumber($page);
         $paginator->setItemCountPerPage($max_per_page);

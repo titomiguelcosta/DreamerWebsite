@@ -1,5 +1,6 @@
 html, body {
     font-family: 'Enriqueta', sans-serif;
+    font-size: 15px;
 }
 #banner {
     height: 15px;
@@ -66,13 +67,16 @@ footer #credits {
     /*    border: 5px solid transparent;*/
     background-image: none;
 }
-#home a:link, #home a:visited {
+#home .content span {
     text-decoration: none;
     position: absolute;
     bottom: 16px;
     right: 20px;
     line-height: 30px;
     height: 30px;
+}
+#home a:link, #home a:visited {
+    text-decoration: none;
 }
 #home .content:hover {
     background-image: url('../images/caixa_bg.png');
@@ -181,6 +185,9 @@ hr {
 }
 .span3 {
     margin-bottom: 5px;
+}
+p {
+    line-height: 25px;
 }
 @media (min-width: 1000px) {
     .span3 .content.first {

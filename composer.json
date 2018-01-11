@@ -12,7 +12,12 @@
         "symfony/translation": "^3.0",
         "symfony/intl": "^3.0",
         "swiftmailer/swiftmailer": "~5",
-        "symfony/asset": "^4.0"
+        "symfony/asset": "^4.0",
+        "zendframework/zend-paginator": "^2.8",
+        "zendframework/zend-servicemanager": "^3.3",
+        "zendframework/zend-feed": "^2.9",
+        "zendframework/zendpdf": "^2.0",
+        "zendframework/zend-soap": "^2.6"
     },
     "autoload": {
         "psr-0": {

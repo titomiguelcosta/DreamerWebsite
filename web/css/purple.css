@@ -21,29 +21,19 @@ header #slogan {
     color: #e3e3e3;
 }
 #home a:hover, #home a:active {
-    color: #fff;
+    color: #FFF;
 }
 .main {
     background-color: #c6c6c6;
     border: 7px solid #C0C0C0;
     padding: 5px 15px;
 }
-/*#home .content.first:hover, #home .content.ninth:hover {
-    border: 5px solid #BD6C54;
+#home .content span {
+    color: #CCC !important;
 }
-#home .content.second:hover, #home .content.eighth:hover {
-    border: 5px solid #E59167;
+#home a:hover .content span {
+    color: #FFF !important;
 }
-#home .content.third:hover, #home .content.seventh:hover {
-    border: 5px solid #F5CA7F;
-}
-#home .content.fourth:hover, #home .content.sixth:hover {
-    border: 5px solid #DEAC68;
-}
-#home .content.fifth:hover {
-    border: 5px solid #BD6C54;
-}
-*/
 .first, .ninth, #menu li.first a:hover, #menu li.first a:active, #menu li.first.active a:link, #menu li.first.active a:visited {
     background-color: #4A3259;
     color: #4A3259;
@@ -62,11 +52,3 @@ h1 {
 h2 {
     color: #8C6181;
 }
-/*.fourth, .sixth {
-    background-color: #D9B19A;
-    color: #D9B19A;
-}
-.fifth {
-    background-color: #F2D8A7;
-    color: #F2D8A7;
-}*/
