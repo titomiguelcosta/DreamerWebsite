@@ -10,12 +10,20 @@
             <div class="span8">
                 <h1>Projects</h1>
                 <dl>
-                    {% for project in projects %}
+                    {% for project in in_progress %}
                     <dt><a href="{{ path('project', {'slug': project.getAttribute('slug')}) }}">{{ project.getElementsByTagName('name').item(0).nodeValue }}</a></dt>
                     <dd>{{ project.getElementsByTagName('presentation').item(0).nodeValue }}</dd>
                     {% endfor %}
                 </dl>
-                <p></p>
+
+                <h2>Deprecated</h2>
+                <dl>
+                    {% for project in deprecated %}
+                        <dt><a href="{{ path('project', {'slug': project.getAttribute('slug')}) }}">{{ project.getElementsByTagName('name').item(0).nodeValue }}</a></dt>
+                        <dd>{{ project.getElementsByTagName('presentation').item(0).nodeValue }}</dd>
+                    {% endfor %}
+                </dl>
+                <hr>
             </div>
             <div class="span4">
                 <h2>In progress</h2>

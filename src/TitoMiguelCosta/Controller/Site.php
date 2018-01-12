@@ -40,11 +40,11 @@ class Site
     {
         $crawler = new Crawler();
         $crawler->addXmlContent(file_get_contents(PROJECT_ROOT . '/data/xml/projects.xml'));
-        $projects = $crawler->filterXPath('//project');
         $in_progress = $crawler->filterXPath('//project[status="In progress"]');
+        $deprecated = $crawler->filterXPath('//project[status="Deprecated"]');
 
         return $app['twig']->render('site/projects.twig', array(
-                    'projects' => $projects,
+                    'deprecated' => $deprecated,
                     'in_progress' => $in_progress
                 ));
     }

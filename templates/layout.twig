@@ -39,16 +39,6 @@
         {% endblock %}
     </head>
     <body>
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-6024619-5']);
-            _gaq.push(['_trackPageview']);
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
         {% block banner %}
         <div id="line" class="row-fluid">
             <div class="square first"></div>
@@ -57,8 +47,7 @@
             <div class="square fourth"></div>
             <div class="square fifth"></div>
         </div>
-        <div id="banner">
-        </div>
+        <div id="banner"></div>
         {% endblock %}
         <div id="wrapper">
             <div class="container">
@@ -71,10 +60,10 @@
                     {% block menu %}
                         <div id="menu" class="pull-right span6">
                             <ul class="unstyled">
-                                <li class="first{% if path('contact') == global.request.getPathInfo() %} active{% endif %}"><a href="{{ path('contact') }}">Contact</a></li>
-                                <li class="third{% if path('code') == global.request.getPathInfo() %} active{% endif %}"><a href="{{ path('code') }}">Code</a></li>
-                                <li class="second{% if path('projects') == global.request.getPathInfo() %} active{% endif %}"><a href="{{ path('projects') }}">Projects</a></li>
                                 <li class="first{% if path('profile') == global.request.getPathInfo() %} active{% endif %}"><a href="{{ path('profile') }}">Profile</a></li>
+                                <li class="second{% if path('projects') == global.request.getPathInfo() %} active{% endif %}"><a href="{{ path('projects') }}">Projects</a></li>
+                                <li class="third{% if path('code') == global.request.getPathInfo() %} active{% endif %}"><a href="{{ path('code') }}">Code</a></li>
+                                <li class="first{% if path('contact') == global.request.getPathInfo() %} active{% endif %}"><a href="{{ path('contact') }}">Contact</a></li>
                             </ul>
                         </div>
                     {% endblock %}
@@ -87,13 +76,23 @@
             <footer class="container">
                 {% spaceless %}
                     <a href="/"><img src="{{ asset('/images/footer/home.svg') }}" width="20" height="20" alt="Home"></a>
-                    <a href="https://www.youtube.com/playlist?list=PLJo6vGeINQikqwwTnLHEF5hi0W3jafvPP" target="_blank"><img src="{{ asset('/images/footer/video.svg') }}" width="20" height="20" alt="Short films"></a>
                     <a href="https://www.instagram.com/titomiguelcosta/" target="_blank"><img src="{{ asset('/images/footer/camera.svg') }}" width="20" height="20" alt="Photos"></a>
+                    <a href="https://www.youtube.com/playlist?list=PLJo6vGeINQikqwwTnLHEF5hi0W3jafvPP" target="_blank"><img src="{{ asset('/images/footer/video.svg') }}" width="20" height="20" alt="Short films"></a>
                     <a href="https://www.youtube.com/playlist?list=PL3E4772C48425800C" target="_blank"><img src="{{ asset('/images/footer/headphones.svg') }}" width="20"height="20"  alt="Music"></a>
                 {% endspaceless %}
                 <div id="credits" class="pull-right">&copy; Tito Miguel Costa</div>
             </footer>
         </div>
         {% endblock %}
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-6024619-5']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
     </body>
 </html>
