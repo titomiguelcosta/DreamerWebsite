@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a220aa50-deaa-48e9-9041-db33516d2c52" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/TitoMiguelCosta/Controller/Site.php" afterPath="$PROJECT_DIR$/src/TitoMiguelCosta/Controller/Site.php" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.twig" afterPath="$PROJECT_DIR$/templates/layout.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/site/code.twig" afterPath="$PROJECT_DIR$/templates/site/code.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/site/exception.twig" afterPath="$PROJECT_DIR$/templates/site/exception.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/site/profile.twig" afterPath="$PROJECT_DIR$/templates/site/profile.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/site/project.twig" afterPath="$PROJECT_DIR$/templates/site/project.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/site/projects.twig" afterPath="$PROJECT_DIR$/templates/site/projects.twig" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" afterPath="$PROJECT_DIR$/config/services.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="code.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/site/code.twig">
+      <file leaf-file-name="services.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/services.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="85" lean-forward="false" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
+            <state relative-caret-position="300">
+              <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -71,7 +63,6 @@
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/config/events.php" />
         <option value="$PROJECT_DIR$/src/TitoMiguelCosta/Form/Contact.php" />
-        <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/TitoMiguelCosta/Listener/Contact.php" />
@@ -87,6 +78,7 @@
         <option value="$PROJECT_DIR$/templates/site/projects.twig" />
         <option value="$PROJECT_DIR$/templates/site/project.twig" />
         <option value="$PROJECT_DIR$/templates/site/code.twig" />
+        <option value="$PROJECT_DIR$/config/services.php" />
       </list>
     </option>
   </component>
@@ -178,19 +170,12 @@
             <path>
               <item name="DreamerWebsite" type="b2602c69:ProjectViewProjectNode" />
               <item name="DreamerWebsite" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="DreamerWebsite" type="b2602c69:ProjectViewProjectNode" />
               <item name="DreamerWebsite" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="photos" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DreamerWebsite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DreamerWebsite" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -503,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/site/contact.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -629,6 +607,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="85" lean-forward="false" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding />
         </state>
       </provider>
