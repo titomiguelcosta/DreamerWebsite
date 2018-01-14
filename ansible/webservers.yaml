@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: webservers
   order: inventory
   remote_user: ubuntu
 
@@ -13,8 +13,8 @@
     - name: pull latest code from repo
       shell: git pull origin master
       args:
-        chdir: /mnt/websites/titomiguelcosta
+        chdir: "{{ project_path }}"
     - name: install dependencies
       shell: composer install
       args:
-        chdir: /mnt/websites/titomiguelcosta
+        chdir: "{{ project_path }}"
