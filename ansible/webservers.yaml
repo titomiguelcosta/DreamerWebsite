@@ -1,0 +1,20 @@
+---
+- hosts: all
+  order: inventory
+  remote_user: ubuntu
+
+  handlers:
+    - name: restart apache
+      service: name=apache2 state=restarted
+      listen: "restart apache"
+      become_user: root
+
+  tasks:
+    - name: pull latest code from repo
+      shell: git pull origin master
+      args:
+        chdir: /mnt/websites/titomiguelcosta
+    - name: install dependencies
+      shell: composer install
+      args:
+        chdir: /mnt/websites/titomiguelcosta

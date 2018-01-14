@@ -37,3 +37,12 @@ Extra info
 
 * Using HttpCache for reverse proxy
 * Rich snippets are used in my profile page
+
+Deployment
+----------
+
+Using ansible recipes for deploying project. Make sure you have an ssh config setting pointing to the server by the name of titomiguelcosta. And then execute:
+
+```
+ansible-playbook -i ansible/inventories/production/hosts ansible/webservers.yaml 
+```
