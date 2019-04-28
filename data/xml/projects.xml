@@ -13,9 +13,9 @@
             <h4>Libraries</h4>
             <ul>
                 <li>Powered by <a href="https://symfony.com/" target="_blank">Symfony</a></li>
-                <li>Integration of <a href="https://developer.github.com/v3/" target="_blank">GitHub's API</a> through <a href="https://github.com/KnpLabs/php-github-api" target="_blank">php-github-api</a> package</li>
-                <li>Integration of <a href="https://www.linkedin.com/developers/" target="_blank">LinkedIn's API</a> through <a href="https://github.com/zoonman/linkedin-api-php-client" target="_blank">linkedin-api-php-client</a> package</li>
-                <li>Integration of <a href="https://developer.twitter.com/en/docs.html" target="_blank">Twitter's API</a> through <a href="https://github.com/abraham/twitteroauth" target="_blank">twitteroauth</a> package</li>
+                <li>Integration with <a href="https://developer.github.com/v3/" target="_blank">GitHub</a> through <a href="https://github.com/KnpLabs/php-github-api" target="_blank">php-github-api</a></li>
+                <li>Integration with <a href="https://www.linkedin.com/developers/" target="_blank">LinkedIn</a> through <a href="https://github.com/zoonman/linkedin-api-php-client" target="_blank">linkedin-api-php-client</a></li>
+                <li>Integration with <a href="https://developer.twitter.com/en/docs.html" target="_blank">Twitter</a> through <a href="https://github.com/abraham/twitteroauth" target="_blank">twitteroauth</a></li>
             </ul>
 
             <h4>References</h4>
