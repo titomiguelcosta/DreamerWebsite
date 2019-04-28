@@ -16,12 +16,12 @@
                 <li>Integration with <a href="https://developer.github.com/v3/" target="_blank">GitHub</a> through <a href="https://github.com/KnpLabs/php-github-api" target="_blank">php-github-api</a></li>
                 <li>Integration with <a href="https://www.linkedin.com/developers/" target="_blank">LinkedIn</a> through <a href="https://github.com/zoonman/linkedin-api-php-client" target="_blank">linkedin-api-php-client</a></li>
                 <li>Integration with <a href="https://developer.twitter.com/en/docs.html" target="_blank">Twitter</a> through <a href="https://github.com/abraham/twitteroauth" target="_blank">twitteroauth</a></li>
+                <li>Documentation provided by <a href="https://symfony.com/doc/master/bundles/NelmioApiDocBundle/index.html" target="_blank">NelmioApiDocBundle</a></li>
             </ul>
 
             <h4>References</h4>
             <ul>
                 <li><a href="https://api.hammer.titomiguelcosta.com/" target="_blank">My own instance</a> and its <a href="https://api.hammer.titomiguelcosta.com/" target="_blank">documentation</a></li>
-                <li>Documentation provided by <a href="https://symfony.com/doc/master/bundles/NelmioApiDocBundle/index.html" target="_blank">NelmioApiDocBundle</a></li>
             </ul>
             ]]>
         </description>
