@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <projects>
-    <project slug="fusebox">
-        <name>Fusebox</name>
-        <presentation>Music Recommendation System</presentation>
+    <project slug="hammer">
+        <name>Hammer</name>
+        <presentation>API from a developer to other developers</presentation>
         <description>
             <![CDATA[
-            <p>Music recommendation system that integrates Spotify with Slack.</p>
-            <p>At <a href="https://pixelfusion.co.nz/" target="_blank">Pixel Fusion</a>, we normally have background music playing from Spotify. It is not easy to please everyone and only a few people have control over the playlist. To give everyone access to the playlist, an integration with Slack was built that allows employees to queue new songs and lets everyone rate them. Based on audio features and ratings, machine learning is used to dynamically manage the playlist, removing and adding songs as it sees fit.</p>
-
-            <p>The project is powered by Python/Django and deployed to AWS through Jenkins.</p>
+            <p>API that exposes services normally used by developers. Currently integrates with GitHub, LinkedIn and Twitter.</p>
+            <p>This API is ready to be deployed to AWS Ellastic Beanstalk, so developers can easily consume the endpoints when building their portfolio page or mobile app.</p>
+            <p>It is a read-only API, and only discloses information already public, so no authentication mechanism is provided.</p>
 
             <h4>Libraries</h4>
             <ul>
-                <li>Powered by <a href="https://www.djangoproject.com/" target="_blank">Django</a></li>
-                <li>Integration of <a href="https://developer.spotify.com/web-api/" target="_blank">Spotify's API</a> through <a href="https://github.com/plamere/spotipy" target="_blank">spotipy</a> package</li>
-                <li>Integration of <a href="https://api.slack.com/" target="_blank">Slack's api</a> through <a href="https://github.com/slackapi/python-slackclient" target="_blank">python-slackclient</a> library</li>
+                <li>Powered by <a href="https://symfony.com/" target="_blank">Symfony</a></li>
+                <li>Integration of <a href="https://developer.github.com/v3/" target="_blank">GitHub's API</a> through <a href="https://github.com/KnpLabs/php-github-api" target="_blank">php-github-api</a> package</li>
+                <li>Integration of <a href="https://www.linkedin.com/developers/" target="_blank">LinkedIn's API</a> through <a href="https://github.com/zoonman/linkedin-api-php-client" target="_blank">linkedin-api-php-client</a> package</li>
+                <li>Integration of <a href="https://developer.twitter.com/en/docs.html" target="_blank">Twitter's API</a> through <a href="https://github.com/abraham/twitteroauth" target="_blank">twitteroauth</a> package</li>
+            </ul>
+
+            <h4>References</h4>
+            <ul>
+                <li><a href="https://api.hammer.titomiguelcosta.com/" target="_blank">My own instance</a> and its <a href="https://api.hammer.titomiguelcosta.com/" target="_blank">documentation</a></li>
+                <li>Documentation provided by <a href="https://symfony.com/doc/master/bundles/NelmioApiDocBundle/index.html" target="_blank">NelmioApiDocBundle</a></li>
             </ul>
             ]]>
         </description>
-        <url>https://github.com/titomiguelcosta/fusebox</url>
-        <keywords>Python, Django, Jenkins, Machine Learning, Slack, Spotify</keywords>
+        <url>https://github.com/titomiguelcosta/hammer</url>
+        <keywords>API, PHP, Symfony, AWS, Elastic Beanstalk, GitHub, LinkedIn, Twitter</keywords>
         <image />
-        <date>August 2017</date>
+        <date>October 2018</date>
         <status>In progress</status>
     </project>
     <project slug="pocket">
@@ -47,9 +53,33 @@
         <date>September 2017</date>
         <status>In progress</status>
     </project>
+    <project slug="fusebox">
+        <name>Fusebox</name>
+        <presentation>Music Recommendation System</presentation>
+        <description>
+            <![CDATA[
+            <p>Music recommendation system that integrates Spotify with Slack.</p>
+            <p>At <a href="https://pixelfusion.co.nz/" target="_blank">Pixel Fusion</a>, we normally have background music playing from Spotify. It is not easy to please everyone and only a few people have control over the playlist. To give everyone access to the playlist, an integration with Slack was built that allows employees to queue new songs and lets everyone rate them. Based on audio features and ratings, machine learning is used to dynamically manage the playlist, removing and adding songs as it sees fit.</p>
+
+            <p>The project is powered by Python/Django and deployed to AWS through Jenkins.</p>
+
+            <h4>Libraries</h4>
+            <ul>
+                <li>Powered by <a href="https://www.djangoproject.com/" target="_blank">Django</a></li>
+                <li>Integration of <a href="https://developer.spotify.com/web-api/" target="_blank">Spotify's API</a> through <a href="https://github.com/plamere/spotipy" target="_blank">spotipy</a> package</li>
+                <li>Integration of <a href="https://api.slack.com/" target="_blank">Slack's api</a> through <a href="https://github.com/slackapi/python-slackclient" target="_blank">python-slackclient</a> library</li>
+            </ul>
+            ]]>
+        </description>
+        <url>https://github.com/titomiguelcosta/fusebox</url>
+        <keywords>Python, Django, Jenkins, Machine Learning, Slack, Spotify</keywords>
+        <image />
+        <date>August 2017</date>
+        <status>In progress</status>
+    </project>
     <project slug="titomiguelcosta-my-personal-website">
         <name>DreamerWebsite</name>
-        <presentation>My personal website powered by Silex with some Zend2 packages and Symfony2 components</presentation>
+        <presentation>My personal website</presentation>
         <description>
             <![CDATA[
             <p>Since my own website is an experimental project, I've decided to Open Source it.</p>
@@ -67,7 +97,7 @@
         <url>https://github.com/titomiguelcosta/DreamerWebsite</url>
         <keywords>Silex, YouTube, Flickr, Paginator, Feed</keywords>
         <image />
-        <date>Late 2012</date>
+        <date>Setember 2012</date>
         <status>In progress</status>
     </project>
     <project slug="zorbus">
