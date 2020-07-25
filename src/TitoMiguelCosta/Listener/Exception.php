@@ -24,15 +24,14 @@ class Exception
         $response = new Response($this->app['twig']->render('site/exception.twig', array()));
         $response->setStatusCode('500');
         $response->setTtl(86400);
-        
+
         $event->setResponse($response);
         $event->stopPropagation();
     }
-    
-    public function email(EventException $event)
+
+    public static function email(EventException $event)
     {
         $app = $event->getApplication();
         $app['mailer']->send(new EmailException($event->getApplication(), $event->getException()));
     }
-
 }
