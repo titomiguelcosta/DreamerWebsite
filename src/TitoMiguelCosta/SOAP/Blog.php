@@ -10,7 +10,7 @@ class Blog
 
     public function __construct()
     {
-        $this->root_dir = realpath(__DIR__.'/../../../data/xml/blog.xml');
+        $this->root_dir = realpath(__DIR__ . '/../../../data/xml/blog.xml');
     }
 
     /**
@@ -37,16 +37,7 @@ class Blog
         } catch (\Exception $e) {
             error_log($e->getMessage());
         }
-//        if (count($post) == 1)
-//        {
-//            $data['title'] = $post->eq(0)->text();
-//            $data['resume'] = $post->eq(1)->text();
-//            $data['content'] = $post->eq(2)->text();
-//            $data['date'] = $post->eq(4)->text();
-//            $data['category'] = $post->eq(5)->text();
-//            $data['tags'] = $post->eq(6)->text();
-//        }
+
         return $data;
     }
-
 }

@@ -1,16 +1,16 @@
 {% extends 'layout.twig' %}
 
 {% block title %}
-    {{ parent() }} | Exception
+    {{ parent() }} | Error
 {% endblock %}
 
 {% block body %}
     <div id="contacts" class="main">
         <div class="row-fluid">
             <div class="span8">
-                <h1>Exception</h1>
+                <h1>Oh no!</h1>
                 <p>Sorry, something unexpected has just happened.</p>
-                <p>The monkeys has been informed and they are dealing with the problem. If you would like to notify them yourself, go ahead, <a href="{{ path('contact') }}">contact them</a>.</p>
+                <p>The monkeys have been informed and they are dealing with the problem. If you would like to notify them yourself, go ahead, <a href="{{ path('contact') }}">ping them</a>.</p>
             </div>
             <div class="span4">
                 <h2>Menu</h2>
