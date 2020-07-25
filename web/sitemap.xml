@@ -1,154 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+      xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://www.titomiguelcosta.com/</loc>
+  <loc>https://www.titomiguelcosta.com/</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/profile</loc>
+  <loc>https://www.titomiguelcosta.com/profile</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/projects</loc>
+  <loc>https://www.titomiguelcosta.com/projects</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/code</loc>
+  <loc>https://www.titomiguelcosta.com/code</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/contacts</loc>
+  <loc>https://www.titomiguelcosta.com/contacts</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog</loc>
+  <loc>https://www.titomiguelcosta.com/blog</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/music</loc>
+  <loc>https://www.titomiguelcosta.com/photos</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/photos</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.titomiguelcosta.com/pdf/TitoMiguelCosta-CV.pdf</loc>
+  <loc>https://www.titomiguelcosta.com/pdf/TitoMiguelCosta-CV.pdf</loc>
   <lastmod>2012-12-08T11:15:33+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/project/zorbus</loc>
+  <loc>https://www.titomiguelcosta.com/project/zorbus</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/project/titomiguelcosta-my-personal-website</loc>
+  <loc>https://www.titomiguelcosta.com/project/titomiguelcosta-my-personal-website</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/project/symfony2-bootstrap</loc>
+  <loc>https://www.titomiguelcosta.com/project/symfony2-bootstrap</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/project/symfony-plugin-tmcTwitterBootstrapPlugin</loc>
+  <loc>https://www.titomiguelcosta.com/project/symfony-plugin-tmcTwitterBootstrapPlugin</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/project/symfony-plugin-tmcI18nPlugin</loc>
+  <loc>https://www.titomiguelcosta.com/project/symfony-plugin-tmcI18nPlugin</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/conding-standards</loc>
+  <loc>https://www.titomiguelcosta.com/blog/conding-standards</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/debug-php-project-with-xdebug-on-netbeans</loc>
+  <loc>https://www.titomiguelcosta.com/blog/debug-php-project-with-xdebug-on-netbeans</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/deploy-symfony2-project-with-capifony</loc>
+  <loc>https://www.titomiguelcosta.com/blog/deploy-symfony2-project-with-capifony</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/integrate-zend2-packages-with-composer</loc>
+  <loc>https://www.titomiguelcosta.com/blog/integrate-zend2-packages-with-composer</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/cache-data-in-symfony2</loc>
+  <loc>https://www.titomiguelcosta.com/blog/cache-data-in-symfony2</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/mysql-and-phpmyadmin-on-fedora-16</loc>
+  <loc>https://www.titomiguelcosta.com/blog/mysql-and-phpmyadmin-on-fedora-16</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/avoid-password-prompt-on-the-command-line</loc>
+  <loc>https://www.titomiguelcosta.com/blog/avoid-password-prompt-on-the-command-line</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/2</loc>
+  <loc>https://www.titomiguelcosta.com/blog/2</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/music/2</loc>
+  <loc>https://www.titomiguelcosta.com/photos/2</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/music/3</loc>
+  <loc>https://www.titomiguelcosta.com/blog/tutorial/category</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/music/4</loc>
+  <loc>https://www.titomiguelcosta.com/blog/google-chrome-fonts-fix</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/music/5</loc>
+  <loc>https://www.titomiguelcosta.com/blog/custom-parameters-in-a-symfony2-project</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/photos/2</loc>
+  <loc>https://www.titomiguelcosta.com/blog/define-bundle-hierarchy-in-symfony2</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/tutorial/category</loc>
+  <loc>https://www.titomiguelcosta.com/blog/version-symfony2-project-with-git</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/google-chrome-fonts-fix</loc>
+  <loc>https://www.titomiguelcosta.com/blog/free-xhtml-css-templates</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/custom-parameters-in-a-symfony2-project</loc>
+  <loc>https://www.titomiguelcosta.com/blog/manage-package-xml-file</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/define-bundle-hierarchy-in-symfony2</loc>
+  <loc>https://www.titomiguelcosta.com/blog/fix/category</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.titomiguelcosta.com/blog/version-symfony2-project-with-git</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.titomiguelcosta.com/blog/free-xhtml-css-templates</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.titomiguelcosta.com/blog/manage-package-xml-file</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.titomiguelcosta.com/blog/fix/category</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.titomiguelcosta.com/blog/resources/category</loc>
+  <loc>https://www.titomiguelcosta.com/blog/resources/category</loc>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>

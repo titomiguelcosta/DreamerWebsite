@@ -20,11 +20,11 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 
 $app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
     'swiftmailer.options' => array(
-        'host' => 'smtp.gmail.com',
-        'port' => 465,
-        'username' => 'titomiguelcosta@gmail.com',
+        'host' => EMAIL_HOST,
+        'port' => EMAIL_PORT,
+        'username' => EMAIL_USERNAME,
         'password' => EMAIL_PASSWORD,
-        'encryption' => 'ssl',
+        'encryption' => EMAIL_ENCRYPTION,
         'auth_mode' => null
     )
 ));
