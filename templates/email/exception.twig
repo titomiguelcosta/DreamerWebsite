@@ -1,9 +1,13 @@
 <h1>Exception on titomiguelcosta.com</h1>
 
 <ul>
-    <li>{{ global.request.getPathInfo }}</li>
+    <li>Path: {{ global.request.getPathInfo }}</li>
+    <li>{{ exception }}</li>
     <li>{{ exception.message }}</li>
-    <li><code>{{ exception.getTraceAsString }}</code></li>
+    <li>File: {{ exception.file }}</li>
+    <li>Line: {{ exception.line }}</li>
+    <li>Code: {{ exception.code }}</li>
+    <li><pre>{{ exception.getTraceAsString }}</pre></li>
 </ul>
 
 <p>Thrown at {{ date() | date('Y-m-d H:i:s')}}</p>
