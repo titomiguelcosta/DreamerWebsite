@@ -13,8 +13,8 @@ Zend2 packages
 * ZendServiceFlickr - integration of the Flickr api
 * ZendGData - integration of the YouTupe api
 
-Symfony2 components
--------------------
+Symfony components
+------------------
 
 * DomCrawler and CssSelector - parse the XML files
 * Form and Validator - contact form

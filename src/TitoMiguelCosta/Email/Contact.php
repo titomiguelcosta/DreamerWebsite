@@ -14,7 +14,7 @@ class Contact extends \Swift_Message
         parent::__construct('Tito Miguel Costa @ Contact', $this->message, 'text/html', 'utf-8');
 
         $this
-            ->setFrom($data['email'])
+            ->setFrom('titomiguelcosta@titomiguelcosta.com')
             ->setTo('contact@titomiguelcosta.com', 'Tito Miguel Costa');
     }
 
@@ -22,5 +22,4 @@ class Contact extends \Swift_Message
     {
         return md5($this->message);
     }
-
 }

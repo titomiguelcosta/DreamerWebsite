@@ -2,19 +2,22 @@
 
 namespace TitoMiguelCosta\Email;
 
-class Exception extends \Swift_Message
-{
+use Exception as BaseException;
+use Silex\Application;
+use Swift_Message;
 
+class Exception extends Swift_Message
+{
     private $message;
 
-    public function __construct($app, $exception)
+    public function __construct(Application $app, BaseException $exception)
     {
         $this->message = $app['twig']->render('email/exception.twig', array('exception' => $exception));
 
         parent::__construct('Tito Miguel Costa @ Exception', $this->message, 'text/html', 'utf-8');
 
         $this
-            ->setFrom('exception@titomiguelcosta.com')
+            ->setFrom('titomiguelcosta@titomiguelcosta.com')
             ->setTo('exception@titomiguelcosta.com', 'Tito Miguel Costa');
     }
 
@@ -22,5 +25,4 @@ class Exception extends \Swift_Message
     {
         return md5($this->message);
     }
-
 }

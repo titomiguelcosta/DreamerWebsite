@@ -2,6 +2,7 @@
 
 namespace TitoMiguelCosta\Listener;
 
+use Interop\Container\Exception\NotFoundException;
 use Silex\Application;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,6 +32,10 @@ class Exception
 
     public static function email(EventException $event)
     {
+        if ($event->getException() instanceof NotFoundException) {
+            return;
+        }
+
         $app = $event->getApplication();
         $app['mailer']->send(new EmailException($event->getApplication(), $event->getException()));
     }

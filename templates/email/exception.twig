@@ -3,6 +3,7 @@
 <ul>
     <li>{{ global.request.getPathInfo }}</li>
     <li>{{ exception.message }}</li>
+    <li><code>{{ exception.getTraceAsString }}</code></li>
 </ul>
 
 <p>Thrown at {{ date() | date('Y-m-d H:i:s')}}</p>
