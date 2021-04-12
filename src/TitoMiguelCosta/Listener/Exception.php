@@ -2,7 +2,7 @@
 
 namespace TitoMiguelCosta\Listener;
 
-use Interop\Container\Exception\NotFoundException;
+use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Silex\Application;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,16 +23,15 @@ class Exception
         $this->app['dispatcher']->dispatch(EventException::EXCEPTION_RAISED, new EventException($this->app, $event->getException()));
 
         $response = new Response($this->app['twig']->render('site/exception.twig', array()));
-        $response->setStatusCode('500');
+        $response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
         $response->setTtl(86400);
 
         $event->setResponse($response);
-        $event->stopPropagation();
     }
 
     public static function email(EventException $event)
     {
-        if ($event->getException() instanceof NotFoundException) {
+        if ($event->getException() instanceof ResourceNotFoundException) {
             return;
         }
 
