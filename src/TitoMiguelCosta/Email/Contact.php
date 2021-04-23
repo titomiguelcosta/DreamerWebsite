@@ -9,7 +9,7 @@ class Contact extends \Swift_Message
 
     public function __construct($app, $data)
     {
-        $this->message = $app['twig']->render('email/contact.twig', array('data' => $data));
+        $this->message = $app['twig']->render('email/contact.twig', ['data' => $data]);
 
         parent::__construct('Tito Miguel Costa @ Contact', $this->message, 'text/html', 'utf-8');
 

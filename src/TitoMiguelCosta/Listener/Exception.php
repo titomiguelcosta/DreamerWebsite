@@ -2,7 +2,7 @@
 
 namespace TitoMiguelCosta\Listener;
 
-use Symfony\Component\Routing\Exception\ResourceNotFoundException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Silex\Application;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,7 +31,8 @@ class Exception
 
     public static function email(EventException $event)
     {
-        if ($event->getException() instanceof ResourceNotFoundException) {
+        // ignore 404
+        if ($event->getException() instanceof NotFoundHttpException) {
             return;
         }
 
