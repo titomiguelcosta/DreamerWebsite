@@ -22,7 +22,7 @@ class Exception
     {
         $this->app['dispatcher']->dispatch(EventException::EXCEPTION_RAISED, new EventException($this->app, $event->getException()));
 
-        $response = new Response($this->app['twig']->render('site/exception.twig', array()));
+        $response = new Response($this->app['twig']->render('site/exception.twig', []));
         $response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
         $response->setTtl(86400);
 
