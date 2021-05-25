@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <projects>
+    <project slug="bogie">
+        <name>Gobie</name>
+        <presentation>Code Analysis for PHP projects</presentation>
+        <description>
+            <![CDATA[
+            <p>Run background checks on source code written in PHP.</p>
+            <p>With a few clicks, it is possible to do code analysis and identify issues in the source code. Trigger can be manual or event based, for instance, whenever new code is pushed to a specific branch.</p>
+            <p>Project is split into three components: agent, api and website.</p>
+            <p>Agent is responsible for executing the configured tasks on top and reports back to the API. It runs on AWS Batch. There are several <a href="https://hub.docker.com/r/titomiguelcosta/grooming-chimps-php74" target="_blank">Docker images</a> for different versions of PHP.</p>
+            <p>Website is in the process to be migrate to React.</p>
+
+            <h4>Libraries</h4>
+            <ul>
+                <li>Powered by <a href="https://symfony.com/" target="_blank">Symfony</a> and <a href="https://api-platform.com/" target="_blank">API Platform</a></li>
+                <li>Integration with <a href="https://developer.github.com/v3/" target="_blank">GitHub</a> through <a href="https://github.com/KnpLabs/php-github-api" target="_blank">php-github-api</a></li>
+                <li>Integration with <a href="https://aws.amazon.com/en/batch/" target="_blank">AWS Batch</a> through <a href="https://github.com/aws/aws-sdk-php" target="_blank">aws-sdk-php</a></li>
+            </ul>
+
+            <h4>References</h4>
+            <ul>
+                <li><a href="https://gobie.titomiguelcosta.com/" target="_blank">Website</a></li>
+                <li><a href="https://api.gobie.titomiguelcosta.com/" target="_blank">API</a></li>
+                <li><a href="https://github.com/titomiguelcosta?tab=repositories&q=gobie" target="_blank">Source code</a></li>
+            </ul>
+            ]]>
+        </description>
+        <url>https://gobie.titomiguelcosta.com/</url>
+        <keywords>API, PHP, Symfony, API Platform, AWS Batch, GitHub</keywords>
+        <image />
+        <date>Abril 2021</date>
+        <status>In progress</status>
+    </project>
     <project slug="hammer">
         <name>Hammer</name>
         <presentation>API from a developer to other developers</presentation>
