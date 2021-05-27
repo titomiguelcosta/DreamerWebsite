@@ -3,7 +3,7 @@
 namespace TitoMiguelCosta\Event;
 
 use Silex\Application;
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 class Contact extends Event
 {

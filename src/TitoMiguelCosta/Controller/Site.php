@@ -9,16 +9,10 @@ use Silex\Application;
 use TitoMiguelCosta\Form\Contact as ContactForm;
 use TitoMiguelCosta\Event\Contact as ContactEvent;
 
-/**
- * Description of Controller
- *
- * @author titomiguelcosta
- */
 class Site
 {
     public function indexAction(Application $app)
     {
-        /* @var $response \Symfony\Component\HttpFoundation\Response */
         $response = new Response($app['twig']->render('site/home.twig', array()));
         $response->setPublic();
         $response->setExpires(new \DateTime('+60 seconds'));

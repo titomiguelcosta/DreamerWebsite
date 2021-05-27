@@ -4,7 +4,6 @@ namespace TitoMiguelCosta\Email;
 
 class Contact extends \Swift_Message
 {
-
     private $message;
 
     public function __construct($app, $data)

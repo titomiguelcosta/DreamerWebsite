@@ -13,15 +13,9 @@ class Blog
         $this->root_dir = realpath(__DIR__ . '/../../../data/xml/blog.xml');
     }
 
-    /**
-     * Returns array with post entry details
-     *
-     * @param  string $slug
-     * @return array
-     */
-    public function getPost($slug)
+    public function getPost(string $slug): array
     {
-        $data = array();
+        $data = [];
 
         $crawler = new Crawler();
         $crawler->addXmlContent(file_get_contents($this->root_dir));
