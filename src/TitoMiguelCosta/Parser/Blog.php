@@ -6,17 +6,18 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class Blog extends Crawler
 {
+    const MAX_PER_PAGE = 7;
 
-    public function getPosts($start = null, $end = null)
+    public function getPosts(int $start = null, int $end = null): array
     {
         $total = $this->totalPosts();
 
         $start = null === $start || $start < 1 ? 1 : $start;
-        $end = null === $end || $end < 1 || $end > $total ? $total : $end;
+        $end = null === $end || $end < 1 || $end > $total ? self::MAX_PER_PAGE : $end;
 
         $rawPosts = $this->filterXPath(sprintf('//post[position() >= %d and position() <= %d]', $start, $end));
 
-        $posts = array();
+        $posts = [];
         foreach ($rawPosts as $rawPost) {
             $posts[] = Post::getPostFromRawData($rawPost);
         }
@@ -24,11 +25,11 @@ class Blog extends Crawler
         return $posts;
     }
 
-    public function getPostsByCategory($category)
+    public function getPostsByCategory($category): array
     {
         $rawPosts = $this->filterXPath('//post[category[text()="' . $category . '"]]');
 
-        $posts = array();
+        $posts = [];
         foreach ($rawPosts as $domElement) {
             $posts[] = Post::getPostFromRawData($domElement);
         }
@@ -36,21 +37,21 @@ class Blog extends Crawler
         return $posts;
     }
 
-    public function getPostBySlug($slug)
+    public function getPostBySlug($slug): Post
     {
         $rawPost = $this->filterXPath('//post[@slug="' . $slug . '"]');
 
         return $rawPost->getPost();
     }
 
-    public function totalPosts()
+    public function totalPosts(): int
     {
         return (int) $this->filterXPath('//post')->count();
     }
 
-    protected function getPost()
+    protected function getPost(): Post
     {
-        $array = array();
+        $array = [];
         $attributes = Post::getNodes();
         foreach ($this->children() as $node) {
             $tag = $node->tagName;
@@ -62,8 +63,7 @@ class Blog extends Crawler
 
         $post = Post::getPostFromArray($array);
         $post->setSlug($this->attr('slug'));
-        
+
         return $post;
     }
-
 }

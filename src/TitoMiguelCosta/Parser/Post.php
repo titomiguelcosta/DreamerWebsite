@@ -2,91 +2,93 @@
 
 namespace TitoMiguelCosta\Parser;
 
+use DateTimeInterface;
+
 class Post
 {
     protected $title, $resume, $content, $date, $image, $category, $tags, $slug;
 
-    public function getTitle()
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
-    public function setTitle($title)
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
 
-    public function getResume()
+    public function getResume(): ?string
     {
         return $this->resume;
     }
 
-    public function setResume($resume)
+    public function setResume(string $resume): void
     {
         $this->resume = $resume;
     }
 
-    public function getContent()
+    public function getContent(): ?string
     {
         return $this->content;
     }
 
-    public function setContent($content)
+    public function setContent(string $content): void
     {
         $this->content = $content;
     }
 
-    public function getDate()
+    public function getDate(): ?string
     {
         return $this->date;
     }
 
-    public function setDate($date)
+    public function setDate(string $date): void
     {
         $this->date = $date;
     }
 
-    public function getImage()
+    public function getImage(): ?string
     {
         return $this->image;
     }
 
-    public function setImage($image)
+    public function setImage(string $image): void
     {
         $this->image = $image;
     }
 
-    public function getCategory()
+    public function getCategory(): ?string
     {
         return $this->category;
     }
 
-    public function setCategory($category)
+    public function setCategory(string $category): void
     {
         $this->category = $category;
     }
 
-    public function getTags()
+    public function getTags(): string
     {
         return $this->tags;
     }
 
-    public function setTags($tags)
+    public function setTags(string $tags): void
     {
         $this->tags = $tags;
     }
 
-    public function getSlug()
+    public function getSlug(): ?string
     {
         return $this->slug;
     }
 
-    public function setSlug($slug)
+    public function setSlug(string $slug): void
     {
         $this->slug = $slug;
     }
 
-    public static function getNodes()
+    public static function getNodes(): array
     {
         return array(
             'title',
@@ -99,7 +101,7 @@ class Post
         );
     }
 
-    public static function getPostFromArray(array $array)
+    public static function getPostFromArray(array $array): Post
     {
         $post = new Post();
         $post->setTitle($array['title']);
@@ -109,11 +111,11 @@ class Post
         $post->setImage($array['image']);
         $post->setCategory($array['category']);
         $post->setTags($array['tags']);
-        
+
         return $post;
     }
 
-    public static function getPostFromRawData(\DOMElement $rawPost)
+    public static function getPostFromRawData(\DOMElement $rawPost): Post
     {
         $post = new Post();
         $post->setTitle($rawPost->getElementsByTagName('title')->item(0)->nodeValue);
@@ -127,5 +129,4 @@ class Post
 
         return $post;
     }
-
 }
