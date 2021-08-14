@@ -36,7 +36,7 @@
                     </div>
 
                     {{ form_rest(form) }}
-                    <input type="submit" name="submit" value="Submit" class="btn" />
+                    <input type="submit" name="submit" value="Send" class="btn" />
                 </form>
                 {% else %}
                     <p>Thanks <strong>{{ app.session.flashbag.get('name')[0] }}</strong>, your message was sent successfully.</p>
