@@ -8,6 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use TitoMiguelCosta\Form\EventListener\ReCaptchaValidationListener;
 
 class Contact extends AbstractType
 {
@@ -16,7 +17,10 @@ class Contact extends AbstractType
         $builder
             ->add('name', TextType::class, array('constraints' => array(new Assert\NotBlank())))
             ->add('email', EmailType::class, array('constraints' => array(new Assert\NotBlank(), new Assert\Email())))
-            ->add('message', TextareaType::class, array('constraints' => array(new Assert\NotBlank())));
+            ->add('message', TextareaType::class, array('constraints' => array(new Assert\NotBlank())))
+            ->add('captcha', ReCaptchaType::class, ['type' => 'checkbox']); // invisible or checkbox
+
+        $builder->addEventSubscriber(new ReCaptchaValidationListener());
     }
 
     public function getName()

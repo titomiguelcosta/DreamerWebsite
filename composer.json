@@ -17,11 +17,12 @@
         "zendframework/zend-paginator": "^2.8",
         "zendframework/zend-servicemanager": "^3.3",
         "zendframework/zend-feed": "^2.9",
-        "zendframework/zendpdf": "^2.0"
+        "zendframework/zendpdf": "^2.0",
+        "google/recaptcha": "^1.2"
     },
     "autoload": {
-        "psr-0": {
-            "TitoMiguelCosta": "src"
+        "psr-4": {
+            "TitoMiguelCosta\\": "src/"
         }
     }
 }
