@@ -15,7 +15,7 @@
       args:
         chdir: "{{ project_path }}"
     - name: install dependencies
-      shell: composer install
+      shell: composer install --ignore-platform-reqs
       args:
         chdir: "{{ project_path }}"
     - name: remove cache
