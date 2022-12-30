@@ -22,4 +22,3 @@
       shell: rm -rf data/cache/*
       args:
         chdir: "{{ project_path }}"
-        warn: false

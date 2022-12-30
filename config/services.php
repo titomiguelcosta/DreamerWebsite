@@ -7,7 +7,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/../templates',
     'twig.options' => array('cache' => __DIR__ . '/../data/cache'),
 ));
-if (defined(GOOGLE_RECAPTCHA_SITE_KEY)) {
+if (defined('GOOGLE_RECAPTCHA_SITE_KEY')) {
     $app['twig']->addGlobal('gg_recaptcha_site_key', GOOGLE_RECAPTCHA_SITE_KEY);
 }
 
