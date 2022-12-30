@@ -16,7 +16,7 @@ class ReCaptchaValidationListener implements EventSubscriberInterface
 
     public function __construct()
     {
-        $this->reCaptcha = new ReCaptcha(GOOGLE_RECAPTCHA_SITE_KEY);
+        $this->reCaptcha = new ReCaptcha(GOOGLE_RECAPTCHA_SECRET_KEY);
     }
 
     public static function getSubscribedEvents()

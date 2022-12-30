@@ -3,7 +3,6 @@
 namespace TitoMiguelCosta\Form;
 
 use TitoMiguelCosta\Form\EventListener\ReCaptchaValidationListener;
-use ReCaptcha\ReCaptcha;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;
@@ -12,17 +11,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ReCaptchaType extends AbstractType
 {
-    /**
-     * @var ReCaptcha
-     */
-    private $reCaptcha;
-
-
-    public function __construct()
-    {
-        $this->reCaptcha = new ReCaptcha(GOOGLE_RECAPTCHA_SITE_KEY);
-    }
-
     /**
      * @inheritDoc
      */
