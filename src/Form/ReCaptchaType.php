@@ -28,7 +28,7 @@ class ReCaptchaType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $subscriber = new ReCaptchaValidationListener($this->reCaptcha);
+        $subscriber = new ReCaptchaValidationListener();
         $subscriber->setInvalidMessage($options['invalid_message']);
         $builder->addEventSubscriber($subscriber);
     }

@@ -19,8 +19,6 @@ class Contact extends AbstractType
             ->add('email', EmailType::class, array('constraints' => array(new Assert\NotBlank(), new Assert\Email())))
             ->add('message', TextareaType::class, array('constraints' => array(new Assert\NotBlank())))
             ->add('captcha', ReCaptchaType::class, ['type' => 'checkbox']); // invisible or checkbox
-
-        $builder->addEventSubscriber(new ReCaptchaValidationListener());
     }
 
     public function getName()
