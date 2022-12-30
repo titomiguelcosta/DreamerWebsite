@@ -11,9 +11,18 @@ require_once __DIR__ . '/../config/services.php';
 require_once __DIR__ . '/../config/routing.php';
 require_once __DIR__ . '/../config/events.php';
 
+use Symfony\Component\Form\FormRenderer;
 use Symfony\Component\HttpKernel\HttpCache\HttpCache;
 use Symfony\Component\HttpKernel\HttpCache\Store;
 use Symfony\Component\HttpFoundation\Request;
+
+$app->extend('twig.runtimes', function ($runtimes, $app) {
+    return array_merge($runtimes, [
+        FormRenderer::class => 'twig.form.renderer',
+    ]);
+});
+
+$app['twig']->addGlobal('gg_recaptcha_site_key', defined('GOOGLE_RECAPTCHA_SITE_KEY') ? GOOGLE_RECAPTCHA_SITE_KEY : 'unknown');
 
 $cache = new HttpCache($app, new Store(__DIR__ . '/../data/cache'));
 $request = Request::createFromGlobals();
