@@ -9,6 +9,12 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.form.templates' => array('form_div_layout.html.twig', 'form/custom_types.html.twig'),
 ));
 
+if (defined('GOOGLE_RECAPTCHA_SITE_KEY')) {
+    $app['twig']->addGlobal('gg_recaptcha_site_key', GOOGLE_RECAPTCHA_SITE_KEY);
+} else {
+    $app['twig']->addGlobal('gg_recaptcha_site_key', 'unknown');
+}
+
 $app->register(new Silex\Provider\ValidatorServiceProvider(), array());
 $app->register(new Silex\Provider\TranslationServiceProvider(), array(
     'locale_fallback' => 'en',

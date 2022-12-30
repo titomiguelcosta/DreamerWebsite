@@ -20,10 +20,6 @@ $app->extend('twig.runtimes', function ($runtimes, $app) {
     return array_merge($runtimes, [
         FormRenderer::class => 'twig.form.renderer',
     ]);
-
-    if (defined('GOOGLE_RECAPTCHA_SITE_KEY')) {
-        $app['twig']->addGlobal('gg_recaptcha_site_key', GOOGLE_RECAPTCHA_SITE_KEY);
-    }
 });
 
 $cache = new HttpCache($app, new Store(__DIR__ . '/../data/cache'));
